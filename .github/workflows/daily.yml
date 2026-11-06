@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # 順番待ちの実行でも、最新のmainから始める（古い状態との衝突を防ぐ）
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
