@@ -33,9 +33,10 @@ def _page(title, body, noindex=False):
 
 def article_html(a):
     items, d = a["items"], a["content"]
+    shown = sorted({p["i"] for p in d["picks"]})
     rows = "".join(
         f"<tr><td>{E(it['name'])}</td><td>{it['price']:,}円</td>"
-        f"<td>{it['review_avg']:.2f}（{it['review_count']:,}件）</td></tr>" for it in items
+        f"<td>{it['review_avg']:.2f}（{it['review_count']:,}件）</td></tr>" for it in (items[i] for i in shown)
     )
     picks = ""
     for p in d["picks"]:
@@ -52,8 +53,8 @@ def article_html(a):
     body = (
         f'<p><a href="index.html">← 記事一覧</a></p><div class="pr">{PR_TEXT}</div>{sample}'
         f"<h1>{E(d['title'])}</h1><p>{E(d['lead'])}</p>"
-        f"<h2>比較の基準</h2><p>楽天市場のレビュー件数が多い順に、在庫のある商品から{len(items)}件を取得して比較しています。"
-        f"件数が少ない商品は根拠が薄いため除外しました。</p>"
+        f"<h2>比較の基準</h2><p>楽天市場のレビュー件数が多い順に、在庫のある商品から{len(items)}件を取得し、商品の種類が合う{len(shown)}件を掲載しています。"
+        f"レビュー件数が少ない商品と、種類が合わない商品は除外しました。</p>"
         f"<table><tr><th>商品</th><th>価格</th><th>レビュー</th></tr>{rows}</table>"
         f"<p class=\"note\">データ取得日時：{E(a['fetched_at'])}。価格・在庫は変動します。購入前に販売ページでご確認ください。</p>"
         f"<h2>タイプ別のおすすめ</h2>{picks}<h2>よくある疑問</h2>{faq}"

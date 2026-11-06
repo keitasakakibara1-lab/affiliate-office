@@ -12,12 +12,15 @@ WRITER_SYSTEM = """あなたは比較記事の執筆担当です。次の規則�
 - 各おすすめには「向いている人」「選ぶ理由」「弱み（トレードオフ）」を必ず書く。弱みが書けない商品は選ばない。
 - 「最安」「絶対」「No.1」など断定・最上級表現、健康や医療の効果を示す表現は使わない。
 - 数字はデータにあるものだけ。レビューは「件数が多い」など事実で表現し、評価の優劣を断定しない。
+- キーワードの商品種別に当てはまらない商品（例：ハブの検索に出たSDカードリーダー単体、ケース、ケーブルのみ）は picks に含めない。種別が合う商品が3件未満なら picks は空配列にする。
 - 出力はJSONのみ。キー: title, lead, picks[{i, who_for, point, tradeoff}], faq[{q, a}]。iは商品データの添字。"""
 
 
 # ---------- 企画（ナツメ） ----------
 def plan(state, cfg):
-    used = {a["keyword"] for a in state["articles"]}
+    from collections import Counter
+    rej = Counter(a["keyword"] for a in state["articles"] if a["status"] == "rejected")
+    used = {a["keyword"] for a in state["articles"] if a["status"] != "rejected"} | {k for k, n in rej.items() if n >= 2}
     cands = [t for t in cfg["topics"] if t not in used]
     if not cands:
         say(state, "planner", "候補キーワードが尽きました。config.jsonに追加してください", status="ネタ切れ")
@@ -115,8 +118,13 @@ def review(state, article, items, sample):
         problems.append("比較対象が2商品未満")
     # 本文中の数字が商品データに由来するか（価格・件数の捏造を検知）
     allowed = {str(it["price"]) for it in items} | {str(it["review_count"]) for it in items}
-    for num in re.findall(r"\d{3,}", body.replace(",", "")):
-        if num not in allowed and not (len(num) == 4 and num.startswith("20")):
+    for it in items:  # 商品名に書かれた容量・ワット数などは根拠があるので許可
+        allowed |= set(re.findall(r"\d+", it["name"].replace(",", "")))
+    flat = body.replace(",", "")
+    # 「1500円台」「1000件を超える」など、価格帯・件数帯の区切りとしての数字も許可
+    band = set(re.findall(r"(\d+)(?=(?:円|件)(?:台|以下|未満|以上|前後|超|を超|から|〜|クラス))", flat))
+    for num in re.findall(r"\d{3,}", flat):
+        if num not in allowed and num not in band and not (len(num) == 4 and num.startswith("20")):
             problems.append(f"データにない数字「{num}」")
     # LLMによる二次審査（任意）
     if llm_available() and not problems:
