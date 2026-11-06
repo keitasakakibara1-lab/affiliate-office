@@ -34,7 +34,7 @@ def plan(state, cfg):
                 '収益見込みと検索意図が明確なものを1つ選び、{"keyword":候補のいずれか,"angle":切り口}を返して。'
                 "切り口は40字以内で、価格帯・レビュー件数・レビュー平均で比べる範囲に限り、"
                 "実測・性能・発熱・互換性など商品データにない事実は含めないこと。",
-                500,
+                1500,
             )
             if r.get("keyword") in cands:
                 kw, angle = r["keyword"], r.get("angle", angle)
@@ -120,6 +120,8 @@ def review(state, article, items, sample):
     allowed = {str(it["price"]) for it in items} | {str(it["review_count"]) for it in items}
     for it in items:  # 商品名に書かれた容量・ワット数などは根拠があるので許可
         allowed |= set(re.findall(r"\d+", it["name"].replace(",", "")))
+    prices = [it["price"] for it in items]
+    allowed |= {str(abs(a - b)) for a in prices for b in prices}  # 価格差は計算で得られる数字
     flat = body.replace(",", "")
     # 「1500円台」「1000件を超える」など、価格帯・件数帯の区切りとしての数字も許可
     band = set(re.findall(r"(\d+)(?=(?:円|件)(?:台|以下|未満|以上|前後|超|を超|から|〜|クラス))", flat))
@@ -134,7 +136,7 @@ def review(state, article, items, sample):
                 "根拠のない断定、誇大表現、薄い内容を指摘します。JSONのみ。",
                 f"記事:\n{body}\n商品データ:\n{_items_json(items)}\n"
                 '{"problems":["具体的な問題..."]}を返して。問題がなければ空配列。',
-                800,
+                3000,
             )
             problems += r.get("problems", [])
         except Exception as e:
