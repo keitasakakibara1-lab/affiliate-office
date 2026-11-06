@@ -158,21 +158,39 @@ def _rank_stats(r):
 
 
 def _calc_block(r, st, unit):
-    """使う量を入力すると、月・年のコスト差が分かる計算欄（外部ライブラリなし・数値のみ埋め込み）。"""
+    """使う量と送料を入れると、実質の単価で並べ替え、月・年の差額を出す計算欄（外部ライブラリなし）。"""
     import json as _json
     qty = r.get("default_qty") or {"L": 10, "kg": 5, "個": 50}[r["basis"]["base"]]
-    data = _json.dumps({"top": round(r["items"][0]["unit_price"], 4), "med": round(st["med"], 4), "bal": None}, ensure_ascii=False)
+    items = [{"p": i["price"], "t": round(i["total"], 4), "s": 1 if i.get("postage") == "別" else 0,
+              "n": i["name"][:56], "u": i["url"], "a": i["review_avg"], "c": i["review_count"]} for i in r["items"]]
+    # 商品名などの外部由来の文字列がscriptを壊さないよう、< > & をエスケープして埋め込む
+    data = _json.dumps({"items": items, "unit": unit}, ensure_ascii=False)
+    data = data.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     return (
-        '<div class="card"><b>あなたの使う量で計算する</b>'
-        f'<p class="note">1か月に使う量（{E(unit)}）を入れると、1位と中央値の商品とで、月・年にいくら違うかが分かります。送料・クーポンは含みません。</p>'
-        f'<p><input id="q" type="number" min="0" step="any" value="{qty}" style="width:6em;font-size:1rem"> {E(unit)} / 月</p>'
-        '<p id="calcout" aria-live="polite"></p>'
-        f'<script>(function(){{var d={data};var q=document.getElementById("q"),o=document.getElementById("calcout");'
+        '<div class="card"><b>あなたの条件で並べ替える</b>'
+        '<p class="note">使う量と、送料が別の商品の送料を入れると、送料を含めた実質の単価で並べ替え、月・年の差額を計算します。クーポン・ポイントは含みません。</p>'
+        f'<p>1か月に使う量：<input id="q" type="number" min="0" step="any" value="{qty}" style="width:6em;font-size:1rem"> {E(unit)}</p>'
+        '<p>送料が別の商品の送料（1注文あたりの目安）：<select id="sh" style="font-size:1rem">'
+        '<option value="0">考慮しない</option><option value="500">500円</option><option value="800">800円</option>'
+        '<option value="1100">1,100円</option><option value="1500">1,500円</option><option value="2000">2,000円</option></select></p>'
+        '<p id="calcout" aria-live="polite"></p><ol id="calclist" style="padding-left:1.2em"></ol>'
+        f'<script>(function(){{var D={data};'
+        'var q=document.getElementById("q"),sh=document.getElementById("sh"),o=document.getElementById("calcout"),L=document.getElementById("calclist");'
         'function f(n){return Math.round(n).toLocaleString("ja-JP")}'
-        'function u(){var v=parseFloat(q.value);if(!(v>=0)){o.textContent="";return}'
-        'var a=v*d.top,b=v*d.med,g=Math.max(b-a,0);'
-        'o.textContent="1位の単価では月約"+f(a)+"円、中央値の単価では月約"+f(b)+"円です。差は月約"+f(g)+"円、年約"+f(g*12)+"円です。";}'
-        'q.addEventListener("input",u);u();})();</script></div>'
+        'function safe(u){return /^https:\\/\\//.test(u)?u:"#"}'
+        'function upd(){var v=parseFloat(q.value),ship=parseFloat(sh.value)||0;'
+        'if(!(v>=0)){o.textContent="";L.textContent="";return}'
+        'var rows=D.items.map(function(i){return {i:i,e:(i.p+(i.s?ship:0))/i.t}}).sort(function(x,y){return x.e-y.e});'
+        'var es=rows.map(function(x){return x.e}),m=es.length>>1,med=es.length%2?es[m]:(es[m-1]+es[m])/2;'
+        'var g=Math.max(med-es[0],0)*v;'
+        'o.textContent="送料を含めた実質の単価では、1位は約"+es[0].toFixed(1)+"円/"+D.unit+"、中央値は約"+med.toFixed(1)+"円/"+D.unit+"です。差は月約"+f(g)+"円、年約"+f(g*12)+"円です。";'
+        'L.textContent="";rows.slice(0,5).forEach(function(x,k){var li=document.createElement("li");'
+        'var a=document.createElement("a");a.setAttribute("href",safe(x.i.u));a.setAttribute("rel","sponsored nofollow noopener");a.setAttribute("target","_blank");'
+        'a.textContent=x.i.n;li.appendChild(a);'
+        'var sp=document.createElement("div");sp.className="note";'
+        'sp.textContent="実質 約"+x.e.toFixed(1)+"円/"+D.unit+"（"+f(x.i.p)+"円"+(x.i.s?"＋送料別":"")+"、レビュー "+x.i.a.toFixed(2)+"（"+f(x.i.c)+"件））";'
+        'li.appendChild(sp);L.appendChild(li)});}'
+        'q.addEventListener("input",upd);sh.addEventListener("change",upd);upd();})();</script></div>'
     )
 
 

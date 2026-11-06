@@ -21,16 +21,11 @@
       "status": "rank-drip-coffee を published にしました"
     },
     "analyst": {
-      "done": 16,
+      "done": 17,
       "status": "収益を集計済み"
     }
   },
   "log": [
-    {
-      "t": "11/06 18:19",
-      "agent": "designer",
-      "msg": "ランキング rank-detergent-laundry を更新（状態: pending）"
-    },
     {
       "t": "11/06 18:19",
       "agent": "researcher",
@@ -423,6 +418,11 @@
     },
     {
       "t": "11/06 18:47",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 18:49",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
