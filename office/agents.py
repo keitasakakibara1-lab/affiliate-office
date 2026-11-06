@@ -91,7 +91,7 @@ def _grounded(value, src):
     """抽出値が原文に実在するか。数字はすべて原文に含まれ、数字なしの値は原文に部分一致すること。"""
     v, src = _norm(value), _norm(src)
     nums = re.findall(r"\d+(?:\.\d+)?", v)
-    return all(n in src for n in nums) if nums else v in src
+    return all(re.search(r"(?<![\d.])" + re.escape(n) + r"(?![\d.])", src) for n in nums) if nums else v in src
 
 
 def extract_specs(state, kw, items):

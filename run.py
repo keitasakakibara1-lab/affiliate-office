@@ -10,11 +10,32 @@ import json
 import sys
 import time
 
-from office import agents, core, render
+from office import agents, core, ranking, render
 from office.core import say
 
 
+def update_rankings(cfg, state):
+    """単価ランキングを更新する。新規は確認待ち、公開済み・確認待ちは中身だけ最新に差し替える。"""
+    rks = state.setdefault("rankings", {})
+    for rk in cfg.get("rankings", []):
+        try:
+            r = ranking.build(state, cfg, rk)
+        except Exception as e:  # 1つの失敗で他を止めない
+            say(state, "researcher", f"「{rk['keyword']}」のランキング更新に失敗（{type(e).__name__}）")
+            continue
+        if not r:
+            continue
+        cur = rks.get(r["slug"])
+        if cur and cur["status"] in ("published", "pending"):
+            r["status"] = cur["status"]
+        else:
+            r["status"] = "pending" if cfg["require_human_approval"] else "published"
+        rks[r["slug"]] = r
+        say(state, "designer", f"ランキング {r['slug']} を更新（状態: {r['status']}）", done=True)
+
+
 def daily(cfg, state):
+    update_rankings(cfg, state)
     tried = set()  # 同じ実行の中で、同じ話題を繰り返さない
     for _ in range(cfg["max_articles_per_day"]):
         plan = agents.plan(state, cfg, tried)
@@ -66,6 +87,13 @@ def demand(cfg):
 
 
 def set_status(state, slug, new):
+    r = state.get("rankings", {}).get(slug)
+    if r is not None:
+        if r["status"] != "pending":
+            sys.exit(f"確認待ちではありません: {slug}")
+        r["status"] = new
+        say(state, "designer", f"{slug} を {new} にしました", done=True)
+        return
     for a in state["articles"]:
         if a["slug"] == slug and a["status"] == "pending":
             a["status"] = new

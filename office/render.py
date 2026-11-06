@@ -109,14 +109,47 @@ def article_html(a):
                  path=f'{a["slug"]}.html', date=a["fetched_at"][:10])
 
 
-def index_html(cfg, arts):
-    lis = "".join(
+def ranking_html(r):
+    base = r["basis"]["base"]
+    unit = {"L": "L", "kg": "kg", "個": "個"}[base]
+    label = r["basis"]["label"]
+    rows = ""
+    for n, it in enumerate(r["items"], 1):
+        img = (f'<a href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">'
+               f'<img src="{E(it["image"])}" alt="" loading="lazy" width="56" height="56" '
+               f'style="border-radius:6px;vertical-align:middle;margin-right:8px"></a>') if it.get("image") else ""
+        tot = f'{it["total"]:.2f}'.rstrip("0").rstrip(".")
+        post = {"込み": "送料込み", "別": "送料別"}.get(it.get("postage"), "要確認")
+        rows += (
+            f"<tr><td>{n}</td><td>{img}<a href=\"{E(it['url'])}\" rel=\"sponsored nofollow noopener\" target=\"_blank\">{E(it['name'][:70])}</a>"
+            f"<br><span class=\"note\">{E(it.get('shop',''))}</span></td>"
+            f"<td>{it['price']:,}円<br><span class=\"note\">{post}</span></td><td>{tot}{unit}</td>"
+            f"<td><b>約{it['unit_price']:.1f}円</b></td><td>{it['review_avg']:.2f}（{it['review_count']:,}件）</td></tr>"
+        )
+    notes = "".join(f"<li>{E(x)}</li>" for x in r.get("notes", []))
+    body = (
+        f'<p><a href="index.html">← 一覧</a></p><div class="pr">{PR_TEXT}</div>'
+        f"<h1>{E(r['title'])}</h1>"
+        f"<p>楽天市場でレビュー件数の多い商品のうち、商品名・説明文に内容量が明記されている商品を、<b>{E(label)}の価格が安い順</b>に並べています。"
+        f"毎日、価格を取得し直して更新します。</p>"
+        f"<p class=\"note\">最終更新：{E(r['updated'])}。取得{r['fetched']}件のうち、内容量を確認できた商品から掲載しています。"
+        f"内容量は商品名・説明文の記載から抜き出し、原文と照合できた数字だけを使っています。誤りがある場合は購入ページの記載を優先してください。</p>"
+        f"<table><tr><th>順位</th><th>商品</th><th>価格</th><th>総量</th><th>{E(label)}</th><th>レビュー</th></tr>{rows}</table>"
+        f"<p class=\"note\">価格は取得時点のものです。「送料別」の商品は、送料を足すと順位が変わることがあります。単価の安さは、味・品質・好みへの合い方を示すものではありません。</p>"
+        f"<h2>選ぶときの注意</h2><ul>{notes}</ul>"
+    )
+    return _page(r["title"], body, desc=f"{r['keyword']}を{label}の価格で比べたランキング。毎日更新。", path=f"{r['slug']}.html", date=r["updated"][:10])
+
+
+def index_html(cfg, arts, ranks=()):
+    rk = "".join(f'<li><a href="{E(r["slug"])}.html">{E(r["title"])}</a> <span class=note>毎日更新</span></li>' for r in ranks)
+    lis = rk + "".join(
         f'<li><a href="{E(a["slug"])}.html">{E(a["content"]["title"])}</a>'
         f'{" <span class=note>(サンプル)</span>" if a.get("sample") else ""}</li>' for a in arts
     ) or "<li>公開済みの記事はまだありません。</li>"
     body = (f"<h1>{E(cfg['site_name'])}</h1><div class=\"pr\">{PR_TEXT}</div>"
             f"<p>購入前の比較で迷わないための、数字で確認できる範囲の比較メモです。</p><ul>{lis}</ul>")
-    return _page(cfg["site_name"], body, noindex=all(a.get("sample") for a in arts),
+    return _page(cfg["site_name"], body, noindex=(all(a.get("sample") for a in arts) and not ranks),
                  desc=f'{cfg["site_name"]}：楽天市場の商品を、価格・レビュー・記載仕様で比べる比較メモ。')
 
 
@@ -178,11 +211,18 @@ def build(cfg, state):
     _SITE["url"], _SITE["name"] = cfg.get("site_url", ""), cfg.get("site_name", "")
     for a in public:  # URL設定後に再生成（canonical用）
         (core.DOCS / f"{a['slug']}.html").write_text(article_html(a), encoding="utf-8")
-    (core.DOCS / "index.html").write_text(index_html(cfg, public), encoding="utf-8")
+    rpub = [r for r in state.get("rankings", {}).values() if r["status"] == "published"]
+    for r in rpub:
+        (core.DOCS / f"{r['slug']}.html").write_text(ranking_html(r), encoding="utf-8")
+    for r in state.get("rankings", {}).values():
+        if r["status"] == "pending":
+            (core.REVIEW / f"{r['slug']}.html").write_text(ranking_html(r), encoding="utf-8")
+    (core.DOCS / "index.html").write_text(index_html(cfg, public, rpub), encoding="utf-8")
     (core.DOCS / "about.html").write_text(about_html(cfg), encoding="utf-8")
     base = cfg.get("site_url", "").rstrip("/")
-    urls = [base + "/", base + "/about.html"] + [f"{base}/{a['slug']}.html" for a in public if not a.get("sample")]
+    urls = [base + "/", base + "/about.html"] + [f"{base}/{a['slug']}.html" for a in public if not a.get("sample")] + [f"{base}/{r['slug']}.html" for r in rpub]
     lastmod = {f"{base}/{a['slug']}.html": a["fetched_at"][:10] for a in public}
+    lastmod.update({f"{base}/{r['slug']}.html": r["updated"][:10] for r in rpub})
     sm = "".join(f"<url><loc>{E(u)}</loc>" + (f"<lastmod>{lastmod[u]}</lastmod>" if u in lastmod else "") + "</url>" for u in urls)
     (core.DOCS / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + sm + "</urlset>", encoding="utf-8")
