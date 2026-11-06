@@ -5,7 +5,7 @@
       "status": "「ワイヤレスマウス 静音」を企画済み"
     },
     "researcher": {
-      "done": 71,
+      "done": 98,
       "status": "「キャットフード 成猫 2kg」: 取得60件→種類が合う60件→内容量を確認58件→掲載15件（極端な値0件を除外）"
     },
     "writer": {
@@ -17,300 +17,15 @@
       "status": "審査通過"
     },
     "designer": {
-      "done": 71,
+      "done": 98,
       "status": "ランキング rank-cat-food を更新（状態: pending）"
     },
     "analyst": {
-      "done": 12,
+      "done": 13,
       "status": "収益を集計済み"
     }
   },
   "log": [
-    {
-      "t": "11/06 18:06",
-      "agent": "researcher",
-      "msg": "「おむつ テープ Mサイズ」: 取得24件→種類が合う24件→内容量を確認14件→掲載14件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:06",
-      "agent": "designer",
-      "msg": "ランキング rank-diaper-tape-m を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:06",
-      "agent": "researcher",
-      "msg": "「おむつ テープ Sサイズ」: 取得17件→種類が合う16件→内容量を確認12件→掲載12件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:06",
-      "agent": "designer",
-      "msg": "ランキング rank-diaper-tape-s を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:07",
-      "agent": "researcher",
-      "msg": "「おむつ パンツ Mサイズ」: 取得43件→種類が合う41件→内容量を確認26件→掲載15件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:07",
-      "agent": "designer",
-      "msg": "ランキング rank-diaper-pants-m を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:07",
-      "agent": "researcher",
-      "msg": "「おむつ パンツ Lサイズ」: 取得60件→種類が合う56件→内容量を確認16件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:07",
-      "agent": "designer",
-      "msg": "ランキング rank-diaper-pants-l を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:07",
-      "agent": "researcher",
-      "msg": "「洗濯洗剤 詰め替え 大容量」: 取得60件→種類が合う39件→内容量を確認13件→掲載13件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:07",
-      "agent": "designer",
-      "msg": "ランキング rank-detergent-laundry を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "researcher",
-      "msg": "「食器用洗剤 詰め替え」: 取得60件→種類が合う60件→内容量を確認5件→掲載5件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "designer",
-      "msg": "ランキング rank-detergent-dish を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "researcher",
-      "msg": "「ゴミ袋 45L 100枚」: 取得16件→種類が合う16件→内容量を確認13件→掲載13件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "designer",
-      "msg": "ランキング rank-trash-bag-45l を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "researcher",
-      "msg": "「単3 乾電池 アルカリ 20本」: 取得31件→種類が合う28件→内容量を確認12件→掲載12件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "designer",
-      "msg": "ランキング rank-battery-aa を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "researcher",
-      "msg": "「不織布マスク 100枚」: 取得60件→種類が合う22件→内容量を確認20件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:08",
-      "agent": "designer",
-      "msg": "ランキング rank-mask-nonwoven を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:09",
-      "agent": "researcher",
-      "msg": "「ドッグフード 成犬 5kg」: 取得60件→種類が合う57件→内容量を確認53件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:09",
-      "agent": "designer",
-      "msg": "ランキング rank-dog-food を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:09",
-      "agent": "researcher",
-      "msg": "「キャットフード 成猫 2kg」: 取得60件→種類が合う60件→内容量を確認58件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:09",
-      "agent": "designer",
-      "msg": "ランキング rank-cat-food を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:09",
-      "agent": "analyst",
-      "msg": "累計報酬0円・成果0件（実績データなし）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "researcher",
-      "msg": "「炭酸水 500ml 24本」: 取得60件→種類が合う32件→内容量を確認27件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "designer",
-      "msg": "ランキング rank-sparkling-water を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "researcher",
-      "msg": "「炭酸水 1L 12本」: 取得37件→種類が合う29件→内容量を確認29件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "designer",
-      "msg": "ランキング rank-sparkling-water-1l を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "researcher",
-      "msg": "「ミネラルウォーター 2L 12本」: 取得60件→種類が合う51件→内容量を確認42件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "designer",
-      "msg": "ランキング rank-water-2l を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "researcher",
-      "msg": "「ミネラルウォーター 500ml 24本」: 取得60件→種類が合う44件→内容量を確認41件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:13",
-      "agent": "designer",
-      "msg": "ランキング rank-water-500ml を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:14",
-      "agent": "researcher",
-      "msg": "「お茶 ペットボトル 500ml 24本」: 取得60件→種類が合う49件→内容量を確認36件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:14",
-      "agent": "designer",
-      "msg": "ランキング rank-green-tea-bottle を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:14",
-      "agent": "researcher",
-      "msg": "「麦茶 ティーバッグ 大容量」: 取得29件→種類が合う22件→内容量を確認10件→掲載9件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:14",
-      "agent": "designer",
-      "msg": "ランキング rank-barley-tea-bag を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:15",
-      "agent": "researcher",
-      "msg": "「紅茶 ティーバッグ」: 取得60件→種類が合う58件→内容量を確認38件→掲載15件（極端な値4件を除外）"
-    },
-    {
-      "t": "11/06 18:15",
-      "agent": "designer",
-      "msg": "ランキング rank-black-tea-bag を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:15",
-      "agent": "researcher",
-      "msg": "「ルイボスティー ティーバッグ」: 取得60件→種類が合う60件→内容量を確認40件→掲載15件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:15",
-      "agent": "designer",
-      "msg": "ランキング rank-rooibos-tea-bag を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:15",
-      "agent": "researcher",
-      "msg": "「コーヒー ドリップバッグ」: 取得60件→種類が合う51件→内容量を確認39件→掲載15件（極端な値4件を除外）"
-    },
-    {
-      "t": "11/06 18:15",
-      "agent": "designer",
-      "msg": "ランキング rank-drip-coffee を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:16",
-      "agent": "researcher",
-      "msg": "「コーヒー豆 1kg」: 取得60件→種類が合う57件→内容量を確認40件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:16",
-      "agent": "designer",
-      "msg": "ランキング rank-coffee-beans を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:16",
-      "agent": "researcher",
-      "msg": "「米 5kg」は内容量を確認できた商品が2件のみ。更新を見送り"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "researcher",
-      "msg": "「米 10kg」: 取得60件→種類が合う55件→内容量を確認44件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "designer",
-      "msg": "ランキング rank-rice-10kg を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "researcher",
-      "msg": "「米 30kg」: 取得60件→種類が合う50件→内容量を確認31件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "designer",
-      "msg": "ランキング rank-rice-30kg を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "researcher",
-      "msg": "「パスタ 乾麺 5kg」: 取得18件→種類が合う16件→内容量を確認15件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "designer",
-      "msg": "ランキング rank-pasta-dry を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "researcher",
-      "msg": "「オートミール 1kg」: 取得18件→種類が合う11件→内容量を確認9件→掲載9件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:17",
-      "agent": "designer",
-      "msg": "ランキング rank-oatmeal を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「ミックスナッツ 無塩 1kg」: 取得58件→種類が合う53件→内容量を確認36件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "designer",
-      "msg": "ランキング rank-mixed-nuts を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「ツナ缶 24缶」: 取得26件→種類が合う10件→内容量を確認10件→掲載10件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "designer",
-      "msg": "ランキング rank-tuna-can を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「鶏むね肉 2kg」: 取得27件→種類が合う14件→内容量を確認12件→掲載12件（極端な値0件を除外）"
-    },
     {
       "t": "11/06 18:18",
       "agent": "designer",
@@ -423,6 +138,291 @@
     },
     {
       "t": "11/06 18:21",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「炭酸水 500ml 24本」: 取得60件→種類が合う32件→内容量を確認27件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-sparkling-water を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「炭酸水 1L 12本」: 取得37件→種類が合う29件→内容量を確認29件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-sparkling-water-1l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「ミネラルウォーター 2L 12本」: 取得60件→種類が合う51件→内容量を確認42件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-water-2l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「ミネラルウォーター 500ml 24本」: 取得60件→種類が合う44件→内容量を確認41件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-water-500ml を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「お茶 ペットボトル 500ml 24本」: 取得60件→種類が合う49件→内容量を確認36件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-green-tea-bottle を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「麦茶 ティーバッグ 大容量」: 取得29件→種類が合う22件→内容量を確認10件→掲載9件（極端な値1件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-barley-tea-bag を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「紅茶 ティーバッグ」: 取得60件→種類が合う38件→内容量を確認25件→掲載15件（極端な値1件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-black-tea-bag を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「ルイボスティー ティーバッグ」: 取得60件→種類が合う60件→内容量を確認40件→掲載15件（極端な値1件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-rooibos-tea-bag を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「コーヒー ドリップバッグ」: 取得60件→種類が合う51件→内容量を確認39件→掲載15件（極端な値4件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-drip-coffee を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「コーヒー豆 1kg」: 取得60件→種類が合う57件→内容量を確認40件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-coffee-beans を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「米 10kg」: 取得60件→種類が合う55件→内容量を確認44件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-rice-10kg を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「米 30kg」: 取得60件→種類が合う50件→内容量を確認31件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-rice-30kg を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "researcher",
+      "msg": "「パスタ 乾麺 5kg」: 取得18件→種類が合う16件→内容量を確認15件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:33",
+      "agent": "designer",
+      "msg": "ランキング rank-pasta-dry を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「オートミール 1kg」: 取得18件→種類が合う11件→内容量を確認9件→掲載9件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-oatmeal を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ミックスナッツ 無塩 1kg」: 取得58件→種類が合う53件→内容量を確認36件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-mixed-nuts を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ツナ缶 24缶」: 取得26件→種類が合う10件→内容量を確認10件→掲載10件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-tuna-can を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「鶏むね肉 2kg」: 取得27件→種類が合う14件→内容量を確認12件→掲載12件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-chicken-breast を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「薄力粉 1kg」: 取得32件→種類が合う27件→内容量を確認21件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-flour-soft を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ベビー おむつ テープ Mサイズ」は内容量を確認できた商品が3件のみ。更新を見送り"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ベビー おむつ テープ Sサイズ」は内容量を確認できた商品が3件のみ。更新を見送り"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ベビー おむつ パンツ Mサイズ」: 取得12件→種類が合う10件→内容量を確認5件→掲載5件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-diaper-pants-m を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ベビー おむつ パンツ Lサイズ」: 取得17件→種類が合う14件→内容量を確認6件→掲載6件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-diaper-pants-l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「洗濯洗剤 詰め替え 大容量」: 取得60件→種類が合う39件→内容量を確認13件→掲載13件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-detergent-laundry を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「食器用洗剤 詰め替え」: 取得60件→種類が合う60件→内容量を確認5件→掲載5件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-detergent-dish を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ゴミ袋 45L 100枚」: 取得16件→種類が合う16件→内容量を確認13件→掲載13件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-trash-bag-45l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「単3 乾電池 アルカリ 20本」: 取得31件→種類が合う28件→内容量を確認12件→掲載12件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-battery-aa を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「不織布マスク 100枚」: 取得60件→種類が合う22件→内容量を確認20件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-mask-nonwoven を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「ドッグフード 成犬 5kg」: 取得60件→種類が合う57件→内容量を確認53件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-dog-food を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "researcher",
+      "msg": "「キャットフード 成猫 2kg」: 取得60件→種類が合う60件→内容量を確認58件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:34",
+      "agent": "designer",
+      "msg": "ランキング rank-cat-food を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:34",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -1963,7 +1963,7 @@
       "fetched": 32,
       "confirmed": 27,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:13 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-drip-coffee": {
@@ -2181,7 +2181,7 @@
       "fetched": 51,
       "confirmed": 39,
       "excluded_outlier": 4,
-      "updated": "2026-11-06 18:15 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-sparkling-water-1l": {
@@ -2399,7 +2399,7 @@
       "fetched": 29,
       "confirmed": 29,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:13 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-water-2l": {
@@ -2617,7 +2617,7 @@
       "fetched": 51,
       "confirmed": 42,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:13 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-water-500ml": {
@@ -2834,7 +2834,7 @@
       "fetched": 44,
       "confirmed": 41,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:13 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-green-tea-bottle": {
@@ -3051,7 +3051,7 @@
       "fetched": 49,
       "confirmed": 36,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:14 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-barley-tea-bag": {
@@ -3190,7 +3190,7 @@
       "fetched": 22,
       "confirmed": 10,
       "excluded_outlier": 1,
-      "updated": "2026-11-06 18:14 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-rooibos-tea-bag": {
@@ -3407,7 +3407,7 @@
       "fetched": 60,
       "confirmed": 40,
       "excluded_outlier": 1,
-      "updated": "2026-11-06 18:15 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-coffee-beans": {
@@ -3624,7 +3624,7 @@
       "fetched": 57,
       "confirmed": 40,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:16 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-rice-10kg": {
@@ -3842,7 +3842,7 @@
       "fetched": 55,
       "confirmed": 44,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:17 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-rice-30kg": {
@@ -4060,7 +4060,7 @@
       "fetched": 50,
       "confirmed": 31,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:17 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-pasta-dry": {
@@ -4278,7 +4278,7 @@
       "fetched": 16,
       "confirmed": 15,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:17 JST",
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-oatmeal": {
@@ -4418,7 +4418,7 @@
       "fetched": 11,
       "confirmed": 9,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:17 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-mixed-nuts": {
@@ -4636,7 +4636,7 @@
       "fetched": 53,
       "confirmed": 36,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:18 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-tuna-can": {
@@ -4789,7 +4789,7 @@
       "fetched": 10,
       "confirmed": 10,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:18 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-chicken-breast": {
@@ -4967,398 +4967,14 @@
       "fetched": 14,
       "confirmed": 12,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:18 JST",
-      "status": "pending"
-    },
-    "rank-diaper-tape-m": {
-      "slug": "rank-diaper-tape-m",
-      "id": "diaper-tape-m",
-      "group": "ベビー",
-      "keyword": "おむつ テープ Mサイズ",
-      "title": "おむつ（テープ・Mサイズ）の単価ランキング｜1個あたりの価格で比べる",
-      "basis": {
-        "base": "個",
-        "label": "1個あたり"
-      },
-      "notes": [
-        "1個は、おむつ1枚です。メーカーによって、サイズの目安となる体重や、肌ざわり・漏れにくさは違います。単価では合うかどうかは分かりません。",
-        "お試しセットや、複数パックのセットは、合計の枚数で計算しています。",
-        "送料が別の商品があります。表の送料表示を確認し、合計で比べてください。"
-      ],
-      "items": [
-        {
-          "name": "花王 メリーズ エアスルー テープ M52枚×4個入 紙おむつ | テープ おむつ 新生児 メリーズ おむつ Mサイズ メリーズテープ おむつテープ メリーズ テープタイプ おむつ テープ M おむつテープ Mサイズ",
-          "price": 6920,
-          "shop": "ベイシア楽天市場店",
-          "review_avg": 4.82,
-          "review_count": 55,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.qyx0v835.g00s0vmo.qyx0wa6f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4901301437716x4%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10126182%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beisia/cabinet/09476807/4901301437716.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 208.0,
-          "unit_price": 33.26923076923077,
-          "code": "beisia:10126182"
-        },
-        {
-          "name": "【4個セット】メリーズファストプレミアム テープ Mサイズ48枚×4 おむつ 花王",
-          "price": 7280,
-          "shop": "子育ての店 ベビー・キッズ",
-          "review_avg": 4.48,
-          "review_count": 48,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qe9yo.qyx0v99e.g00qe9yo.qyx0w0e3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmamababy%2F7195766%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmamababy%2Fi%2F10190454%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mamababy/cabinet/tenposupport06/12820999/imgrc0130809075.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 192.0,
-          "unit_price": 37.916666666666664,
-          "code": "mamababy:10190454"
-        },
-        {
-          "name": "3回吸収 【速配】 大人用紙おむつ ひまわり にっこりテープMサイズ 《マジックテープタイプ》ケース(合計100枚入[10枚×10袋]) | 大人用オムツ 紙おむつ 紙オムツ おむつ 大人 介護用おむつ 介護用紙おむつ テープ止めタイプ 介護用品",
-          "price": 8140,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.66,
-          "review_count": 830,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10004175%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10004175%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/himawari/g00030-case2021.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 100.0,
-          "unit_price": 81.4,
-          "code": "himawari-kaigo:10004175"
-        },
-        {
-          "name": "大人用紙おむつ/テープ止め/介護/アテントRケアスーパーフィットテープMサイズ/22枚×3袋/1ケース",
-          "price": 5682,
-          "shop": "MART-IN 楽天市場店",
-          "review_avg": 4.91,
-          "review_count": 23,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u679o.qyx0v132.g00u679o.qyx0wc6b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmart-in%2F4902011770094-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmart-in%2Fi%2F10019948%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mart-in/cabinet/sku-pro_01/4902011770094-003.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 66.0,
-          "unit_price": 86.0909090909091,
-          "code": "mart-in:10019948"
-        },
-        {
-          "name": "【速配】Mサイズ 大人用紙おむつ アテント 消臭効果付きテープ式M 背モレ横モレも防ぐ ケース(28枚×2袋） | 大人用オムツ 紙オムツ 紙おむつ大人用 介護用おむつ 介護用紙おむつ 失禁用品 介護用品 テープ止めタイプ テープタイプ 背モレ横モレ 大王製紙",
-          "price": 5720,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.84,
-          "review_count": 260,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10005517%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10005517%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/kami/g009560-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 56.0,
-          "unit_price": 102.14285714285714,
-          "code": "himawari-kaigo:10005517"
-        },
-        {
-          "name": "【速配】Mサイズ 大人用紙おむつ アテント 消臭効果付きテープ式M 背モレ横モレも防ぐ ケース(28枚×2袋）| 大人用紙おむつ 紙おむつ大人用 大人用オムツ 紙オムツ 介護用おむつ 介護用紙おむつ 失禁用品 介護用品 紙おむつ テープ テープタイプ 背モレ横モレ 大王製紙",
-          "price": 5720,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.84,
-          "review_count": 91,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10003532%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10003532%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/kami/g009560-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 56.0,
-          "unit_price": 102.14285714285714,
-          "code": "himawari-kaigo:10003532"
-        },
-        {
-          "name": "大人用紙おむつ ネピアテンダー テープタイプ Mサイズ ケース(合計72枚入[24枚×3袋]) | テープ止めタイプ 大人用オムツ 紙おむつ大人用 紙オムツ おむつ 大人 介護用おむつ 介護用紙おむつ 失禁用品 介護用品 王子ネピア",
-          "price": 7491,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.68,
-          "review_count": 160,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10000284%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10000284%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/nepia/g004110-case.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 72.0,
-          "unit_price": 104.04166666666667,
-          "code": "himawari-kaigo:10000284"
-        },
-        {
-          "name": "テープ止め アテント 背モレ・横モレも防ぐテープ式 Mサイズ 1パック30枚入り 目安吸収量約5回分 大王製紙 介護おむつ テープオムツ テープ式 高齢者 大人用紙おむつ 大人用おむつ 大人用オムツ",
-          "price": 3200,
-          "shop": "紙おむつ本舗",
-          "review_avg": 4.83,
-          "review_count": 277,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7u1o.qyx0v8e3.g00u7u1o.qyx0w203/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkamiomutsu-honpo%2Fat31%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkamiomutsu-honpo%2Fi%2F10000130%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kamiomutsu-honpo/cabinet/compass1783663889.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 30.0,
-          "unit_price": 106.66666666666667,
-          "code": "kamiomutsu-honpo:10000130"
-        },
-        {
-          "name": "【ポイント10倍】【障害者給付対応】エルモア スーパーいちばん 幅広簡単テープ止め Mサイズ 20枚 大人用紙おむつ 紙おむつ",
-          "price": 2156,
-          "shop": "紙おむつドットコム 楽天市場支店",
-          "review_avg": 4.71,
-          "review_count": 24,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q442o.qyx0vdde.g00q442o.qyx0wf1c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faisin-line%2F15106%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faisin-line%2Fi%2F10000345%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aisin-line/cabinet/202603_point10/15106.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 20.0,
-          "unit_price": 107.8,
-          "code": "aisin-line:10000345"
-        },
-        {
-          "name": "【速配】 サルバ 応援介護 あて楽テープ Mサイズ 男女共用テープタイプ 市販用大容量パック ケース(合計60枚入[30枚×2袋]) ｜ 大人用紙おむつ 白十字 紙おむつ 紙オムツ おむつ 大人 大人用オムツ 大人用 介護用おむつ 介護用紙おむつ 失禁用品 介護用品 ひまわり ｜",
-          "price": 6798,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.73,
-          "review_count": 112,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10006080%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10006080%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/00309601/g00671-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 60.0,
-          "unit_price": 113.3,
-          "code": "himawari-kaigo:10006080"
-        },
-        {
-          "name": "ライフリー 横モレあんしんテープ止め Mサイズ 20枚×4袋 [ 公式ショップ ] ユニ・チャーム公式 大人用 おむつ 送料無料 ケース販売 ユニチャーム",
-          "price": 9680,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.48,
-          "review_count": 31,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F330%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10000210%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/tape/100275.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 80.0,
-          "unit_price": 121.0,
-          "code": "unicharm:10000210"
-        },
-        {
-          "name": "【メーカー直営】リフレ 簡単テープ止めタイプ横モレ防止 Mサイズ 30枚 4回吸収 リブドゥ | 大人用紙おむつ 介護おむつ テープおむつ テープ式 テープタイプ 背モレ 横モレ 寝て過ごす 在宅介護 病院 業務用 介護用品",
-          "price": 3967,
-          "shop": "大人用紙おむつのまごころサポート",
-          "review_avg": 4.74,
-          "review_count": 65,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00prtqo.qyx0v29f.g00prtqo.qyx0wf8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fharvest%2F640514%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fharvest%2Fi%2F10000050%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/harvest/cabinet/tape/kantantape/imgrc0079698569.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 30.0,
-          "unit_price": 132.23333333333332,
-          "code": "harvest:10000050"
-        },
-        {
-          "name": "大人用紙おむつ 白十字 P.Uサルバ安心Wフィット長時間 《テープ止めタイプ》 Mサイズ ケース(合計60枚入[30枚×2袋]) | 大人用オムツ 紙パンツ 紙おむつ大人用 紙オムツ 介護用おむつ 介護用紙おむつ 失禁用品 介護用品 テープタイプ",
-          "price": 8074,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.8,
-          "review_count": 149,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10000266%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10000266%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/00309601/g001901-case2021-5.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 60.0,
-          "unit_price": 134.56666666666666,
-          "code": "himawari-kaigo:10000266"
-        },
-        {
-          "name": "テープ止め アテント Rケアスーパーフィットテープ Mサイズ 1パック22枚入り 目安吸収量約4回分 大王製紙 介護オムツ テープ式 おむつ テープオムツ テープ式紙おむつ 介護用おむつ 大人用紙おむつ",
-          "price": 3050,
-          "shop": "紙おむつ本舗",
-          "review_avg": 4.81,
-          "review_count": 73,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7u1o.qyx0v8e3.g00u7u1o.qyx0w203/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkamiomutsu-honpo%2Fat01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkamiomutsu-honpo%2Fi%2F10000006%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kamiomutsu-honpo/cabinet/compass1783663138.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 22.0,
-          "unit_price": 138.63636363636363,
-          "code": "kamiomutsu-honpo:10000006"
-        }
-      ],
-      "fetched": 24,
-      "confirmed": 14,
-      "excluded_outlier": 0,
-      "updated": "2026-11-06 18:06 JST",
-      "status": "pending"
-    },
-    "rank-diaper-tape-s": {
-      "slug": "rank-diaper-tape-s",
-      "id": "diaper-tape-s",
-      "group": "ベビー",
-      "keyword": "おむつ テープ Sサイズ",
-      "title": "おむつ（テープ・Sサイズ）の単価ランキング｜1個あたりの価格で比べる",
-      "basis": {
-        "base": "個",
-        "label": "1個あたり"
-      },
-      "notes": [
-        "1個は、おむつ1枚です。メーカーによって、サイズの目安となる体重や、肌ざわり・漏れにくさは違います。",
-        "複数パックのセットは、合計の枚数で計算しています。",
-        "送料が別の商品があります。表の送料表示を確認し、合計で比べてください。"
-      ],
-      "items": [
-        {
-          "name": "moony テープ Sサイズ 生後5〜9ヶ月頃 【ムーニー マシュマロ肌ごこちモレ安心 S 70枚×4袋 】4kg〜8kg テープ型ベビー用紙オムツ 低刺激 フィットギャザー 弱酸性シート ユニ・チャーム公式ショップ マシュマロフィット設計 テープタイプ 安心吸収力 ゆるうんちストッパー",
-          "price": 7084,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.58,
-          "review_count": 55,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F100642%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10001856%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/baby/moony/100642.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 280.0,
-          "unit_price": 25.3,
-          "code": "unicharm:10001856"
-        },
-        {
-          "name": "花王 メリーズ エアスルー テープ Sサイズ 62枚×4個入(体重4〜8kg) 紙おむつ | 赤ちゃん 紙おむつ テープ メリーズ Sサイズ エアスルー 大容量 まとめ買い 出産準備 新生児 肌に優しい 日本製",
-          "price": 6920,
-          "shop": "ベイシア楽天市場店",
-          "review_avg": 4.84,
-          "review_count": 45,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00s0vmo.qyx0v835.g00s0vmo.qyx0wa6f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeisia%2F4901301437709x4%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbeisia%2Fi%2F10126181%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beisia/cabinet/09476807/4901301437709.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 248.0,
-          "unit_price": 27.903225806451612,
-          "code": "beisia:10126181"
-        },
-        {
-          "name": "＼サンプルCP開催中／ 4個セット おむつ パンパース テープ 新生児 S M L 送料無料 新生児用 Sサイズ Mサイズ Lサイズ さらさらケア UJ オムツ 紙おむつ 紙オムツ Pampers おしめ テープタイプ まとめ買い 幼稚園 保育園 ベビー 赤ちゃん 【M,Lのみサンプル付】",
-          "price": 8980,
-          "shop": "子育ての店 ベビー・キッズ",
-          "review_avg": 4.7,
-          "review_count": 71,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qe9yo.qyx0v99e.g00qe9yo.qyx0w0e3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmamababy%2F7252901%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmamababy%2Fi%2F10193037%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mamababy/cabinet/09483188/12470037/imgrc0140407660.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 296.0,
-          "unit_price": 30.33783783783784,
-          "code": "mamababy:10193037"
-        },
-        {
-          "name": "《サイズが選べる！》【 新生児・S・ M 】パンパース テープ 【出産祝い】パンパーステープSサイズ　132枚 Mサイズ 132枚 新生児 144枚【コットンケア　オムツ　おむつ　 出産祝い】(Panpers Ssize)【コストコ通販】テープ【選択】ヤマト★送料無料★",
-          "price": 5500,
-          "shop": "グッドマム",
-          "review_avg": 4.56,
-          "review_count": 32,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qx6io.qyx0vcf5.g00qx6io.qyx0w83f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgood-mam88%2Fck00002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgood-mam88%2Fi%2F10000150%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/good-mam88/cabinet/187811354738718.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 132.0,
-          "unit_price": 41.666666666666664,
-          "code": "good-mam88:10000150"
-        },
-        {
-          "name": "【ポイント10倍 11/8 23：59まで】 パンパース テープ 新生児サイズ 144枚 Sサイズ 132枚 Mサイズ 116枚 オムツ おむつ 紙おむつ 高級 コットンケア 出産祝い ギフト はじめての肌へのいちばん コストコ 箱買い テープタイプ ラッピング 即納",
-          "price": 5550,
-          "shop": "Aguichant",
-          "review_avg": 4.83,
-          "review_count": 23,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj4ho.qyx0va96.g00uj4ho.qyx0wb81/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faguichant-shop%2Fcsc-018%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faguichant-shop%2Fi%2F10000058%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aguichant-shop/cabinet/10892317/imgrc0116430911.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 132.0,
-          "unit_price": 42.04545454545455,
-          "code": "aguichant-shop:10000058"
-        },
-        {
-          "name": "【※エントリーでP5倍】 ☆【2個セット(1ケース)★送料無料】大王製紙 アテント 消臭効果付テープ式 背モレ・横モレも防ぐ Sサイズ 大容量(34枚入) 4回吸収 2パック［大人用紙おむつ］［介護　紙おむつ］［大人用おむつ］［テープ式］［ 消臭効果］",
-          "price": 5480,
-          "shop": "アカカベ公式オンラインストア",
-          "review_avg": 4.78,
-          "review_count": 27,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00t7l9o.qyx0va0a.g00t7l9o.qyx0w65a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fakakabeshop%2F4902011103250-2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fakakabeshop%2Fi%2F10017929%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/akakabeshop/cabinet/tool108/20261102_164943/000/4902011103250-2.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 68.0,
-          "unit_price": 80.58823529411765,
-          "code": "akakabeshop:10017929"
-        },
-        {
-          "name": "【速配】 Sサイズ 大人用紙おむつ アテント 消臭効果付テープ式 背モレ横モレも防ぐ 大容量ケース(34枚×2袋) | 紙おむつ大人用 大人用オムツ 紙オムツ 大人 介護用おむつ 介護用紙おむつ 失禁用品 介護用品 紙おむつ テープ テープタイプ 大王製紙",
-          "price": 6105,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.79,
-          "review_count": 24,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10004226%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10004226%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/kami/g070150-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 68.0,
-          "unit_price": 89.77941176470588,
-          "code": "himawari-kaigo:10004226"
-        },
-        {
-          "name": "大人用紙おむつ ネピアテンダー テープタイプ Sサイズ ケース(合計96枚入[32枚×3袋]) テープ止めタイプ 大人用オムツ 紙おむつ大人用 大人用 紙オムツ 介護用おむつ 介護用紙おむつ 失禁用品",
-          "price": 8976,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.87,
-          "review_count": 23,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10000283%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10000283%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/nepia/g004400-case.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 96.0,
-          "unit_price": 93.5,
-          "code": "himawari-kaigo:10000283"
-        },
-        {
-          "name": "テープ止め アテント 背モレ・横モレも防ぐテープ式 Sサイズ 1パック34枚入り 目安吸収量約4回分 大王製紙 介護おむつ テープオムツ 高齢者 オムツパンツ 大人用紙おむつ 大人用おむつ 大人用オムツ",
-          "price": 3410,
-          "shop": "紙おむつ本舗",
-          "review_avg": 4.82,
-          "review_count": 22,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7u1o.qyx0v8e3.g00u7u1o.qyx0w203/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkamiomutsu-honpo%2Fat33%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkamiomutsu-honpo%2Fi%2F10000132%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kamiomutsu-honpo/cabinet/compass1783663952.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 34.0,
-          "unit_price": 100.29411764705883,
-          "code": "kamiomutsu-honpo:10000132"
-        },
-        {
-          "name": "たっぷり21枚！ おむつ お試しセット Sサイズ テープ 7種類×3枚 出産祝い ベビー 赤ちゃん 子育て ベビーグッズ ギフト オムツ パンパース 肌へのいちばん メリーズ ファーストプレミアム ムーニー ナチュラルムーニー グーン 敏感肌設計 試供品 試着 子供 サイズアップ",
-          "price": 2200,
-          "shop": "Aleppo Souq",
-          "review_avg": 4.76,
-          "review_count": 55,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r310o.qyx0v309.g00r310o.qyx0w86d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faleppo-souq%2F10001027%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faleppo-souq%2Fi%2F10001027%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aleppo-souq/cabinet/03029818/07920183/26067otamesi21_top.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 21.0,
-          "unit_price": 104.76190476190476,
-          "code": "aleppo-souq:10001027"
-        },
-        {
-          "name": "【メーカー直営】リフレ 簡単テープ止めタイプ横モレ防止 Sサイズ 34枚 3回吸収 リブドゥ | 大人用紙おむつ 介護おむつ テープおむつ テープ式 テープタイプ 背モレ 横モレ 寝て過ごす 在宅介護 病院 業務用 介護用品",
-          "price": 3967,
-          "shop": "大人用紙おむつのまごころサポート",
-          "review_avg": 4.78,
-          "review_count": 40,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00prtqo.qyx0v29f.g00prtqo.qyx0wf8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fharvest%2F640509%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fharvest%2Fi%2F10000049%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/harvest/cabinet/tape/kantantape/imgrc0079698572.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 34.0,
-          "unit_price": 116.67647058823529,
-          "code": "harvest:10000049"
-        },
-        {
-          "name": "出産祝い おむつ ギフトバッグ 21枚 保冷バッグ エコバッグ オムツ 手提げ おむつ お試しセット Sサイズ テープ ベビー ギフト プレゼント 赤ちゃん お買い物 パンパース メリーズ プレミアム ムーニー ナチュラルムーニー グーン バスケット 保温バッグ 便利 試供品 試着",
-          "price": 3300,
-          "shop": "Aleppo Souq",
-          "review_avg": 4.73,
-          "review_count": 48,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r310o.qyx0v309.g00r310o.qyx0w86d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faleppo-souq%2F10000976%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faleppo-souq%2Fi%2F10000976%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aleppo-souq/cabinet/03029818/07920183/2207omutugiftbag.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 21.0,
-          "unit_price": 157.14285714285714,
-          "code": "aleppo-souq:10000976"
-        }
-      ],
-      "fetched": 16,
-      "confirmed": 12,
-      "excluded_outlier": 0,
-      "updated": "2026-11-06 18:06 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-diaper-pants-m": {
       "slug": "rank-diaper-pants-m",
       "id": "diaper-pants-m",
       "group": "ベビー",
-      "keyword": "おむつ パンツ Mサイズ",
+      "keyword": "ベビー おむつ パンツ Mサイズ",
       "title": "おむつ（パンツ・Mサイズ）の単価ランキング｜1個あたりの価格で比べる",
       "basis": {
         "base": "個",
@@ -5436,17 +5052,17 @@
           "code": "kyarahouse:10133966"
         }
       ],
-      "fetched": 12,
+      "fetched": 10,
       "confirmed": 5,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:18 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-diaper-pants-l": {
       "slug": "rank-diaper-pants-l",
       "id": "diaper-pants-l",
       "group": "ベビー",
-      "keyword": "おむつ パンツ Lサイズ",
+      "keyword": "ベビー おむつ パンツ Lサイズ",
       "title": "おむつ（パンツ・Lサイズ）の単価ランキング｜1個あたりの価格で比べる",
       "basis": {
         "base": "個",
@@ -5472,6 +5088,45 @@
           "code": "unicharm:10002322"
         },
         {
+          "name": "【4個セット】ユニチャーム マミーポコパンツ ドラえもん 紙おむつ 9〜15kg おおきめ Lサイズ 42枚入 男女共用 XP1120",
+          "price": 5380,
+          "shop": "XPRICE楽天市場店",
+          "review_avg": 4.77,
+          "review_count": 22,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qn68o.qyx0v372.g00qn68o.qyx0w907/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000380334%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fa-price%2Fi%2F11129055%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/a-price/cabinet/pics/1056/2980000380334.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 168.0,
+          "unit_price": 32.023809523809526,
+          "code": "a-price:11129055"
+        },
+        {
+          "name": "【3個セット】オムツ おむつ マミーポコ パンツ Lサイズ おむつ ドラえもん 枚数 M:74枚×3 L:62枚×3 ビッグ:54枚×3 ビッグより大きい:36枚×3 送料無料 オムツ 紙おむつ 紙オムツ ベビー かわいい パンツ式 MamyPoko ビックサイズ",
+          "price": 5999,
+          "shop": "子育ての店 ベビー・キッズ",
+          "review_avg": 4.73,
+          "review_count": 30,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qe9yo.qyx0v99e.g00qe9yo.qyx0w0e3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmamababy%2F7159327%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmamababy%2Fi%2F10176129%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mamababy/cabinet/09483188/12470037/7291314.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 186.0,
+          "unit_price": 32.25268817204301,
+          "code": "mamababy:10176129"
+        },
+        {
+          "name": "【3個セット】 おむつ メリーズ エアスルー パンツ 紙おむつ オムツ 肌さら まとめ買い 通気性 しめつけない はかせやすい Sサイズ62枚 Mサイズ52枚 Lサイズ44枚 ビッグサイズ38枚 ビッグより大きい24枚 花王 KAO Merries【D】",
+          "price": 5874,
+          "shop": "子育ての店 ベビー・キッズ",
+          "review_avg": 4.13,
+          "review_count": 38,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qe9yo.qyx0v99e.g00qe9yo.qyx0w0e3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmamababy%2F7256900%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmamababy%2Fi%2F10193494%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mamababy/cabinet/tenposupport06/12820999/7256889.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 132.0,
+          "unit_price": 44.5,
+          "code": "mamababy:10193494"
+        },
+        {
           "name": "【オヤスミマン 男の子 Lサイズ 夜用オムツ 30枚×4袋】9kg〜14kg 8回分吸収 パンツ型ベビー用紙オムツ ユニ・チャーム公式ショップ ムーニー オヤスミマン 男の子用 Lサイズ 超強力吸収 朝までモレ0 360°モレ徹底ガード構造 ぐっすり夢ごこちデザイン ポリエチレン",
           "price": 6908,
           "shop": "ユニ・チャームダイレクトショップ",
@@ -5485,179 +5140,23 @@
           "code": "unicharm:10001433"
         },
         {
-          "name": "【速配】大人用紙おむつ パンツ サルバ うす型やわ楽パンツ Lサイズ(腰周り：80〜115cm) ケース(合計88枚入[22枚×4袋]) | 大人用紙オムツ パンツタイプ 紙オムツ 大人用おむつ 紙オムツ 大人 紙パンツ 紙おむつ大人用 失禁パンツ 介護用おむつ 介護用オムツ 介護用パンツ",
-          "price": 6336,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.74,
-          "review_count": 282,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10005819%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10005819%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/00309601/g00642-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 88.0,
-          "unit_price": 72.0,
-          "code": "himawari-kaigo:10005819"
-        },
-        {
-          "name": "ライフリー パンツタイプ 下着の感覚超うす型パンツ Lサイズ 2回吸収 32枚入 【ライフリー】 介護用おむつ",
-          "price": 2618,
-          "shop": "楽天24エクスプレス",
-          "review_avg": 4.36,
-          "review_count": 36,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.qyx0vdc7.g00ugyno.qyx0w533/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4903111948826%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutensokuhaimart%2Fi%2F10018806%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/826/4903111948826.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 32.0,
-          "unit_price": 81.8125,
-          "code": "rakutensokuhaimart:10018806"
-        },
-        {
-          "name": "【ケース】ライフリー 超うす型下着感覚パンツ 2回 L 22枚×3袋 [ 公式ショップ ] ユニ・チャーム公式 パンツタイプ 尿もれ 軽失禁 歩けるおむつ 介護 下着感覚 まとめ買い ユニチャーム【公式ショップ】",
-          "price": 6105,
+          "name": "【オヤスミマン 女の子 Lサイズ 夜用オムツ 30枚】9kg〜14kg 8回分吸収 パンツ型ベビー用紙オムツ ユニ・チャーム公式ショップ ムーニー 超強力吸収 朝までモレ0 オヤスミマン 女の子用 Lサイズ 360°モレ徹底ガード構造 ぐっすり夢ごこち おしっこ8回分 ポリエチレン",
+          "price": 1760,
           "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.72,
-          "review_count": 36,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F359%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10000780%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/100177.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 66.0,
-          "unit_price": 92.5,
-          "code": "unicharm:10000780"
-        },
-        {
-          "name": "大人用紙おむつ ネピアテンダー あんしんフィットパンツ Lサイズ ケース(合計80枚入[20枚×4袋]) | 大人用紙おむつ 介護用おむつ パンツ型おむつ 大人用おむつ 尿漏れパンツ 失禁パンツ 介護用オムツ 介護パンツ 介護用パンツ 大人用 紙パンツ 失禁用品",
-          "price": 7436,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.56,
-          "review_count": 34,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10000281%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10000281%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/nepia/g004280-case.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 80.0,
-          "unit_price": 92.95,
-          "code": "himawari-kaigo:10000281"
-        },
-        {
-          "name": "【速配】 大人用紙おむつ パンツタイプ ライフリー うす型軽快パンツ Lサイズ 市販用 ケース(20枚×4袋入）| 紙パンツ うす型 失禁用品 大人用紙オムツ 紙おむつ 大人 紙おむつ大人用 介護用品 ユニ・チャーム",
-          "price": 7480,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.76,
-          "review_count": 29,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10002553%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10002553%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/04362480/g02112-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 80.0,
-          "unit_price": 93.5,
-          "code": "himawari-kaigo:10002553"
-        },
-        {
-          "name": "まとめ買い DFree リハビリ うす型パンツ Lサイズ 男女共用 20枚×4袋 | リハビリパンツ 大人用 介護用 紙パンツ 介護パンツ 大人用紙おむつ 大人用おむつ 紙オムツ 大人用紙オムツ 大人用オムツ オムツ おむつ 介護用おむつ 介護 大人おむつ 介護用品",
-          "price": 7851,
-          "shop": "DFree公式ショップ",
-          "review_avg": 4.59,
-          "review_count": 187,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u1sho.qyx0v97a.g00u1sho.qyx0wd10/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdfree%2Ftwj-sp300l-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdfree%2Fi%2F10000012%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/dfree/cabinet/08419397/pants_l4_01.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 80.0,
-          "unit_price": 98.1375,
-          "code": "dfree:10000012"
-        },
-        {
-          "name": "ライフリー パンツタイプ うす型軽快パンツ Lサイズ 2回吸収 大人用おむつ(30枚入)【xe8】【ライフリー　中度アウター】",
-          "price": 2970,
-          "shop": "楽天24",
-          "review_avg": 4.44,
-          "review_count": 61,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.qyx0v1ee.g00r136o.qyx0w443/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fe367267h%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10244005%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/287/4903111541287.jpg?_ex=128x128",
+          "review_avg": 4.91,
+          "review_count": 22,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F831%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10000785%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/baby/oyasumiman/100008.jpg?_ex=128x128",
           "postage": "別",
           "total": 30.0,
-          "unit_price": 99.0,
-          "code": "rakuten24:10244005"
-        },
-        {
-          "name": "ライフリー うす型軽快パンツ L 20枚 4袋 ユニ・チャーム公式 大人用紙おむつ 介護おむつ パンツ 薄型 2回吸収 300ml 下着気分 スルッとはける Ag+消臭 医療費控除対象 20枚×4 1箱 ケース販売【公式ショップ】",
-          "price": 8140,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.66,
-          "review_count": 114,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2Fa310%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10000219%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/usukei/100188.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 80.0,
-          "unit_price": 101.75,
-          "code": "unicharm:10000219"
-        },
-        {
-          "name": "【メーカー直営】リフレ はくパンツ レギュラー Lサイズ 18枚 4回吸収 リブドゥ | 大人用紙おむつ 介護用紙おむつ リハビリパンツ 紙パンツ パンツタイプ うす型パンツ 尿漏れパンツ 失禁パンツ 介護パンツ リハビリオムツ 介護用品",
-          "price": 2114,
-          "shop": "大人用紙おむつのまごころサポート",
-          "review_avg": 4.61,
-          "review_count": 38,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00prtqo.qyx0v29f.g00prtqo.qyx0wf8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fharvest%2F585199%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fharvest%2Fi%2F10000013%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/harvest/cabinet/pants/regular/imgrc0109735539.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 18.0,
-          "unit_price": 117.44444444444444,
-          "code": "harvest:10000013"
-        },
-        {
-          "name": "【メーカー直営】リフレ はくパンツ スリム Lサイズ 18枚 2回吸収 リブドゥ | 大人用紙おむつ 介護用紙おむつ リハビリパンツ 紙パンツ パンツタイプ うす型パンツ 尿漏れパンツ 失禁パンツ 介護パンツ リハビリオムツ 業務用 介護用品",
-          "price": 2131,
-          "shop": "大人用紙おむつのまごころサポート",
-          "review_avg": 4.76,
-          "review_count": 25,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00prtqo.qyx0v29f.g00prtqo.qyx0wf8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fharvest%2F584507%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fharvest%2Fi%2F10000010%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/harvest/cabinet/pants/slim/imgrc0108261554.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 18.0,
-          "unit_price": 118.38888888888889,
-          "code": "harvest:10000010"
-        },
-        {
-          "name": "ライフリー 長時間あんしんリハビリパンツ L 22枚 2袋 ユニ・チャーム公式 大人用紙おむつ 介護おむつ パンツタイプ 5回吸収 750ml やわらかストレッチ すきまモレ0 背モレブロック Ag+消臭 22枚×2 まとめ買い【公式ショップ】",
-          "price": 5544,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.78,
-          "review_count": 27,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F386%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10001155%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/100225.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 44.0,
-          "unit_price": 126.0,
-          "code": "unicharm:10001155"
-        },
-        {
-          "name": "ライフリー パンツタイプ リハビリパンツ Lサイズ 5回吸収 大人用おむつ(22枚入)【ライフリー　中度アウター】",
-          "price": 2970,
-          "shop": "楽天24 ヘルスケア館",
-          "review_avg": 3.59,
-          "review_count": 27,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pl1po.qyx0vdd6.g00pl1po.qyx0wa71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkenkocom%2Fe367271h%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkenkocom%2Fi%2F11393678%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kenkocom/cabinet/461/4903111541461.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 22.0,
-          "unit_price": 135.0,
-          "code": "kenkocom:11393678"
-        },
-        {
-          "name": "ライフリー 尿とりパッドなしでも長時間安心パンツ L 12枚 4袋 ユニ・チャーム公式 大人用紙おむつ 介護おむつ パンツタイプ 7回吸収 1000ml 夜用 背モレ防止 全面通気 消臭 尿漏れ 12枚×4 ケース販売 まとめ買い【公式ショップ】",
-          "price": 8800,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.86,
-          "review_count": 35,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2Fa338%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10000456%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/100233.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 48.0,
-          "unit_price": 183.33333333333334,
-          "code": "unicharm:10000456"
+          "unit_price": 58.666666666666664,
+          "code": "unicharm:10000785"
         }
       ],
-      "fetched": 56,
-      "confirmed": 16,
+      "fetched": 14,
+      "confirmed": 6,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:07 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-detergent-laundry": {
@@ -5849,7 +5348,7 @@
       "fetched": 39,
       "confirmed": 13,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:19 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-detergent-dish": {
@@ -5937,7 +5436,7 @@
       "fetched": 60,
       "confirmed": 5,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:19 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-trash-bag-45l": {
@@ -6129,7 +5628,7 @@
       "fetched": 16,
       "confirmed": 13,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:20 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-battery-aa": {
@@ -6307,7 +5806,7 @@
       "fetched": 28,
       "confirmed": 12,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:20 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-mask-nonwoven": {
@@ -6525,7 +6024,7 @@
       "fetched": 22,
       "confirmed": 20,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:20 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-dog-food": {
@@ -6743,7 +6242,7 @@
       "fetched": 57,
       "confirmed": 53,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:20 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-cat-food": {
@@ -6961,7 +6460,7 @@
       "fetched": 60,
       "confirmed": 58,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:21 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     },
     "rank-black-tea-bag": {
@@ -6980,19 +6479,6 @@
       ],
       "items": [
         {
-          "name": "オーガニック ルイボスティー ハイグレード ティーバッグ 100包 【送料無料】 植物由来 ティーバッグ 有機JAS なごみ メガ盛り ノンカフェイン カフェインレス 妊活 お茶 ハーブティー ルイボス茶 紅茶 温活 マタニティ 100個入り ランキング ギフト",
-          "price": 1404,
-          "shop": "アロマ ルイボスnaturalshopなごみ",
-          "review_avg": 4.77,
-          "review_count": 1235,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qlomo.qyx0vf25.g00qlomo.qyx0wffd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagomisabo%2F100p%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnagomisabo%2Fi%2F10000199%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nagomisabo/cabinet/img_rbs/100p.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 100.0,
-          "unit_price": 14.04,
-          "code": "nagomisabo:10000199"
-        },
-        {
           "name": "セイロンティーダージリンブレンド ティーバッグ 100個入 紅茶 ダージリンティー セイロンティー 水出し アイスティー ブレンド 大容量 大袋 たっぷり お得 ティーパック 送料無料 ティーライフ",
           "price": 1590,
           "shop": "TEALIFE+ ルイボス専門店",
@@ -7004,58 +6490,6 @@
           "total": 100.0,
           "unit_price": 15.9,
           "code": "tealife-cafe:10000022"
-        },
-        {
-          "name": "【ポイント10倍】有機ルイボスティー（2g×80包）水出しOK ノンカフェイン 80包入 ルイボスティー オーガニック ルイボス茶　ティーバッグタイプ オーガランド パック ダイエット 健康 酵素 ポリフェノール 送料無料 ポイント消化 送料無料",
-          "price": 1280,
-          "shop": "サプリ専門店 オーガランド",
-          "review_avg": 4.71,
-          "review_count": 2054,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pzamo.qyx0vad7.g00pzamo.qyx0w64b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foga%2Frbt_001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Foga%2Fi%2F10266418%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/oga/cabinet/item_img/shohin/241126_rbt_1_01.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 80.0,
-          "unit_price": 16.0,
-          "code": "oga:10266418"
-        },
-        {
-          "name": "オーガニック ルイボスティー ハイグレード ティーバッグ 60包 【送料無料】 有機JAS なごみ メガ盛り ノンカフェイン カフェインレス 妊活 お茶 ハーブティー ルイボス茶 紅茶 温活 マタニティ 60個入り ランキング ギフト",
-          "price": 1080,
-          "shop": "アロマ ルイボスnaturalshopなごみ",
-          "review_avg": 4.65,
-          "review_count": 2869,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qlomo.qyx0vf25.g00qlomo.qyx0wffd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagomisabo%2F60p%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnagomisabo%2Fi%2F10000287%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nagomisabo/cabinet/img_rbs/60p.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 60.0,
-          "unit_price": 18.0,
-          "code": "nagomisabo:10000287"
-        },
-        {
-          "name": "【10%OFF】 紅茶 ティーバッグ 福袋 選べる90包 jaftea セイロンファミリー フレーバーティー ティーパック 送料無料 個包装 アールグレイ ベリー ピーチ ノンカフェイン ルイボスティー カモミール ペパーミント ギフト かわいい おしゃれ プレゼント",
-          "price": 1750,
-          "shop": "内祝いのギフトランドショーワ",
-          "review_avg": 4.74,
-          "review_count": 341,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tc14o.qyx0vdfa.g00tc14o.qyx0w93c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgiftland-showa%2F48236-01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgiftland-showa%2Fi%2F10000073%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/giftland-showa/cabinet/bargain2/07150349/48236-01_001.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 90.0,
-          "unit_price": 19.444444444444443,
-          "code": "giftland-showa:10000073"
-        },
-        {
-          "name": "黒豆ルイボスティーこだわりブレンド 100包入 1〜10袋 ノンカフェイン カフェインレス ハーブティー ミネラル 黒豆茶 お茶 ルイボス茶 紅茶 水出し 冷茶 ティーバッグ ティーパック お得 健康茶 大容量 送料無料 ティーライフ",
-          "price": 1980,
-          "shop": "TEALIFE+ ルイボス専門店",
-          "review_avg": 4.8,
-          "review_count": 871,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rtnpo.qyx0v45b.g00rtnpo.qyx0wda6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftealife-cafe%2F96291%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftealife-cafe%2Fi%2F10004934%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tealife-cafe/cabinet/rooibostea/k-rooibos/97035_thumb.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 100.0,
-          "unit_price": 19.8,
-          "code": "tealife-cafe:10004934"
         },
         {
           "name": "【楽天1位】 はちみつ紅茶 ハチミツティー 2箱 50包 25袋入り2箱セット はちみつ紅茶 JB Honey`s ハニー 蜂蜜 紅茶 ティーバッグ セイロンファミリー スリランカ リラックス カフェ 蜂蜜紅茶 ノンカフェイン メール便 送料無料",
@@ -7136,19 +6570,6 @@
           "code": "suisya:10001458"
         },
         {
-          "name": "はちみつ紅茶 30袋 1000円ポッキリ 送料無料 紅茶 ティーバッグ 濃厚 極上 JB ハチミツ紅茶 ティーパック ノンカフェイン ルイボスティー カモミール ミント かわいい セイロンファミリー 蜂蜜紅茶 お試し 千円ぽっきり",
-          "price": 1000,
-          "shop": "内祝いのギフトランドショーワ",
-          "review_avg": 4.47,
-          "review_count": 240,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tc14o.qyx0vdfa.g00tc14o.qyx0w93c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgiftland-showa%2F48890-01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgiftland-showa%2Fi%2F10000430%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/giftland-showa/cabinet/food/12695868/48890-01_01_2.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 30.0,
-          "unit_price": 33.333333333333336,
-          "code": "giftland-showa:10000430"
-        },
-        {
           "name": "【期間限定特価+はちみつチャイ付】【送料無料】ティーアース はちみつ紅茶 50g(2g×25袋)(5個組)ティーバッグ 個包装タイプ スリランカ産セイロン茶 ポーランド産はちみつ使用 蜂蜜 ハチミツ お茶 ハニーティー TEARTH",
           "price": 4698,
           "shop": "プリセプト通販事業部",
@@ -7173,12 +6594,90 @@
           "total": 25.0,
           "unit_price": 43.2,
           "code": "nenrin:10000745"
+        },
+        {
+          "name": "はちみつ紅茶 個包装2gx25包x2箱 蜂蜜紅茶 紅茶 ギフト プレゼント 手土産 にも最適。ティーバッグ 上品な蜂蜜の甘みがやみつきに。TEARTH（ティーアース）は高級茶葉ブランドです。",
+          "price": 2640,
+          "shop": "毎日の暮らしにHappyを トリセツ",
+          "review_avg": 4.65,
+          "review_count": 323,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00txmso.qyx0v81a.g00txmso.qyx0w13f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftorisetsu%2Fte-hachi02%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftorisetsu%2Fi%2F10000003%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/torisetsu/cabinet/flick-1th/n_te-hachi02_sm.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 50.0,
+          "unit_price": 52.8,
+          "code": "torisetsu:10000003"
+        },
+        {
+          "name": "ホットティーに！GRANJA SanFrancisco『はちみつ紅茶（20袋入）』紅茶 ティーバッグ はちみつ ハチミツ 蜂蜜 アイスティー ホットティー お土産 手土産 ギフト スペイン直輸入 ご褒美 リラックス プレゼント 内祝 輸入食品 個包装 スペイン直輸入",
+          "price": 1080,
+          "shop": "グランジャポン 楽天市場店",
+          "review_avg": 4.57,
+          "review_count": 383,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00ruslo.qyx0v143.g00ruslo.qyx0wae5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgranjapon%2Fte_01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgranjapon%2Fi%2F10000001%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/granjapon/cabinet/honeytea/tea_tx1.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 20.0,
+          "unit_price": 54.0,
+          "code": "granjapon:10000001"
+        },
+        {
+          "name": "はちみつ紅茶 個包装 2g x 12包 x 2箱 蜂蜜紅茶 紅茶 ギフト プレゼント 手土産 にも最適。ティーバッグ 上品な蜂蜜の甘み。TEARTH（ティーアース）は高級茶葉ブランドです。メール便なので不在でも大丈夫！",
+          "price": 1320,
+          "shop": "毎日の暮らしにHappyを トリセツ",
+          "review_avg": 4.65,
+          "review_count": 228,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00txmso.qyx0v81a.g00txmso.qyx0w13f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftorisetsu%2Fte-hachi12-02%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftorisetsu%2Fi%2F10000012%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/torisetsu/cabinet/flick-1th/n_te-hachi12-02_sm.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 24.0,
+          "unit_price": 55.0,
+          "code": "torisetsu:10000012"
+        },
+        {
+          "name": "【1000円ポッキリ】【今話題の国内産！】話題の和紅茶セット 3種のフルーツ和紅茶ティーバッグ 紅茶 和紅茶 ティーバッグ 小分け おしゃれ かわいい プレゼント ギフト 贈り物 誕生日 美味しい 詰め合わせ 贈答 りんご 桃 ぶどう",
+          "price": 1000,
+          "shop": "お茶・抹茶の宇治田原製茶場",
+          "review_avg": 4.59,
+          "review_count": 321,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00ritno.qyx0v793.g00ritno.qyx0w4c4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fujitawara-seichajyo%2F27275%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fujitawara-seichajyo%2Fi%2F10000221%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ujitawara-seichajyo/cabinet/shohin01/07801602/imgrc0123588073.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 18.0,
+          "unit_price": 55.55555555555556,
+          "code": "ujitawara-seichajyo:10000221"
+        },
+        {
+          "name": "デカフェ 紅茶 ノンカフェイン ハーブティー お試しセット 24包(12種x各2包) ティーバッグ アソート アーマッドティー 送料無料 メール便 yp2",
+          "price": 1390,
+          "shop": "いきいきショップ【ねんりん】",
+          "review_avg": 4.61,
+          "review_count": 454,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00s2nmo.qyx0v33a.g00s2nmo.qyx0wfb6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnenrin%2Fdecafe-noncafe-tea-msm%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnenrin%2Fi%2F10000621%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nenrin/cabinet/item/tb001/decafe24p_1r.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 24.0,
+          "unit_price": 57.916666666666664,
+          "code": "nenrin:10000621"
+        },
+        {
+          "name": "チャイティー (3g×20p) 「ティーバッグ」【森のこかげ】 ハーブ スパイス 100% ブレンド (ショウガ入り) (国産 紅茶 ベースのチャイティ) ちゃいてぃ (残留農薬検査済み) 北海道 沖縄 離島も無料配送可 森のこかげ 健少T",
+          "price": 1296,
+          "shop": "e-picot いーぴこっと楽天市場店",
+          "review_avg": 4.49,
+          "review_count": 369,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q5kko.qyx0v2cd.g00q5kko.qyx0w9ab/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-picot%2F1513265%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-picot%2Fi%2F10000626%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/e-picot/cabinet/product/uresuji/chaithi0-tb.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 20.0,
+          "unit_price": 64.8,
+          "code": "e-picot:10000626"
         }
       ],
-      "fetched": 58,
-      "confirmed": 38,
-      "excluded_outlier": 4,
-      "updated": "2026-11-06 18:15 JST",
+      "fetched": 38,
+      "confirmed": 25,
+      "excluded_outlier": 1,
+      "updated": "2026-11-06 18:33 JST",
       "status": "pending"
     },
     "rank-flour-soft": {
@@ -7396,7 +6895,7 @@
       "fetched": 27,
       "confirmed": 21,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:18 JST",
+      "updated": "2026-11-06 18:34 JST",
       "status": "pending"
     }
   }
