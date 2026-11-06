@@ -113,6 +113,39 @@ def article_html(a):
                  path=f'{a["slug"]}.html', date=a["fetched_at"][:10])
 
 
+def _hist():
+    import json
+    p = core.DATA / "history.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
+def _svg_chart(rows, unit):
+    """日次の中央値と最小値を、依存なしのSVG折れ線で描く。"""
+    W, H, L, B, T = 600, 170, 46, 24, 12
+    xs = list(range(len(rows)))
+    vals = [v for r in rows for v in (r[1], r[2])]
+    lo, hi = min(vals), max(vals)
+    if hi - lo < 1e-9:
+        hi, lo = hi * 1.05 + 1, lo * 0.95
+    def X(i):
+        return L + (W - L - 8) * (i / max(len(rows) - 1, 1))
+    def Y(v):
+        return T + (H - T - B) * (1 - (v - lo) / (hi - lo))
+    def line(idx, color, dash=""):
+        pts = " ".join(f"{X(i):.1f},{Y(r[idx]):.1f}" for i, r in enumerate(rows))
+        return f'<polyline fill="none" stroke="{color}" stroke-width="2" {dash} points="{pts}"/>'
+    dash = 'stroke-dasharray="5 4"'
+    l2, l1 = line(2, "var(--acc)"), line(1, "var(--mut)", dash)
+    return (f'<svg viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="単価の推移（中央値と最小値）">'
+            f'<title>単価の推移（中央値と最小値）</title>'
+            f'<text x="2" y="{T + 8}" font-size="11" fill="currentColor">{hi:.0f}</text>'
+            f'<text x="2" y="{H - B}" font-size="11" fill="currentColor">{lo:.0f}</text>'
+            f'<text x="{L}" y="{H - 6}" font-size="11" fill="currentColor">{rows[0][0]}</text>'
+            f'<text x="{W - 8}" y="{H - 6}" font-size="11" text-anchor="end" fill="currentColor">{rows[-1][0]}</text>'
+            f'{line(2, "var(--acc)")}{line(1, "var(--mut)", "stroke-dasharray=\"5 4\"")}</svg>'
+            f'<p class="note">実線：掲載商品の単価の中央値 ／ 点線：最も低い単価（単位：円/{E(unit)}）</p>')
+
+
 def _rank_stats(r):
     import statistics
     its = r["items"]
@@ -167,6 +200,18 @@ def ranking_html(r, related=()):
              f"<li>必要な量を決めて、その量に近い商品から選ぶと、単価の差を活かせます。</li>"
              "<li>「送料別」の商品は、送料を足した合計で比べてください。</li>"
              "<li>商品名に期間限定価格やクーポンの記載がある場合は、期間外に価格が変わります。</li></ul>")
+    hrows = _hist().get(r["id"], [])
+    if len(hrows) >= 2:
+        d0, d1 = hrows[0], hrows[-1]
+        chg = (d1[2] / d0[2] - 1) * 100
+        trend = (f"<h2>単価の推移</h2><p>当サイトの記録（{d0[0]}〜{d1[0]}、{len(hrows)}日分）では、掲載商品の単価の中央値は"
+                 f"{d0[2]:.0f}円から{d1[2]:.0f}円へ、約{abs(chg):.1f}%{'上昇' if chg > 0.05 else ('下落' if chg < -0.05 else '（ほぼ変わらず）')}しました。</p>"
+                 + _svg_chart(hrows, unit)
+                 + '<p class="note">記録は、毎日の更新時の掲載商品を対象にしています。全商品の統計ではありません。</p>')
+    elif len(hrows) == 1:
+        trend = f"<h2>単価の推移</h2><p>{hrows[0][0]}から、単価の記録を始めました。記録がたまると、ここに推移を表示します。</p>"
+    else:
+        trend = ""
     body = (
         f'<p><a href="index.html">← 一覧</a></p><div class="pr">{PR_TEXT}</div>'
         f"<h1>{E(r['title'])}</h1>"
@@ -177,7 +222,7 @@ def ranking_html(r, related=()):
         f"内容量は商品名・説明文の記載から抜き出し、原文と照合できた数字だけを使っています。誤りがある場合は購入ページの記載を優先してください。</p>"
         f"{top_cards}{rest_cards}"
         f"<p class=\"note\">価格は取得時点のものです。商品名は販売者の表記です。単価の安さは、味・品質・好みへの合い方を示すものではありません。</p>"
-        f"{howto}<h2>選ぶときの注意</h2><ul>{notes}</ul>"
+        f"{trend}{howto}<h2>選ぶときの注意</h2><ul>{notes}</ul>"
         + (("<h2>ほかのランキング</h2><ul>" + "".join(f'<li><a href="{E(x["slug"])}.html">{E(x["title"])}</a></li>' for x in related) + "</ul>") if related else "")
     )
     ym = r["updated"][:7].replace("-", "年") + "月"
@@ -191,6 +236,37 @@ def _range_txt(r):
     return f"約{its[0]['unit_price']:.0f}〜{its[-1]['unit_price']:.0f}円/{u}（{len(its)}件）"
 
 
+def price_index_html(cfg, ranks):
+    h = _hist()
+    groups = {}
+    for r in ranks:
+        groups.setdefault(r.get("group", "その他"), []).append(r)
+    rows = ""
+    for g, rs in groups.items():
+        for r in rs:
+            hr = h.get(r["id"], [])
+            if not hr:
+                continue
+            last = hr[-1]
+            unit = {"L": "L", "kg": "kg", "個": "個"}[r["basis"]["base"]]
+            wk = next((x for x in reversed(hr) if x[0] <= _days_ago(last[0], 7)), None)
+            chg = f"{(last[2] / wk[2] - 1) * 100:+.1f}%" if wk else "記録中"
+            rows += (f'<tr><td>{E(g)}</td><td><a href="{E(r["slug"])}.html">{E(r["title"].split("｜")[0])}</a></td>'
+                     f'<td>{last[1]:.0f}</td><td>{last[2]:.0f}</td><td>/{E(unit)}</td><td>{chg}</td></tr>')
+    body = (f'<p><a href="index.html">← 一覧</a></p><div class="pr">{PR_TEXT}</div>'
+            "<h1>楽天市場の食品・日用品 単価の推移（毎日更新）</h1>"
+            "<p>各ランキングの掲載商品について、最も低い単価と中央値を毎日記録しています。前週比は、7日以上の記録がたまると表示されます。</p>"
+            f"<table><tr><th>分野</th><th>項目</th><th>最小</th><th>中央値</th><th>単位</th><th>前週比（中央値）</th></tr>{rows}</table>"
+            '<p class="note">対象は、当サイトのランキングに掲載された商品です（楽天市場全体の統計ではありません）。単位は円です。</p>'
+            '<p><a href="unit-price-history.csv">記録データ（CSV）をダウンロード</a></p>')
+    return _page("楽天市場の食品・日用品 単価の推移", body, desc="楽天市場の食品・日用品の単価（最小・中央値）を毎日記録した推移。", path="price-index.html", date=core.now().strftime("%Y-%m-%d"))
+
+
+def _days_ago(day, n):
+    import datetime as _dt
+    return (_dt.date.fromisoformat(day) - _dt.timedelta(days=n)).isoformat()
+
+
 def index_html(cfg, arts, ranks=()):
     groups = {}
     for r in ranks:
@@ -202,8 +278,9 @@ def index_html(cfg, arts, ranks=()):
         f'<li><a href="{E(a["slug"])}.html">{E(a["content"]["title"])}</a>'
         f'{" <span class=note>(サンプル)</span>" if a.get("sample") else ""}</li>' for a in arts
     ) or "<li>公開済みの記事はまだありません。</li>"
+    idxlink = '<p><a href="price-index.html">単価の推移（毎日更新）を見る</a></p>' if ranks else ""
     body = (f"<h1>{E(cfg['site_name'])}</h1><div class=\"pr\">{PR_TEXT}</div>"
-            f"<p>購入前の比較で迷わないための、数字で確認できる範囲の比較メモです。</p><ul>{lis}</ul>")
+            f"<p>購入前の比較で迷わないための、数字で確認できる範囲の比較メモです。</p>{idxlink}<ul>{lis}</ul>")
     return _page(cfg["site_name"], body, noindex=(all(a.get("sample") for a in arts) and not ranks),
                  desc=f'{cfg["site_name"]}：楽天市場の商品を、価格・レビュー・記載仕様で比べる比較メモ。')
 
@@ -276,8 +353,14 @@ def build(cfg, state):
             (core.REVIEW / f"{r['slug']}.html").write_text(ranking_html(r), encoding="utf-8")
     (core.DOCS / "index.html").write_text(index_html(cfg, public, rpub), encoding="utf-8")
     (core.DOCS / "about.html").write_text(about_html(cfg), encoding="utf-8")
+    if rpub:
+        (core.DOCS / "price-index.html").write_text(price_index_html(cfg, rpub), encoding="utf-8")
+        hh = _hist()
+        csv_rows = ["date,ranking,min_unit_price,median_unit_price,items"] + [
+            f"{x[0]},{rid},{x[1]},{x[2]},{x[3]}" for rid, rows_ in sorted(hh.items()) for x in rows_]
+        (core.DOCS / "unit-price-history.csv").write_text("\n".join(csv_rows) + "\n", encoding="utf-8")
     base = cfg.get("site_url", "").rstrip("/")
-    urls = [base + "/", base + "/about.html"] + [f"{base}/{a['slug']}.html" for a in public if not a.get("sample")] + [f"{base}/{r['slug']}.html" for r in rpub]
+    urls = [base + "/", base + "/about.html"] + ([base + "/price-index.html"] if rpub else []) + [f"{base}/{a['slug']}.html" for a in public if not a.get("sample")] + [f"{base}/{r['slug']}.html" for r in rpub]
     lastmod = {f"{base}/{a['slug']}.html": a["fetched_at"][:10] for a in public}
     lastmod.update({f"{base}/{r['slug']}.html": r["updated"][:10] for r in rpub})
     sm = "".join(f"<url><loc>{E(u)}</loc>" + (f"<lastmod>{lastmod[u]}</lastmod>" if u in lastmod else "") + "</url>" for u in urls)

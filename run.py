@@ -28,6 +28,10 @@ def update_rankings(cfg, state):
             if cur and cur["status"] == "pending":  # 古い確認待ちは、誤りを含む可能性があるため破棄する
                 del rks["rank-" + rk["id"]]
             continue
+        if ranking.sudden_change(r["id"], r["items"]):
+            say(state, "researcher", f"「{rk['keyword']}」は前日から単価の中央値が35%超動いたため、誤抽出を疑い更新を見送り")
+            continue
+        ranking.record_history(r["id"], r["items"])
         cur = rks.get(r["slug"])
         if cur and cur["status"] in ("published", "pending"):
             r["status"] = cur["status"]

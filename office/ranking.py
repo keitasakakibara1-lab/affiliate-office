@@ -185,3 +185,40 @@ def build(state, cfg, rk):
         "fetched": matched, "confirmed": n, "excluded_outlier": excluded_outlier,
         "updated": core.now().strftime("%Y-%m-%d %H:%M JST"),
     }
+
+
+# ---------- 価格指数（日次の履歴）----------
+def _hist_path():
+    return core.DATA / "history.json"
+
+
+def load_history():
+    import json
+    p = _hist_path()
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
+def record_history(rid, items, day=None):
+    """ランキングごとに、その日の最小・中央値の単価を1日1件だけ残す。"""
+    import json
+    h = load_history()
+    day = day or f"{core.now():%Y-%m-%d}"
+    ups = [i["unit_price"] for i in items]
+    row = [day, round(min(ups), 2), round(statistics.median(ups), 2), len(ups)]
+    rows = h.setdefault(rid, [])
+    if rows and rows[-1][0] == day:
+        rows[-1] = row
+    else:
+        rows.append(row)
+    core.DATA.mkdir(exist_ok=True)
+    _hist_path().write_text(json.dumps(h, ensure_ascii=False), encoding="utf-8")
+
+
+def sudden_change(rid, items, limit=0.35):
+    """前日の記録と比べて中央値が大きく動いた場合は、誤抽出の疑いで更新を見送る。"""
+    h = load_history().get(rid, [])
+    if not h or h[-1][0] == f"{core.now():%Y-%m-%d}" and len(h) < 2:
+        return False
+    prev = h[-2] if h[-1][0] == f"{core.now():%Y-%m-%d}" else h[-1]
+    med = statistics.median(i["unit_price"] for i in items)
+    return prev[2] > 0 and abs(med / prev[2] - 1) > limit
