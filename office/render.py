@@ -19,6 +19,10 @@ th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:to
 .btn{display:inline-block;background:var(--acc);color:#fff;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:.9rem}
 .note{font-size:.8rem;color:var(--mut)}a{color:var(--acc)}
 .gal{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.gal img{width:128px;height:128px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#fff}
+.rk{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}
+.rn{min-width:28px;height:28px;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;text-align:center;line-height:28px;font-size:.85rem}
+.rb{flex:1;min-width:0}.up{font-size:1.25rem;font-weight:700}.up small{font-size:.8rem;color:var(--mut);font-weight:400}
+.nm{font-size:.9rem;line-height:1.5;margin:2px 0 4px;word-break:break-all}.ri img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
 .sample{background:#fff3cd;color:#7a5b00;padding:8px 12px;border-radius:8px;font-size:.85rem}
 """
 
@@ -116,15 +120,15 @@ def ranking_html(r):
     rows = ""
     for n, it in enumerate(r["items"], 1):
         img = (f'<a href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">'
-               f'<img src="{E(it["image"])}" alt="" loading="lazy" width="56" height="56" '
-               f'style="border-radius:6px;vertical-align:middle;margin-right:8px"></a>') if it.get("image") else ""
+               f'<img src="{E(it["image"])}" alt="" loading="lazy" width="72" height="72"></a>') if it.get("image") else ""
         tot = f'{it["total"]:.2f}'.rstrip("0").rstrip(".")
-        post = {"込み": "送料込み", "別": "送料別"}.get(it.get("postage"), "要確認")
+        post = {"込み": "送料込み", "別": "送料別"}.get(it.get("postage"), "送料要確認")
         rows += (
-            f"<tr><td>{n}</td><td>{img}<a href=\"{E(it['url'])}\" rel=\"sponsored nofollow noopener\" target=\"_blank\">{E(it['name'][:70])}</a>"
-            f"<br><span class=\"note\">{E(it.get('shop',''))}</span></td>"
-            f"<td>{it['price']:,}円<br><span class=\"note\">{post}</span></td><td>{tot}{unit}</td>"
-            f"<td><b>約{it['unit_price']:.1f}円</b></td><td>{it['review_avg']:.2f}（{it['review_count']:,}件）</td></tr>"
+            f'<div class="rk"><div class="rn">{n}</div>'
+            f'<div class="rb"><div class="up">約{it["unit_price"]:.1f}円<small> / {E(label.replace("あたり", ""))}</small></div>'
+            f'<div class="nm"><a href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">{E(it["name"][:90])}</a></div>'
+            f'<div class="note">{it["price"]:,}円（{post}）／ 総量 {tot}{unit} ／ レビュー {it["review_avg"]:.2f}（{it["review_count"]:,}件）／ {E(it.get("shop", ""))}</div>'
+            f'</div><div class="ri">{img}</div></div>'
         )
     notes = "".join(f"<li>{E(x)}</li>" for x in r.get("notes", []))
     body = (
@@ -134,7 +138,7 @@ def ranking_html(r):
         f"毎日、価格を取得し直して更新します。</p>"
         f"<p class=\"note\">最終更新：{E(r['updated'])}。取得{r['fetched']}件のうち、内容量を確認できた商品から掲載しています。"
         f"内容量は商品名・説明文の記載から抜き出し、原文と照合できた数字だけを使っています。誤りがある場合は購入ページの記載を優先してください。</p>"
-        f"<table><tr><th>順位</th><th>商品</th><th>価格</th><th>総量</th><th>{E(label)}</th><th>レビュー</th></tr>{rows}</table>"
+        f"{rows}"
         f"<p class=\"note\">価格は取得時点のものです。商品名に期間限定価格やクーポンの記載がある場合、期間外は価格が変わります。「送料別」は楽天のデータ上で送料が別になっている商品で、条件付きの送料無料を含みます。送料を足すと順位が変わることがあります。商品名は販売者の表記です。単価の安さは、味・品質・好みへの合い方を示すものではありません。</p>"
         f"<h2>選ぶときの注意</h2><ul>{notes}</ul>"
     )
