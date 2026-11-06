@@ -1,4 +1,4 @@
-"""楽天市場商品検索API（2026年2月刷新後の仕様）。
+"""楽天市場商品検索API（2026年2月刷新後の仕様、現行版 20260701）。
 
 - エンドポイント: openapi.rakuten.co.jp
 - applicationId と accessKey の両方が必要
@@ -11,7 +11,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20220601"
+ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701"
 UUID_RE = re.compile(r"[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}")
 
 
@@ -81,7 +81,7 @@ def search(keyword, hits, referer, min_price=0):
         raise RuntimeError("楽天API失敗 | " + " | ".join(attempts)) from None
 
     items = []
-    for it in data.get("Items", []):
+    for it in (data.get("items") or data.get("Items") or []):
         it = it.get("Item", it)
         count = int(it.get("reviewCount") or 0)
         avg = float(it.get("reviewAverage") or 0)
