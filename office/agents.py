@@ -16,7 +16,8 @@ WRITER_SYSTEM = """あなたは比較記事の執筆担当です。次の規則�
 - 商品名に価格・クーポン・セール・期間の表記がある場合でも、価格はデータの値を使う。lead か faq で「商品名にクーポンやセールの表記があるが、実際の価格・期間は購入ページで確認が必要」と、全体に向けて1か所で注意する。
 - 容量・サイズなどが商品名に複数併記されている商品は、その商品の弱みに「複数の表記がある」ことを書く。
 - 認証・受賞・ランキング（「1位」「〇冠」「PSE認証」など）は商品名に書かれた販売者の表記にすぎない。「商品名に〜と記載」と表現し、事実として断定しない。
-- 「軽量」などの検索語を裏付けるデータがない場合は、lead に「軽さなどは実測比較ではない」と書く。
+- specs は商品説明文に明記された仕様を機械的に抜き出し、原文との一致を確認済みの値。おすすめの理由と弱みには、specs の具体的な値（重量・サイズ・DPI・容量など）を使って違いを説明する。specs にない項目は「記載なし」と書かず、触れない。
+- 検索語の特性（軽量・静音など）を裏付ける仕様値が specs にない場合だけ、lead に「実測比較ではない」と書く。
 - 価格帯は「1,500円台」のように書き、「前半」「後半」は使わない。
 - 「最安」「絶対」「No.1」など断定・最上級表現、健康や医療の効果を示す表現は使わない。レビューは件数や平均評価という事実で表現し、優劣を断定しない。
 - 出力はJSONのみ。キー: title, lead, picks[{i, who_for, point, tradeoff}], faq[{q, a}]。iは商品データの添字。"""
@@ -81,9 +82,76 @@ def write(state, kw, angle, items):
     return data
 
 
+def _norm(t):
+    import unicodedata
+    return unicodedata.normalize("NFKC", t or "").replace(",", "")
+
+
+def _grounded(value, src):
+    """抽出値が原文に実在するか。数字はすべて原文に含まれ、数字なしの値は原文に部分一致すること。"""
+    v, src = _norm(value), _norm(src)
+    nums = re.findall(r"\d+(?:\.\d+)?", v)
+    return all(n in src for n in nums) if nums else v in src
+
+
+def extract_specs(state, kw, items):
+    """商品説明文から比較用の仕様を抜き出し、原文と一致した値だけを残す。説明文は保存しない。"""
+    import json
+    cols = []
+    if llm_available() and any(it.get("caption") for it in items):
+        try:
+            slim = [{"i": i, "name": it["name"], "caption": it.get("caption", "")[:800]} for i, it in enumerate(items)]
+            r = llm_json(
+                "あなたは商品仕様の抽出担当です。商品名と説明文に明記された値だけを、原文のまま短く写します。"
+                "推測・換算・補完・言い換えはしません。書かれていない項目はnullです。JSONのみで答えます。",
+                f"カテゴリ: {kw}\n商品:\n{json.dumps(slim, ensure_ascii=False)}\n"
+                "購入者がこのカテゴリで選ぶ決め手になる項目（重量・サイズ・容量・対応機種・DPIなど）を3〜6個選び、"
+                '{"columns":["項目名"],"rows":[{"i":0,"values":{"項目名":"原文の値またはnull"}}]}を返して。',
+                3000,
+            )
+            rows = {x.get("i"): x.get("values", {}) for x in r.get("rows", []) if isinstance(x, dict)}
+            for c in r.get("columns", [])[:6]:
+                got = 0
+                for i, it in enumerate(items):
+                    v = (rows.get(i) or {}).get(c)
+                    src = it["name"] + " " + it.get("caption", "")
+                    if isinstance(v, str) and v.strip() and v != "null" and _grounded(v, src):
+                        it.setdefault("specs", {})[c] = v.strip()
+                        got += 1
+                if got >= 3:  # 3商品以上で取れた項目だけ比較表に使う
+                    cols.append(c)
+                else:
+                    for it in items:
+                        it.get("specs", {}).pop(c, None)
+        except Exception as e:
+            say(state, "researcher", f"仕様抽出に失敗、価格とレビューのみで進行（{e}）")
+    for it in items:
+        it.pop("caption", None)
+        if not it.get("specs"):
+            it.pop("specs", None)
+    n = sum(1 for it in items if it.get("specs"))
+    say(state, "researcher", f"仕様を抽出：{len(cols)}項目（{'・'.join(cols) or 'なし'}）、{n}商品で取得", done=True)
+    return cols
+
+
+def record_prices(items):
+    """価格履歴を data/prices.json に蓄積する（1日1回、商品コードごと）。"""
+    import json
+    p = core.DATA / "prices.json"
+    h = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    day = f"{core.now():%Y-%m-%d}"
+    for it in items:
+        if it.get("code"):
+            rows = h.setdefault(it["code"], [])
+            if not rows or rows[-1][0] != day:
+                rows.append([day, it["price"]])
+    core.DATA.mkdir(exist_ok=True)
+    p.write_text(json.dumps(h, ensure_ascii=False), encoding="utf-8")
+
+
 def _items_json(items):
     import json
-    slim = [{"i": i, "label": f"商品{chr(65 + i)}", **{k: v for k, v in it.items() if k in ("name", "price", "review_avg", "review_count")}}
+    slim = [{"i": i, "label": f"商品{chr(65 + i)}", **{k: v for k, v in it.items() if k in ("name", "price", "review_avg", "review_count", "specs")}}
             for i, it in enumerate(items)]
     return json.dumps(slim, ensure_ascii=False)
 
@@ -146,6 +214,10 @@ def review(state, article, items, sample):
     allowed = {str(it["price"]) for it in items} | {str(it["review_count"]) for it in items}
     for it in items:  # 商品名に書かれた容量・ワット数などは根拠があるので許可
         allowed |= set(re.findall(r"\d+", it["name"].replace(",", "")))
+    for it in items:  # 説明文から原文照合済みの仕様値の数字も許可
+        for v in (it.get("specs") or {}).values():
+            allowed |= set(re.findall(r"\d+", _norm(v)))
+    allowed.add(str(sum(it["review_count"] for it in items)))
     prices = [it["price"] for it in items]
     allowed |= {str(abs(a - b)) for a in prices for b in prices}  # 価格差は計算で得られる数字
     flat = body.replace(",", "")

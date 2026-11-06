@@ -39,6 +39,16 @@ def article_html(a):
         f"<tr><td>商品{chr(65 + i)}</td><td>{E(items[i]['name'])}</td><td>{items[i]['price']:,}円</td>"
         f"<td>{items[i]['review_avg']:.2f}（{items[i]['review_count']:,}件）</td></tr>" for i in shown
     )
+    cols = [c for c in a.get("spec_columns", []) if any(c in (items[i].get("specs") or {}) for i in shown)]
+    spec_tbl = ""
+    if cols:
+        head = "".join(f"<th>{E(c)}</th>" for c in cols)
+        body_rows = "".join(
+            f"<tr><td>商品{chr(65 + i)}</td>" + "".join(f"<td>{E((items[i].get('specs') or {}).get(c, '記載なし'))}</td>" for c in cols) + "</tr>"
+            for i in shown
+        )
+        spec_tbl = (f"<h2>仕様の比較</h2><p class=\"note\">商品ページの説明文に書かれている内容を抜き出しています（実測ではありません）。"
+                    f"「記載なし」は、説明文に見当たらなかった項目です。</p><table><tr><th>記号</th>{head}</tr>{body_rows}</table>")
     picks = ""
     for p in d["picks"]:
         it = items[p["i"]]
@@ -65,7 +75,7 @@ def article_html(a):
         f"レビュー件数が少ない商品と、種類が合わない商品は除外しました。</p>"
         f"<table><tr><th>記号</th><th>商品</th><th>価格</th><th>レビュー</th></tr>{rows}</table>"
         f"<p class=\"note\">データ取得日時：{E(a['fetched_at'])}。価格・在庫は変動します。購入前に販売ページでご確認ください。</p>"
-        f"<h2>タイプ別のおすすめ</h2>{picks}<h2>よくある疑問</h2>{faq}"
+        f"{spec_tbl}<h2>タイプ別のおすすめ</h2>{picks}<h2>よくある疑問</h2>{faq}"
     )
     return _page(d["title"], body, noindex=bool(a.get("sample")))
 

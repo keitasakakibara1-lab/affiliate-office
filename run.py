@@ -21,6 +21,9 @@ def daily(cfg, state):
         items, sample = agents.research(state, cfg, plan["keyword"])
         if not items:
             continue
+        spec_cols = agents.extract_specs(state, plan["keyword"], items)
+        if not sample:
+            agents.record_prices(items)
         article = agents.write(state, plan["keyword"], plan["angle"], items)
         problems = agents.review(state, article, items, sample)
         slug = f"{core.now():%Y%m%d}-{len(state['articles']) + 1:03d}"
@@ -35,7 +38,7 @@ def daily(cfg, state):
         state["articles"].append({
             "slug": slug, "keyword": plan["keyword"], "status": status, "sample": sample,
             "problems": problems, "fetched_at": core.now().strftime("%Y-%m-%d %H:%M JST"),
-            "items": items, "content": article,
+            "items": items, "spec_columns": spec_cols, "content": article,
         })
         say(state, "designer", f"{slug} を組版（状態: {status}）", done=True, status=f"{slug} を組版済み")
 

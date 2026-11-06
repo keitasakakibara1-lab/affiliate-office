@@ -97,6 +97,8 @@ def search(keyword, hits, referer, min_price=0):
             "review_avg": avg,
             "review_count": count,
             "url": it.get("affiliateUrl") or it["itemUrl"],
+            "code": it.get("itemCode", ""),
+            "caption": (it.get("itemCaption") or "")[:1000],  # 仕様抽出にだけ使い、保存はしない
             "image": imgs[0] if imgs else "",
             "images": imgs,
         })
