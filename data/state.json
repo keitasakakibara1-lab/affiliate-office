@@ -1,27 +1,27 @@
 {
   "agents": {
     "planner": {
-      "done": 4,
-      "status": "「USBハブ Type-C」を企画済み"
+      "done": 6,
+      "status": "「モバイルバッテリー 軽量」を企画済み"
     },
     "researcher": {
-      "done": 4,
+      "done": 6,
       "status": "商品データ取得済み"
     },
     "writer": {
-      "done": 4,
+      "done": 6,
       "status": "執筆済み"
     },
     "reviewer": {
-      "done": 4,
-      "status": "審査通過"
+      "done": 6,
+      "status": "差し戻し"
     },
     "designer": {
-      "done": 4,
-      "status": "20261106-004 を組版済み"
+      "done": 6,
+      "status": "20261106-006 を組版済み"
     },
     "analyst": {
-      "done": 2,
+      "done": 3,
       "status": "収益を集計済み"
     }
   },
@@ -138,6 +138,61 @@
     },
     {
       "t": "11/06 16:44",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "planner",
+      "msg": "今日のお題は「モバイルバッテリー 軽量」。切り口は「価格帯別に軽量モデルをレビュー件数と評価平均で比較し定番を探す」"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "researcher",
+      "msg": "5商品を取得（レビュー件数順）"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "writer",
+      "msg": "『軽量モバイルバッテリーを価格帯別に比較｜レビュー件数と評価平均から定番を探す』を書き上げました"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "reviewer",
+      "msg": "差し戻し：「軽量モバイルバッテリー」を掲げて比較しているのに、重量が確認できるのは179gの1商品だけで、軽量性は比較できていない。記事自体も軽さは比較できないと認めており、タイトルと本文の内容が合っていない。 / 「価格差が小さく、レビュー件数も評価平均も近い範囲にある」という説明は不正確。レビュー件数は16,392件〜31,658件でほぼ2倍の開きがある。冒頭の「定番を探す」という前提とも矛盾する。 / 商品0の価格を1,580円と記載しているが、商品名には「20%OFF&P2倍→1,236円」とあり、価格表記が食い違う。商品2も商品名では「クーポンで1,880円」だが1,980円と記載している。価格の根拠やクーポン条件の説明がなく、消費者が実際の価格を誤認するおそれがある。"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "designer",
+      "msg": "20261106-005 を組版（状態: rejected）"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "planner",
+      "msg": "今日のお題は「モバイルバッテリー 軽量」。切り口は「1万円以下で比較、価格帯別にレビュー件数と平均評価で選ぶ人気モデル」"
+    },
+    {
+      "t": "11/06 16:51",
+      "agent": "researcher",
+      "msg": "5商品を取得（レビュー件数順）"
+    },
+    {
+      "t": "11/06 16:52",
+      "agent": "writer",
+      "msg": "『モバイルバッテリー 軽量モデルを1万円以下で比較｜価格帯・レビュー件数・平均評価で見る5選』を書き上げました"
+    },
+    {
+      "t": "11/06 16:52",
+      "agent": "reviewer",
+      "msg": "差し戻し：「商品データに記載された事実だけで整理」としているが、情報源は販売者が付けた商品名です。「MFi認証品」「PSE認証」「正規品」「PL保険加入済み」などの認証・安全性表記を、裏付けの確認なしにそのまま紹介しています。「商品名に記載がある」との限定はあるものの、モバイルバッテリーの安全性に関わる表記なので、未検証である旨や確認方法の注記がなく不十分です。 / 価格の扱いが不正確です。添字0の商品名には「20%OFF&P2倍→1,236円」とあり、添字2には「クーポンで1,880円」、添字4には「100円クーポン」、添字1には「200円offクーポン」とあります。記事は1,580円を「5件中もっとも低い価格」と断定し、実効価格との差異を説明していません。価格の取得日時や変動条件も示しておらず、価格比較として誤認を招きます。 / 添字2の商品名には「20000mAh」の記載もあるのに、記事とFAQは単純に「10000mAh表記」としています。容量の選択肢があることに触れていないため、容量比較が不正確で、購入者が誤認するおそれがあります。添字1の併記は注意喚起しているのに、添字2は扱いが不統一です。"
+    },
+    {
+      "t": "11/06 16:52",
+      "agent": "designer",
+      "msg": "20261106-006 を組版（状態: rejected）"
+    },
+    {
+      "t": "11/06 16:52",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -572,6 +627,290 @@
           {
             "q": "自分の機器で使えるかはどう確認すればよいですか？",
             "a": "対応機種や出力の詳細は、商品データだけでは判断できません。購入前に販売ページの記載を確認してください。特に「e / Air非対応」と注記のある商品は、機種との相性の確認が必要です。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "20261106-005",
+      "keyword": "モバイルバッテリー 軽量",
+      "status": "rejected",
+      "sample": false,
+      "problems": [
+        "「軽量モバイルバッテリー」を掲げて比較しているのに、重量が確認できるのは179gの1商品だけで、軽量性は比較できていない。記事自体も軽さは比較できないと認めており、タイトルと本文の内容が合っていない。",
+        "「価格差が小さく、レビュー件数も評価平均も近い範囲にある」という説明は不正確。レビュー件数は16,392件〜31,658件でほぼ2倍の開きがある。冒頭の「定番を探す」という前提とも矛盾する。",
+        "商品0の価格を1,580円と記載しているが、商品名には「20%OFF&P2倍→1,236円」とあり、価格表記が食い違う。商品2も商品名では「クーポンで1,880円」だが1,980円と記載している。価格の根拠やクーポン条件の説明がなく、消費者が実際の価格を誤認するおそれがある。",
+        "商品4を「ケーブル内蔵タイプをなるべく抑えた価格で選びたい人」向けとしているが、商品0(1,580円)もコネクター内蔵で、より安い。価格面の位置づけが事実と合わず、推奨の根拠が不正確。",
+        "商品名の「MFi認証品」「PSE認証」「PSE認証済み」「PL保険加入済み」「90日保証」などを、事業者の自己申告のまま転記している。公的な確認や出典の明示がなく、安全性や信頼性を裏づけたように読めるおそれがある。",
+        "商品名にある「1位」「6冠」「楽天1位」「スマホ1位」などのランキング表現について、根拠や時点を確認せず、注意喚起もしていない。商品名の転記により、根拠不明の優良誤認表現を助長しかねない。",
+        "商品2は商品名に10000mAhと20000mAhが併記されているが、容量が不明確な点を指摘していない。商品1だけ指摘しており、判断が一貫していない。",
+        "「評価平均が高い」「レビュー件数が多い」といった数値だけで優劣を示唆している。レビューの信頼性(やらせ・インセンティブ付きレビューの可能性)や取得日時、取得元が示されておらず、「取得時点」と書くだけでは検証できない。",
+        "内容が商品名とレビュー数値の言い換えにとどまり、実機での重量・容量・出力・発熱・サイズなどの検証や独自の知見がない。各商品の説明が定型的で、検索目的の量産型コンテンツとして、Googleのスパムポリシー(スケールドコンテンツ・薄い内容)に抵触するおそれがある。",
+        "アフィリエイト等の広告・PR表記や、商品リンクの利害関係の開示が記事内に見当たらない。収益化している場合は、ステルスマーケティング規制上、広告であることを明示する必要がある。"
+      ],
+      "fetched_at": "2026-11-06 16:51 JST",
+      "items": [
+        {
+          "name": "【iPhone18シリーズ対応】＼スマホ1位★20%OFF&P2倍→1,236円／モバイルバッテリー iPhone Android 軽量 小型 MFi認証品 LED残量表示 5000mAh Lightning/Type-cコネクター内蔵 PD10.5W急速充電 残量表示 iPhone18/17/16/15/14/13/12/11/8/SE/Pro/iPad全機種対応",
+          "price": 1580,
+          "shop": "GraceVally 楽天市場店",
+          "review_avg": 4.45,
+          "review_count": 31658,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u931o.qyx0vc67.g00u931o.qyx0w762/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgracevally%2Fgrace-xpb%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgracevally%2Fi%2F10000026%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/imgrc0132050701.gif?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/imgrc0132050701.gif?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355683/11499500/xpb1-24ranking.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/12683959/01.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "P倍倍★1位6冠 正規品 モバイルバッテリー 超マット加工 PSE認証【200円offクーポン2個目に使える】大容量 小型 軽量 ミニ iPhone 急速充電 タイプc ケーブル ケーブル内蔵 Android Type-c ライトニング アイフォン アンドロイド 充電器 急速 急速充電器 5000/10000mAh",
+          "price": 1690,
+          "shop": "ケースbyケース",
+          "review_avg": 4.43,
+          "review_count": 29918,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rgnwo.qyx0vb6c.g00rgnwo.qyx0wb1a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcase-by-case%2F3017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcase-by-case%2Fi%2F10002035%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/09616085/12363017/imgrc0093368206.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/09616085/12363017/imgrc0093368206.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/08775701/1.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/08775701/11480649/imgrc0086197060.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【期間限定 クーポンで1,880円！】【最短即日発送】モバイルバッテリー 軽量 小型 ケーブル内蔵 薄型 大容量 10000mAh 急速充電 iPhone/Android対応 Type-C Lightning 楽天1位 すぐ届く 名入れ 20000mAh 記念品 PSE認証 オーダー ギフト プレゼント W07|11/11 1:59迄",
+          "price": 1980,
+          "shop": "タブタブ&景品太郎",
+          "review_avg": 4.51,
+          "review_count": 28318,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rw9ro.qyx0v40e.g00rw9ro.qyx0wb37/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftabtab%2Fat60950%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftabtab%2Fi%2F10003266%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123697948.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123697948.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123632583.gif?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0111856586.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "モバイルバッテリー 10000mAh 大容量 ポータブル 急速充電 5V/2.1A対応 3台同時充電 iPhone17/16 スマホ/タブレット充電器 PSE認証済み 残電量表示 コンパクト 179g 超小型 軽量 薄型 地震・災害 防災備え 非常用電源 90日あんしん保証付き【PL保険加入済み製品・安心】",
+          "price": 1980,
+          "shop": "愛度楽天市場店",
+          "review_avg": 4.33,
+          "review_count": 17327,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00skpso.qyx0v6da.g00skpso.qyx0waa1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faidort%2Fslub-544%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faidort%2Fi%2F10000404%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/imgrc0076594783.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/imgrc0076594783.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/544rank.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/544c1.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "《100円クーポン》オシャモバ正規品【モバイルバッテリー 軽量 type-c usbc 小型 大容量 名入れ 卒業記念 記念品 プレゼント #OSHAMOBA iPhone 10000mAh ケーブル内蔵 薄型 薄い 軽い かわいい 充電器 スマホ 防災グッズ】★メール便送料無料★ ケーブル内蔵バッテリー {3}",
+          "price": 1680,
+          "shop": "La Chou Chou",
+          "review_avg": 4.33,
+          "review_count": 16392,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rl3eo.qyx0v59f.g00rl3eo.qyx0w875/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcorsage%2F1005-129_2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcorsage%2Fi%2F10001083%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/03659717/imgrc0063744529.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/03659717/imgrc0063744529.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/oshamoba/1005-129_202210_01.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/oshamoba/1005-129_202210_02.jpg?_ex=128x128"
+          ]
+        }
+      ],
+      "content": {
+        "title": "軽量モバイルバッテリーを価格帯別に比較｜レビュー件数と評価平均から定番を探す",
+        "lead": "今回の比較対象は、1,580円〜1,980円に収まる5商品です。レビュー件数はいずれも1万6千件を超え、評価平均は4.33〜4.51の範囲でした。価格帯は「1,500円台」「1,600円台」「1,900円台」の3つに分けて見ていきます。重量が商品名に明記されているのは1商品だけなので、「軽量」を重視する場合は、購入前に商品ページで重さを確認してください。価格・レビューは取得時点のデータで、変動することがあります。",
+        "picks": [
+          {
+            "i": 0,
+            "who_for": "1,500円台でレビュー実績の多い定番候補から選びたい人。iPhoneを使っていて、Lightning/Type-cコネクター内蔵のモデルを探している人。",
+            "point": "価格は1,580円で、5商品の中では価格が低い側です。レビュー件数は31,658件と比較対象の中で多く、評価平均は4.45です。商品名にはMFi認証品、LED残量表示、5000mAh、PD10.5W急速充電、Lightning/Type-cコネクター内蔵と記載されています。",
+            "tradeoff": "商品名の容量表記は5000mAhで、10000mAhと記載された他の商品より小さい数値です。容量を重視する人には物足りない可能性があります。"
+          },
+          {
+            "i": 1,
+            "who_for": "1,600円台で、レビュー件数が多く評価平均も高めの商品を選びたい人。容量を5000mAhか10000mAhかで選びたい人。",
+            "point": "価格は1,690円で、レビュー件数は29,918件、評価平均は4.43です。商品名にはPSE認証、ケーブル内蔵、Type-c・ライトニング対応、5000/10000mAhと記載されています。件数と平均のバランスを重視する人に向きます。",
+            "tradeoff": "商品名に5000/10000mAhと複数の容量が並んでいます。提示された価格がどの容量のものかは、商品データからは判別できません。購入前に商品ページでの確認が必要です。"
+          },
+          {
+            "i": 2,
+            "who_for": "1,900円台で、評価平均の数値が高い商品を選びたい人。名入れやギフト用途も検討している人。",
+            "point": "評価平均は4.51で、今回の5商品の中では数値が高い側です。レビュー件数も28,318件あります。商品名には10000mAh、ケーブル内蔵、薄型、PSE認証、名入れ対応と記載されています。",
+            "tradeoff": "価格は1,980円で、5商品の中では高い側です。商品名には20000mAhや名入れ・ギフトなど複数の用途が並び、軽量性を示す重量の記載はありません。"
+          },
+          {
+            "i": 3,
+            "who_for": "1,900円台で、重量が商品名に明記されたモデルを選びたい人。複数台を同時に充電したい人。",
+            "point": "商品名に179gと明記されているのは、今回の5商品ではこの商品だけです。10000mAh、3台同時充電、残電量表示、PSE認証済み、90日の保証付きとも記載されています。レビュー件数は17,327件です。",
+            "tradeoff": "価格は1,980円で、同価格の別商品より評価平均が4.33とやや低い数値です。レビュー件数も少なめです。商品名にはケーブル内蔵の記載がなく、ケーブルを別に用意する必要があるかもしれません。"
+          },
+          {
+            "i": 4,
+            "who_for": "1,600円台で、ケーブル内蔵タイプをなるべく抑えた価格で選びたい人。見た目のかわいさや、名入れ・記念品用途も気になる人。",
+            "point": "価格は1,680円で、評価平均は4.33、レビュー件数は16,392件です。商品名には10000mAh、ケーブル内蔵、薄型、メール便送料無料と記載されています。",
+            "tradeoff": "レビュー件数は5商品の中では少ない側で、評価平均の数値も低めです。商品名に重量の記載がなく、「軽い」という表現のみです。軽さを数字で比べたい人は、商品ページでの確認が必要です。"
+          }
+        ],
+        "faq": [
+          {
+            "q": "この比較では、どの商品が定番と言えますか？",
+            "a": "特定の1商品を断定はできません。レビュー件数が3万件前後と多いのは、1,580円の商品（31,658件、平均4.45）と1,690円の商品（29,918件、平均4.43）です。評価平均の数値が高いのは1,980円の商品（平均4.51、28,318件）でした。価格と容量表記を見ながら選んでください。"
+          },
+          {
+            "q": "軽さは商品データから比較できますか？",
+            "a": "重量が商品名に明記されているのは179gと記載された1商品だけです。他の4商品は重量の記載がなく、軽さの比較はできません。購入前に商品ページで重量を確認することをおすすめします。"
+          },
+          {
+            "q": "価格帯による違いはありますか？",
+            "a": "今回の5商品は1,580円〜1,980円と価格差が小さく、レビュー件数も評価平均も近い範囲にあります。価格よりも、容量表記（5000mAhか10000mAhか）やケーブル内蔵の有無、重量の記載といった違いを基準に選ぶと比べやすくなります。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "20261106-006",
+      "keyword": "モバイルバッテリー 軽量",
+      "status": "rejected",
+      "sample": false,
+      "problems": [
+        "「商品データに記載された事実だけで整理」としているが、情報源は販売者が付けた商品名です。「MFi認証品」「PSE認証」「正規品」「PL保険加入済み」などの認証・安全性表記を、裏付けの確認なしにそのまま紹介しています。「商品名に記載がある」との限定はあるものの、モバイルバッテリーの安全性に関わる表記なので、未検証である旨や確認方法の注記がなく不十分です。",
+        "価格の扱いが不正確です。添字0の商品名には「20%OFF&P2倍→1,236円」とあり、添字2には「クーポンで1,880円」、添字4には「100円クーポン」、添字1には「200円offクーポン」とあります。記事は1,580円を「5件中もっとも低い価格」と断定し、実効価格との差異を説明していません。価格の取得日時や変動条件も示しておらず、価格比較として誤認を招きます。",
+        "添字2の商品名には「20000mAh」の記載もあるのに、記事とFAQは単純に「10000mAh表記」としています。容量の選択肢があることに触れていないため、容量比較が不正確で、購入者が誤認するおそれがあります。添字1の併記は注意喚起しているのに、添字2は扱いが不統一です。",
+        "レビュー件数・平均評価の取得元と取得時点が示されていません。4.51と4.43のようなわずかな差を「数値が高め」と評価材料にしていますが、レビューの信頼性(サクラ・インセンティブ付きレビューなど)への言及もありません。根拠が弱いまま選ぶ手がかりとして提示しています。",
+        "ステマ規制の観点で、アフィリエイトリンクや広告・PRである旨の表示が記事内にありません。商品の購入を誘導する比較記事なのに、広告主・報酬関係の開示が確認できず、広告であることが読者に分からない可能性があります。",
+        "内容が薄く、Googleのスパムポリシー(薄いコンテンツ・低付加価値)に抵触するおそれがあります。実機の検証、容量や重量の実測、充電速度、安全性の確認、運営者の知見がなく、商品名の文言と価格・レビュー数値を並べ替えただけです。「軽量モデル」と題しながら、重さが分かるのは1件だけで、軽量性を比較できていません。",
+        "タイトルの「軽量モデル」「5選」は、選定基準が不明確です。なぜこの5件なのかという抽出条件(検索順位、売れ筋など)が示されておらず、「軽量」を裏付けるデータも不足しています。恣意的な選定や、実質的な広告記事と受け取られるおそれがあります。",
+        "「1,000円台前半の5000mAh表記モデル」という表現は、1,580円を前半とする点で不正確です。1,500円台は一般に後半寄りで、価格帯の説明が不整合です。"
+      ],
+      "fetched_at": "2026-11-06 16:52 JST",
+      "items": [
+        {
+          "name": "【iPhone18シリーズ対応】＼スマホ1位★20%OFF&P2倍→1,236円／モバイルバッテリー iPhone Android 軽量 小型 MFi認証品 LED残量表示 5000mAh Lightning/Type-cコネクター内蔵 PD10.5W急速充電 残量表示 iPhone18/17/16/15/14/13/12/11/8/SE/Pro/iPad全機種対応",
+          "price": 1580,
+          "shop": "GraceVally 楽天市場店",
+          "review_avg": 4.45,
+          "review_count": 31658,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u931o.qyx0vc67.g00u931o.qyx0w762/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgracevally%2Fgrace-xpb%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgracevally%2Fi%2F10000026%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/imgrc0132050701.gif?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/imgrc0132050701.gif?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355683/11499500/xpb1-24ranking.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/12683959/01.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "P倍倍★1位6冠 正規品 モバイルバッテリー 超マット加工 PSE認証【200円offクーポン2個目に使える】大容量 小型 軽量 ミニ iPhone 急速充電 タイプc ケーブル ケーブル内蔵 Android Type-c ライトニング アイフォン アンドロイド 充電器 急速 急速充電器 5000/10000mAh",
+          "price": 1690,
+          "shop": "ケースbyケース",
+          "review_avg": 4.43,
+          "review_count": 29918,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rgnwo.qyx0vb6c.g00rgnwo.qyx0wb1a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcase-by-case%2F3017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcase-by-case%2Fi%2F10002035%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/09616085/12363017/imgrc0093368206.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/09616085/12363017/imgrc0093368206.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/08775701/1.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/08775701/11480649/imgrc0086197060.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【期間限定 クーポンで1,880円！】【最短即日発送】モバイルバッテリー 軽量 小型 ケーブル内蔵 薄型 大容量 10000mAh 急速充電 iPhone/Android対応 Type-C Lightning 楽天1位 すぐ届く 名入れ 20000mAh 記念品 PSE認証 オーダー ギフト プレゼント W07|11/11 1:59迄",
+          "price": 1980,
+          "shop": "タブタブ&景品太郎",
+          "review_avg": 4.51,
+          "review_count": 28318,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rw9ro.qyx0v40e.g00rw9ro.qyx0wb37/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftabtab%2Fat60950%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftabtab%2Fi%2F10003266%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123697948.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123697948.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123632583.gif?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0111856586.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "モバイルバッテリー 10000mAh 大容量 ポータブル 急速充電 5V/2.1A対応 3台同時充電 iPhone17/16 スマホ/タブレット充電器 PSE認証済み 残電量表示 コンパクト 179g 超小型 軽量 薄型 地震・災害 防災備え 非常用電源 90日あんしん保証付き【PL保険加入済み製品・安心】",
+          "price": 1980,
+          "shop": "愛度楽天市場店",
+          "review_avg": 4.33,
+          "review_count": 17327,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00skpso.qyx0v6da.g00skpso.qyx0waa1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faidort%2Fslub-544%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faidort%2Fi%2F10000404%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/imgrc0076594783.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/imgrc0076594783.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/544rank.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/544c1.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "《100円クーポン》オシャモバ正規品【モバイルバッテリー 軽量 type-c usbc 小型 大容量 名入れ 卒業記念 記念品 プレゼント #OSHAMOBA iPhone 10000mAh ケーブル内蔵 薄型 薄い 軽い かわいい 充電器 スマホ 防災グッズ】★メール便送料無料★ ケーブル内蔵バッテリー {3}",
+          "price": 1680,
+          "shop": "La Chou Chou",
+          "review_avg": 4.33,
+          "review_count": 16392,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rl3eo.qyx0v59f.g00rl3eo.qyx0w875/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcorsage%2F1005-129_2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcorsage%2Fi%2F10001083%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/03659717/imgrc0063744529.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/03659717/imgrc0063744529.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/oshamoba/1005-129_202210_01.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/oshamoba/1005-129_202210_02.jpg?_ex=128x128"
+          ]
+        }
+      ],
+      "content": {
+        "title": "モバイルバッテリー 軽量モデルを1万円以下で比較｜価格帯・レビュー件数・平均評価で見る5選",
+        "lead": "今回比較する5件は、すべて1,500円〜2,000円未満の価格帯に収まっています。1万円以下という条件では、価格差よりも容量表記、ケーブル内蔵の有無、レビュー件数・平均評価の違いが選ぶ手がかりになります。1,000円台前半の5000mAh表記モデルから、1,000円台後半の10000mAh表記モデルまで、商品データに記載された事実だけで整理しました。レビューは件数と平均値を並べており、優劣を断定するものではありません。",
+        "picks": [
+          {
+            "i": 0,
+            "who_for": "5件の中で価格を抑えつつ、レビュー件数の多い商品を選びたい人。iPhoneでケーブルを別に持ちたくない人。",
+            "point": "価格は1,580円で、5件中もっとも低い価格です。レビュー件数は31,658件で5件中もっとも多く、平均は4.45です。商品名にはLightning/Type-cコネクター内蔵、MFi認証品、LED残量表示、PD10.5W急速充電と記載があります。",
+            "tradeoff": "容量表記は5000mAhで、ほかの10000mAh表記の商品より小さい数値です。容量を重視する人は、用途に足りるか確認が必要です。"
+          },
+          {
+            "i": 1,
+            "who_for": "1,000円台で、ケーブル内蔵タイプのレビュー件数が多い商品を比べたい人。",
+            "point": "価格は1,690円、レビュー平均は4.43、件数は29,918件です。商品名にはPSE認証、ケーブル内蔵、Type-c・ライトニング対応の記載があります。",
+            "tradeoff": "商品名に5000/10000mAhと2種類の容量が併記されています。購入時にどちらの容量を選ぶのか、ページで確認する必要があります。"
+          },
+          {
+            "i": 2,
+            "who_for": "10000mAh表記で、平均評価の数値が高い商品を重視する人。薄型でケーブル内蔵のタイプを探している人。",
+            "point": "レビュー平均は4.51で、5件の中では数値が高めです。件数も28,318件と多く、価格は1,980円です。商品名には10000mAh、薄型、ケーブル内蔵、PSE認証の記載があります。",
+            "tradeoff": "価格は1,980円で、5件の中では高い側です。商品名に期間限定クーポン価格の記載があるため、時期によって価格が変わる可能性があります。"
+          },
+          {
+            "i": 3,
+            "who_for": "重さの数値を確認したうえで選びたい人。複数台を同時に充電したい人。",
+            "point": "価格は1,980円、レビュー平均は4.33、件数は17,327件です。商品名に10000mAh、179g、3台同時充電、5V/2.1A対応、残電量表示、90日あんしん保証付きと記載があります。重さが明記されているのは、この5件ではこの商品だけです。",
+            "tradeoff": "レビュー平均は5件の中では低めの数値です。急速充電については5V/2.1A対応との記載にとどまり、ほかの商品にあるPD表記はデータにありません。"
+          },
+          {
+            "i": 4,
+            "who_for": "10000mAh表記でケーブル内蔵タイプを、1,000円台後半の価格で探している人。名入れ対応の商品を選びたい人。",
+            "point": "価格は1,680円、レビュー平均は4.33、件数は16,392件です。商品名にはケーブル内蔵、薄型、名入れ、メール便送料無料の記載があります。10000mAh表記の商品の中では価格が低めです。",
+            "tradeoff": "レビュー件数は5件の中でもっとも少なく、平均も4.33と低めの数値です。ほかの商品とレビューの厚みを比べて判断してください。"
+          }
+        ],
+        "faq": [
+          {
+            "q": "1万円以下で選ぶ場合、今回の商品はどの価格帯ですか？",
+            "a": "今回の5件はすべて1,580円〜1,980円です。1万円以下の条件には十分収まっており、価格差は最大でも400円です。"
+          },
+          {
+            "q": "レビュー件数が多い商品はどれですか？",
+            "a": "もっとも多いのは31,658件の商品（添字0）です。次いで29,918件（添字1）、28,318件（添字2）の順です。件数が多いことは、評価が高いことを意味するものではありません。"
+          },
+          {
+            "q": "容量表記に違いはありますか？",
+            "a": "添字0は5000mAh、添字2・3・4は10000mAh、添字1は5000/10000mAhの併記です。同じ名称でも選択肢が分かれることがあるため、購入前にページの表記を確認してください。"
+          },
+          {
+            "q": "重さを比較できますか？",
+            "a": "商品データで重さが確認できるのは、179gと記載された添字3のみです。ほかの商品の重さはデータにないため、比較できません。"
           }
         ]
       }
