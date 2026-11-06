@@ -1,27 +1,27 @@
 {
   "agents": {
     "planner": {
-      "done": 2,
+      "done": 4,
       "status": "「USBハブ Type-C」を企画済み"
     },
     "researcher": {
-      "done": 2,
+      "done": 4,
       "status": "商品データ取得済み"
     },
     "writer": {
-      "done": 2,
+      "done": 4,
       "status": "執筆済み"
     },
     "reviewer": {
-      "done": 2,
-      "status": "差し戻し"
+      "done": 4,
+      "status": "審査通過"
     },
     "designer": {
-      "done": 2,
-      "status": "20261106-002 を組版済み"
+      "done": 4,
+      "status": "20261106-004 を組版済み"
     },
     "analyst": {
-      "done": 1,
+      "done": 2,
       "status": "収益を集計済み"
     }
   },
@@ -78,6 +78,66 @@
     },
     {
       "t": "11/06 16:41",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 16:43",
+      "agent": "planner",
+      "msg": "今日のお題は「モバイルバッテリー 軽量」。切り口は「価格帯別に、レビュー件数と平均評価の高い軽量モデルを比較」"
+    },
+    {
+      "t": "11/06 16:43",
+      "agent": "researcher",
+      "msg": "5商品を取得（レビュー件数順）"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "writer",
+      "msg": "『軽量モバイルバッテリーを価格帯別に比較｜レビュー件数・平均評価が高い5モデル』を書き上げました"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "reviewer",
+      "msg": "差し戻し：データにない数字「400」"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "designer",
+      "msg": "20261106-003 を組版（状態: rejected）"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "planner",
+      "msg": "今日のお題は「USBハブ Type-C」。切り口は「価格帯別に比較。レビュー件数と平均評価で選ぶ定番モデル」"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "researcher",
+      "msg": "5商品を取得（レビュー件数順）"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "writer",
+      "msg": "『USBハブ Type-C 価格帯別に比較｜レビュー件数と平均評価でみる定番4モデル』を書き上げました"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "reviewer",
+      "msg": "LLM審査に失敗（JSONが返らなかった: ）。ルール審査のみで判定"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "reviewer",
+      "msg": "審査を通過しました"
+    },
+    {
+      "t": "11/06 16:44",
+      "agent": "designer",
+      "msg": "20261106-004 を組版（状態: pending）"
+    },
+    {
+      "t": "11/06 16:44",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -302,6 +362,216 @@
           {
             "q": "購入前に確認しておくことはありますか？",
             "a": "お使いの機器がType-Cの映像出力やPD充電に対応しているかを確認してください。商品名に「非対応」などの注記がないかも、あわせて見ておくと安心です。詳しい仕様や条件は、各商品ページの記載で確認してください。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "20261106-003",
+      "keyword": "モバイルバッテリー 軽量",
+      "status": "rejected",
+      "sample": false,
+      "problems": [
+        "データにない数字「400」"
+      ],
+      "fetched_at": "2026-11-06 16:44 JST",
+      "items": [
+        {
+          "name": "【iPhone18シリーズ対応】＼スマホ1位★20%OFF&P2倍→1,236円／モバイルバッテリー iPhone Android 軽量 小型 MFi認証品 LED残量表示 5000mAh Lightning/Type-cコネクター内蔵 PD10.5W急速充電 残量表示 iPhone18/17/16/15/14/13/12/11/8/SE/Pro/iPad全機種対応",
+          "price": 1580,
+          "shop": "GraceVally 楽天市場店",
+          "review_avg": 4.45,
+          "review_count": 31658,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u931o.qyx0vc67.g00u931o.qyx0w762/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgracevally%2Fgrace-xpb%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgracevally%2Fi%2F10000026%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09895983/imgrc0132050701.gif?_ex=128x128"
+        },
+        {
+          "name": "P倍倍★1位6冠 正規品 モバイルバッテリー 超マット加工 PSE認証【200円offクーポン2個目に使える】大容量 小型 軽量 ミニ iPhone 急速充電 タイプc ケーブル ケーブル内蔵 Android Type-c ライトニング アイフォン アンドロイド 充電器 急速 急速充電器 5000/10000mAh",
+          "price": 1690,
+          "shop": "ケースbyケース",
+          "review_avg": 4.43,
+          "review_count": 29918,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rgnwo.qyx0vb6c.g00rgnwo.qyx0wb1a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcase-by-case%2F3017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcase-by-case%2Fi%2F10002035%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/case-by-case/cabinet/08655288/09616085/12363017/imgrc0093368206.jpg?_ex=128x128"
+        },
+        {
+          "name": "【期間限定 クーポンで1,880円！】【最短即日発送】モバイルバッテリー 軽量 小型 ケーブル内蔵 薄型 大容量 10000mAh 急速充電 iPhone/Android対応 Type-C Lightning 楽天1位 すぐ届く 名入れ 20000mAh 記念品 PSE認証 オーダー ギフト プレゼント W07|11/11 1:59迄",
+          "price": 1980,
+          "shop": "タブタブ&景品太郎",
+          "review_avg": 4.51,
+          "review_count": 28318,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rw9ro.qyx0v40e.g00rw9ro.qyx0wb37/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftabtab%2Fat60950%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftabtab%2Fi%2F10003266%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tabtab/cabinet/product/alphalingw07_at60950/imgrc0123697948.jpg?_ex=128x128"
+        },
+        {
+          "name": "モバイルバッテリー 10000mAh 大容量 ポータブル 急速充電 5V/2.1A対応 3台同時充電 iPhone17/16 スマホ/タブレット充電器 PSE認証済み 残電量表示 コンパクト 179g 超小型 軽量 薄型 地震・災害 防災備え 非常用電源 90日あんしん保証付き【PL保険加入済み製品・安心】",
+          "price": 1980,
+          "shop": "愛度楽天市場店",
+          "review_avg": 4.33,
+          "review_count": 17327,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00skpso.qyx0v6da.g00skpso.qyx0waa1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faidort%2Fslub-544%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faidort%2Fi%2F10000404%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aidort/cabinet/06553239/imgrc0076594783.jpg?_ex=128x128"
+        },
+        {
+          "name": "《100円クーポン》オシャモバ正規品【モバイルバッテリー 軽量 type-c usbc 小型 大容量 名入れ 卒業記念 記念品 プレゼント #OSHAMOBA iPhone 10000mAh ケーブル内蔵 薄型 薄い 軽い かわいい 充電器 スマホ 防災グッズ】★メール便送料無料★ ケーブル内蔵バッテリー {3}",
+          "price": 1680,
+          "shop": "La Chou Chou",
+          "review_avg": 4.33,
+          "review_count": 16392,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rl3eo.qyx0v59f.g00rl3eo.qyx0w875/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcorsage%2F1005-129_2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcorsage%2Fi%2F10001083%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/corsage/cabinet/03257720/03659717/imgrc0063744529.jpg?_ex=128x128"
+        }
+      ],
+      "content": {
+        "title": "軽量モバイルバッテリーを価格帯別に比較｜レビュー件数・平均評価が高い5モデル",
+        "lead": "今回取り上げた5モデルの価格は1,580円〜1,980円で、すべて1,000円台後半に収まります。そのため「1,500円台」「1,600円台」「1,900円台」の3つに分けて比べます。レビュー件数は16,392件〜31,658件、平均評価は4.33〜4.51です。いずれも件数が多い商品ですが、評価の優劣は断定しません。なお、商品データに重量の数値があるのは1件(179g)だけです。「軽量」は商品名の表記に基づく分類で、軽さの実測比較ではありません。",
+        "picks": [
+          {
+            "i": 0,
+            "who_for": "1,500円台で、Lightning/Type-cのコネクター内蔵タイプを探している人",
+            "point": "価格は1,580円で、今回の5件のうち最も低い価格帯です。レビュー件数は31,658件で5件中最多、平均評価は4.45です。商品名にはMFi認証品、LED残量表示、PD10.5W急速充電の記載があります。",
+            "tradeoff": "容量は5000mAhの表記で、他の10000mAh表記の商品(商品2・3・4)より小さい数値です。重量の記載はデータにありません。"
+          },
+          {
+            "i": 1,
+            "who_for": "1,600円台で、小型・ミニ表記のケーブル内蔵モデルを比べたい人",
+            "point": "価格は1,690円、平均評価は4.43、レビュー件数は29,918件です。商品名にはPSE認証、超マット加工、ケーブル内蔵の記載があります。",
+            "tradeoff": "容量が5000/10000mAhと併記されており、1,690円がどちらの容量の価格かはデータから判別できません。購入前に商品ページでの確認が必要です。重量の記載もありません。"
+          },
+          {
+            "i": 4,
+            "who_for": "1,600円台で、10000mAh表記・薄型・ケーブル内蔵のモデルを探している人",
+            "point": "価格は1,680円で、10000mAh表記の3商品の中では最も低い価格です。平均評価は4.33、レビュー件数は16,392件です。商品名にはケーブル内蔵、薄型、名入れ、メール便送料無料の記載があります。",
+            "tradeoff": "レビュー件数は今回の5件で最少です。平均評価の4.33も、商品0〜2より数値が低めです。重量の記載はありません。"
+          },
+          {
+            "i": 2,
+            "who_for": "1,900円台で、平均評価の数値が高いモデルを選びたい人",
+            "point": "平均評価は4.51で5件中最も高い数値です。レビュー件数は28,318件で、価格は1,980円です。商品名には10000mAh、薄型、ケーブル内蔵、Type-C/Lightning、名入れの記載があります。",
+            "tradeoff": "価格は5件の中で最も高い部類(商品3と同額)です。商品名に「クーポンで1,880円」「11/11 1:59迄」とあり、期間限定の条件が付いています。10000mAhと20000mAhの両方が書かれているため、掲載価格の対象容量はデータから確定できません。"
+          },
+          {
+            "i": 3,
+            "who_for": "1,900円台で、重量(179g)や複数台同時充電の記載を確認して選びたい人",
+            "point": "価格は1,980円、平均評価は4.33、レビュー件数は17,327件です。商品名に179g、10000mAh、3台同時充電、残電量表示、90日あんしん保証の記載があります。重量が数値で分かるのは今回この商品だけです。",
+            "tradeoff": "平均評価の4.33は、商品0〜2より数値が低めです。充電は5V/2.1A対応の表記で、PD急速充電の記載は商品名にありません。価格は5件の中で最も高い部類です。"
+          }
+        ],
+        "faq": [
+          {
+            "q": "価格帯ごとの違いは何ですか?",
+            "a": "1,500円台は商品0(1,580円)、1,600円台は商品1(1,690円)と商品4(1,680円)、1,900円台は商品2と商品3(ともに1,980円)です。価格差は最大でも400円で、容量表記やレビュー件数にそれぞれ違いがあります。"
+          },
+          {
+            "q": "軽さは比較できますか?",
+            "a": "商品データに重量の数値があるのは商品3の179gだけです。ほかの4件は重量の記載がないため、軽さの優劣はここでは判断できません。購入前に各商品ページで重量を確認してください。"
+          },
+          {
+            "q": "レビューの数字はどう見ればよいですか?",
+            "a": "今回の5件はレビュー件数が16,392件〜31,658件と多く、平均評価は4.33〜4.51です。これらは事実として示したもので、評価の優劣を断定するものではありません。件数は商品0が最多、平均評価は商品2が最も高い数値です。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "20261106-004",
+      "keyword": "USBハブ Type-C",
+      "status": "pending",
+      "sample": false,
+      "problems": [],
+      "fetched_at": "2026-11-06 16:44 JST",
+      "items": [
+        {
+          "name": "★期間中20%クーポン★【楽天1位常連】USBハブ USB Type-C ハブ 7in1 HDMI 4K USB3.0 PD対応 SDカードリーダー microSD 100W 変換 アダプタ USB-C ハブ ノートパソコン ノートPC Chromebook surface PC iPhone 18 Pro/17 iPad Air Pro Android Mac USB-C Android QGeem",
+          "price": 2980,
+          "shop": "GWAAN",
+          "review_avg": 4.54,
+          "review_count": 2050,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tlkxo.qyx0v1db.g00tlkxo.qyx0w1e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgoodhammond%2Fqg_c_016%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgoodhammond%2Fi%2F10000105%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/goodhammond/cabinet/qg_c_010/qg_c_016_00_0928.jpg?_ex=128x128"
+        },
+        {
+          "name": "【2個目半額/3個目タダ】 SDカードリーダー lightning 高速170Mb/s 2in1/3in1 sdカード usbハブ USB3.0 高速 Type-C 2tb マイクロsdカード sd タイプc データ転送 usbメモリ カードリーダー iPhone 5gbps【iPhone15/16シリーズ対応】 uc0116",
+          "price": 1080,
+          "shop": "MSL FORCE公式楽天市場店",
+          "review_avg": 4.53,
+          "review_count": 1539,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u1wdo.qyx0v750.g00u1wdo.qyx0wee0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsunivision%2Fuc0116%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsunivision%2Fi%2F10000000%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sunivision/cabinet/2026/imgrc0113774692.jpg?_ex=128x128"
+        },
+        {
+          "name": "【クーポン最大10%OFF】【楽天1位 10冠】USB Type-C ハブ 7in1 USB変換アダプタ HDMI 4K USB3.0 ポート PD急速充電 SDカードリーダー 高速 データ移行 ケーブル USBハブ USB-C タイプC typec SDカード MacBook Air iPad Pro Surface Nintendo Switch iPhone18 ノートPC",
+          "price": 3980,
+          "shop": "スマホメモリ専門スターフォーカス",
+          "review_avg": 4.46,
+          "review_count": 1306,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00ruz0o.qyx0vd7c.g00ruz0o.qyx0w4bc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstarfocus%2Fsf-7in1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fstarfocus%2Fi%2F10003068%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/starfocus/cabinet/03546269/7in1hub/hub_slide-01-02.jpg?_ex=128x128"
+        },
+        {
+          "name": "★楽天1位★【6in1】 USB Type-C ハブ HDMI 4K USB3.0 PD87w対応 SD/microSDカードリーダー ドッキングステーション 薄型 軽量アルミ合金 USB変換アダプター MacBook ノートパソコン ノートPC surface iPhone15/15Pro iPad Air5/4 Pro2018/2020/2021/2022 Android対応",
+          "price": 2680,
+          "shop": "ComfyStore",
+          "review_avg": 4.5,
+          "review_count": 1016,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00trcio.qyx0v836.g00trcio.qyx0we40/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomfystore%2Fco-usb-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcomfystore%2Fi%2F10000041%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/comfystore/cabinet/07370190/07782411/01.jpg?_ex=128x128"
+        },
+        {
+          "name": "楽天1位獲得 USB Type-C ハブ HDMI 6-IN-1 1年保証 [ 4K HDMI＋USB 3.0＋USB 2.0＋PD充電 87W対応＋SDカードリーダー ] タイプc usbc hdmiケーブル 変換 アダプタ c端子 USB4 アダプタ Apple MacBook Air Pro neo iMac Mac mini iPhone 18 17 16 15対応 ※e / Air非対応 |pre",
+          "price": 1699,
+          "shop": "ベストクリック 楽天市場店",
+          "review_avg": 4.68,
+          "review_count": 522,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00s1w2o.qyx0v559.g00s1w2o.qyx0w78b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbestclick%2Fp0844%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbestclick%2Fi%2F10000627%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bestclick/cabinet/b800/p0844-2-topsale.jpg?_ex=128x128"
+        }
+      ],
+      "content": {
+        "title": "USBハブ Type-C 価格帯別に比較｜レビュー件数と平均評価でみる定番4モデル",
+        "lead": "Type-C対応のUSBハブを、価格帯（1,000円台・2,000円台・3,000円台）ごとに整理しました。判断材料は、商品データにある価格、レビュー平均、レビュー件数です。レビュー件数が多いほど多くの購入者の声が集まっているという事実は言えますが、評価の優劣は断定しません。各商品の弱みもあわせて載せたので、用途と予算に合わせて選んでください。なお、SDカードリーダー単体の商品はハブ種別に当てはまらないため、今回は対象から外しています。",
+        "picks": [
+          {
+            "i": 4,
+            "who_for": "1,000円台の価格帯で、HDMI出力とPD充電に対応したType-Cハブを探している人",
+            "point": "価格は1,699円で、今回の4商品の中では低い価格帯です。商品名には6-IN-1、4K HDMI、USB 3.0、USB 2.0、PD充電87W対応、SDカードリーダー、1年保証と記載があります。レビュー平均は4.68、件数は522件です。",
+            "tradeoff": "レビュー件数は522件で、他の3商品（1,016〜2,050件）より少なめです。商品名に「e / Air非対応」という注記があるため、購入前に自分の機種が対応しているか確認が必要です。"
+          },
+          {
+            "i": 3,
+            "who_for": "2,000円台前半で、ポート数を絞った薄型・軽量タイプを探している人",
+            "point": "価格は2,680円です。商品名には6in1、4K HDMI、USB3.0、PD87w対応、SD/microSDカードリーダー、薄型、軽量アルミ合金と記載があります。レビュー平均は4.5、件数は1,016件で、件数は1,000件を超えています。",
+            "tradeoff": "商品名の表記は6in1で、7in1の商品とはポート構成が異なる可能性があります。PDの記載は87wで、100W対応と記載された商品より数値が低いです。レビュー件数も、2,000件超の商品と比べると少なめです。"
+          },
+          {
+            "i": 0,
+            "who_for": "3,000円未満の価格帯で、レビュー件数の多い定番モデルを選びたい人",
+            "point": "価格は2,980円です。商品名には7in1、HDMI 4K、USB3.0、PD対応100W、SDカードリーダー、microSDと記載があります。レビュー件数は2,050件で、今回の4商品の中で件数が多く、平均は4.54です。",
+            "tradeoff": "価格は2,680円や1,699円の商品より高めです。商品名にはクーポン表記がありますが、適用条件はデータからは分からないため、購入ページでの確認が必要です。"
+          },
+          {
+            "i": 2,
+            "who_for": "3,000円台で、7in1構成のHDMI・PD充電対応ハブを探している人",
+            "point": "価格は3,980円です。商品名には7in1、HDMI 4K、USB3.0ポート、PD急速充電、SDカードリーダーと記載があります。レビュー平均は4.46、件数は1,306件で、1,000件を超えています。",
+            "tradeoff": "今回の4商品の中では価格が高く、レビュー平均の数値も低めです。PD充電のワット数はデータに記載がないため、必要な出力は購入前に確認してください。"
+          }
+        ],
+        "faq": [
+          {
+            "q": "価格帯はどのように分けましたか？",
+            "a": "掲載した4商品の価格（1,699円、2,680円、2,980円、3,980円）をもとに、1,000円台、2,000円台、3,000円台として整理しました。"
+          },
+          {
+            "q": "レビュー件数と平均評価はどう見ればよいですか？",
+            "a": "件数が多い商品は、それだけ多くの購入者の声が集まっています。平均評価は数値の差が小さいため、優劣を決める材料ではなく、比較の目安として見てください。"
+          },
+          {
+            "q": "SDカードリーダー単体の商品が含まれていないのはなぜですか？",
+            "a": "検索に出ても、Type-Cハブの種別に当てはまらない商品は比較対象から除外しているためです。今回は、HDMIやUSBポートなどを備えたハブとして記載のある商品だけを掲載しました。"
+          },
+          {
+            "q": "自分の機器で使えるかはどう確認すればよいですか？",
+            "a": "対応機種や出力の詳細は、商品データだけでは判断できません。購入前に販売ページの記載を確認してください。特に「e / Air非対応」と注記のある商品は、機種との相性の確認が必要です。"
           }
         ]
       }
