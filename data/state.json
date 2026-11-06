@@ -5,7 +5,7 @@
       "status": "「ワイヤレスマウス 静音」を企画済み"
     },
     "researcher": {
-      "done": 45,
+      "done": 71,
       "status": "「キャットフード 成猫 2kg」: 取得60件→種類が合う60件→内容量を確認58件→掲載15件（極端な値0件を除外）"
     },
     "writer": {
@@ -17,300 +17,15 @@
       "status": "審査通過"
     },
     "designer": {
-      "done": 45,
+      "done": 71,
       "status": "ランキング rank-cat-food を更新（状態: pending）"
     },
     "analyst": {
-      "done": 11,
+      "done": 12,
       "status": "収益を集計済み"
     }
   },
   "log": [
-    {
-      "t": "11/06 17:09",
-      "agent": "planner",
-      "msg": "今日のお題は「ワイヤレスマウス 静音」。切り口は「3,000円以下で選ぶ静音マウス、価格帯別にレビュー件数と平均評価で比較」"
-    },
-    {
-      "t": "11/06 17:09",
-      "agent": "researcher",
-      "msg": "5商品を取得（レビュー件数順）"
-    },
-    {
-      "t": "11/06 17:10",
-      "agent": "researcher",
-      "msg": "仕様を抽出：5項目（接続方式・重量・サイズ・DPI・電源）、5商品で取得"
-    },
-    {
-      "t": "11/06 17:11",
-      "agent": "writer",
-      "msg": "『3,000円以下の静音ワイヤレスマウス5選｜価格帯別にレビュー件数と平均評価で比較』を書き上げました"
-    },
-    {
-      "t": "11/06 17:11",
-      "agent": "reviewer",
-      "msg": "審査を通過しました"
-    },
-    {
-      "t": "11/06 17:11",
-      "agent": "designer",
-      "msg": "20261106-010 を組版（状態: pending）"
-    },
-    {
-      "t": "11/06 17:11",
-      "agent": "analyst",
-      "msg": "累計報酬0円・成果0件（実績データなし）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "researcher",
-      "msg": "「炭酸水 500ml 24本」: 30件中28件で内容量を確認、15件を掲載（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "designer",
-      "msg": "ランキング rank-sparkling-water を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "researcher",
-      "msg": "「国産 米 5kg」: 30件中18件で内容量を確認、15件を掲載（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "designer",
-      "msg": "ランキング rank-rice-5kg を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "researcher",
-      "msg": "「コーヒー ドリップバッグ」: 30件中24件で内容量を確認、15件を掲載（極端な値3件を除外）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "designer",
-      "msg": "ランキング rank-drip-coffee を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 17:44",
-      "agent": "analyst",
-      "msg": "累計報酬0円・成果0件（実績データなし）"
-    },
-    {
-      "t": "11/06 17:46",
-      "agent": "researcher",
-      "msg": "「炭酸水 500ml 24本」: 取得60件→種類が合う32件→内容量を確認29件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 17:46",
-      "agent": "designer",
-      "msg": "ランキング rank-sparkling-water を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 17:47",
-      "agent": "researcher",
-      "msg": "「国産 米 5kg」: 取得60件→種類が合う51件→内容量を確認31件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 17:47",
-      "agent": "designer",
-      "msg": "ランキング rank-rice-5kg を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 17:47",
-      "agent": "researcher",
-      "msg": "「コーヒー ドリップバッグ」: 取得60件→種類が合う54件→内容量を確認40件→掲載15件（極端な値4件を除外）"
-    },
-    {
-      "t": "11/06 17:47",
-      "agent": "designer",
-      "msg": "ランキング rank-drip-coffee を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 17:47",
-      "agent": "analyst",
-      "msg": "累計報酬0円・成果0件（実績データなし）"
-    },
-    {
-      "t": "11/06 17:49",
-      "agent": "analyst",
-      "msg": "累計報酬0円・成果0件（実績データなし）"
-    },
-    {
-      "t": "11/06 18:00",
-      "agent": "researcher",
-      "msg": "「炭酸水 500ml 24本」: 取得60件→種類が合う32件→内容量を確認27件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:00",
-      "agent": "designer",
-      "msg": "ランキング rank-sparkling-water を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:00",
-      "agent": "researcher",
-      "msg": "「炭酸水 1L 12本」: 取得37件→種類が合う29件→内容量を確認29件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:00",
-      "agent": "designer",
-      "msg": "ランキング rank-sparkling-water-1l を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:00",
-      "agent": "researcher",
-      "msg": "「ミネラルウォーター 2L 12本」: 取得60件→種類が合う60件→内容量を確認42件→掲載15件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:00",
-      "agent": "designer",
-      "msg": "ランキング rank-water-2l を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:01",
-      "agent": "researcher",
-      "msg": "「ミネラルウォーター 500ml 24本」: 取得60件→種類が合う46件→内容量を確認41件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:01",
-      "agent": "designer",
-      "msg": "ランキング rank-water-500ml を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:01",
-      "agent": "researcher",
-      "msg": "「お茶 ペットボトル 500ml 24本」: 取得60件→種類が合う50件→内容量を確認37件→掲載15件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:01",
-      "agent": "designer",
-      "msg": "ランキング rank-green-tea-bottle を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:02",
-      "agent": "researcher",
-      "msg": "「麦茶 ティーバッグ 大容量」: 取得29件→種類が合う22件→内容量を確認10件→掲載9件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:02",
-      "agent": "designer",
-      "msg": "ランキング rank-barley-tea-bag を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:02",
-      "agent": "researcher",
-      "msg": "「紅茶 ティーバッグ 100袋」は内容量を確認できた商品が3件のみ。更新を見送り"
-    },
-    {
-      "t": "11/06 18:02",
-      "agent": "researcher",
-      "msg": "「ルイボスティー ティーバッグ」: 取得60件→種類が合う60件→内容量を確認41件→掲載15件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:02",
-      "agent": "designer",
-      "msg": "ランキング rank-rooibos-tea-bag を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:03",
-      "agent": "researcher",
-      "msg": "「コーヒー ドリップバッグ」: 取得60件→種類が合う54件→内容量を確認38件→掲載15件（極端な値3件を除外）"
-    },
-    {
-      "t": "11/06 18:03",
-      "agent": "designer",
-      "msg": "ランキング rank-drip-coffee を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:03",
-      "agent": "researcher",
-      "msg": "「コーヒー豆 1kg」: 取得60件→種類が合う60件→内容量を確認40件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:03",
-      "agent": "designer",
-      "msg": "ランキング rank-coffee-beans を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:04",
-      "agent": "researcher",
-      "msg": "「米 5kg」は内容量を確認できた商品が2件のみ。更新を見送り"
-    },
-    {
-      "t": "11/06 18:04",
-      "agent": "researcher",
-      "msg": "「米 10kg」: 取得60件→種類が合う60件→内容量を確認44件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:04",
-      "agent": "designer",
-      "msg": "ランキング rank-rice-10kg を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:04",
-      "agent": "researcher",
-      "msg": "「米 30kg」: 取得60件→種類が合う59件→内容量を確認31件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:04",
-      "agent": "designer",
-      "msg": "ランキング rank-rice-30kg を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "researcher",
-      "msg": "「パスタ 乾麺 5kg」: 取得18件→種類が合う16件→内容量を確認15件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "designer",
-      "msg": "ランキング rank-pasta-dry を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "researcher",
-      "msg": "「オートミール 1kg」: 取得18件→種類が合う11件→内容量を確認9件→掲載9件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "designer",
-      "msg": "ランキング rank-oatmeal を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "researcher",
-      "msg": "「ミックスナッツ 無塩 1kg」: 取得58件→種類が合う58件→内容量を確認38件→掲載15件（極端な値1件を除外）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "designer",
-      "msg": "ランキング rank-mixed-nuts を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "researcher",
-      "msg": "「ツナ缶 24缶」: 取得26件→種類が合う26件→内容量を確認15件→掲載13件（極端な値2件を除外）"
-    },
-    {
-      "t": "11/06 18:05",
-      "agent": "designer",
-      "msg": "ランキング rank-tuna-can を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:06",
-      "agent": "researcher",
-      "msg": "「鶏むね肉 2kg」: 取得27件→種類が合う18件→内容量を確認14件→掲載14件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:06",
-      "agent": "designer",
-      "msg": "ランキング rank-chicken-breast を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:06",
-      "agent": "researcher",
-      "msg": "「薄力粉 1kg」は内容量を確認できた商品が0件のみ。更新を見送り"
-    },
     {
       "t": "11/06 18:06",
       "agent": "researcher",
@@ -423,6 +138,291 @@
     },
     {
       "t": "11/06 18:09",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "researcher",
+      "msg": "「炭酸水 500ml 24本」: 取得60件→種類が合う32件→内容量を確認27件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "designer",
+      "msg": "ランキング rank-sparkling-water を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "researcher",
+      "msg": "「炭酸水 1L 12本」: 取得37件→種類が合う29件→内容量を確認29件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "designer",
+      "msg": "ランキング rank-sparkling-water-1l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "researcher",
+      "msg": "「ミネラルウォーター 2L 12本」: 取得60件→種類が合う51件→内容量を確認42件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "designer",
+      "msg": "ランキング rank-water-2l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "researcher",
+      "msg": "「ミネラルウォーター 500ml 24本」: 取得60件→種類が合う44件→内容量を確認41件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:13",
+      "agent": "designer",
+      "msg": "ランキング rank-water-500ml を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:14",
+      "agent": "researcher",
+      "msg": "「お茶 ペットボトル 500ml 24本」: 取得60件→種類が合う49件→内容量を確認36件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:14",
+      "agent": "designer",
+      "msg": "ランキング rank-green-tea-bottle を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:14",
+      "agent": "researcher",
+      "msg": "「麦茶 ティーバッグ 大容量」: 取得29件→種類が合う22件→内容量を確認10件→掲載9件（極端な値1件を除外）"
+    },
+    {
+      "t": "11/06 18:14",
+      "agent": "designer",
+      "msg": "ランキング rank-barley-tea-bag を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:15",
+      "agent": "researcher",
+      "msg": "「紅茶 ティーバッグ」: 取得60件→種類が合う58件→内容量を確認38件→掲載15件（極端な値4件を除外）"
+    },
+    {
+      "t": "11/06 18:15",
+      "agent": "designer",
+      "msg": "ランキング rank-black-tea-bag を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:15",
+      "agent": "researcher",
+      "msg": "「ルイボスティー ティーバッグ」: 取得60件→種類が合う60件→内容量を確認40件→掲載15件（極端な値1件を除外）"
+    },
+    {
+      "t": "11/06 18:15",
+      "agent": "designer",
+      "msg": "ランキング rank-rooibos-tea-bag を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:15",
+      "agent": "researcher",
+      "msg": "「コーヒー ドリップバッグ」: 取得60件→種類が合う51件→内容量を確認39件→掲載15件（極端な値4件を除外）"
+    },
+    {
+      "t": "11/06 18:15",
+      "agent": "designer",
+      "msg": "ランキング rank-drip-coffee を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:16",
+      "agent": "researcher",
+      "msg": "「コーヒー豆 1kg」: 取得60件→種類が合う57件→内容量を確認40件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:16",
+      "agent": "designer",
+      "msg": "ランキング rank-coffee-beans を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:16",
+      "agent": "researcher",
+      "msg": "「米 5kg」は内容量を確認できた商品が2件のみ。更新を見送り"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "researcher",
+      "msg": "「米 10kg」: 取得60件→種類が合う55件→内容量を確認44件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "designer",
+      "msg": "ランキング rank-rice-10kg を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "researcher",
+      "msg": "「米 30kg」: 取得60件→種類が合う50件→内容量を確認31件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "designer",
+      "msg": "ランキング rank-rice-30kg を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "researcher",
+      "msg": "「パスタ 乾麺 5kg」: 取得18件→種類が合う16件→内容量を確認15件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "designer",
+      "msg": "ランキング rank-pasta-dry を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "researcher",
+      "msg": "「オートミール 1kg」: 取得18件→種類が合う11件→内容量を確認9件→掲載9件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:17",
+      "agent": "designer",
+      "msg": "ランキング rank-oatmeal を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「ミックスナッツ 無塩 1kg」: 取得58件→種類が合う53件→内容量を確認36件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "designer",
+      "msg": "ランキング rank-mixed-nuts を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「ツナ缶 24缶」: 取得26件→種類が合う10件→内容量を確認10件→掲載10件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "designer",
+      "msg": "ランキング rank-tuna-can を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「鶏むね肉 2kg」: 取得27件→種類が合う14件→内容量を確認12件→掲載12件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "designer",
+      "msg": "ランキング rank-chicken-breast を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「薄力粉 1kg」: 取得32件→種類が合う27件→内容量を確認21件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "designer",
+      "msg": "ランキング rank-flour-soft を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「おむつ テープ Mサイズ」は内容量を確認できた商品が3件のみ。更新を見送り"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「おむつ テープ Sサイズ」は内容量を確認できた商品が2件のみ。更新を見送り"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "researcher",
+      "msg": "「おむつ パンツ Mサイズ」: 取得43件→種類が合う12件→内容量を確認5件→掲載5件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:18",
+      "agent": "designer",
+      "msg": "ランキング rank-diaper-pants-m を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:19",
+      "agent": "researcher",
+      "msg": "「おむつ パンツ Lサイズ」は内容量を確認できた商品が4件のみ。更新を見送り"
+    },
+    {
+      "t": "11/06 18:19",
+      "agent": "researcher",
+      "msg": "「洗濯洗剤 詰め替え 大容量」: 取得60件→種類が合う39件→内容量を確認13件→掲載13件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:19",
+      "agent": "designer",
+      "msg": "ランキング rank-detergent-laundry を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:19",
+      "agent": "researcher",
+      "msg": "「食器用洗剤 詰め替え」: 取得60件→種類が合う60件→内容量を確認5件→掲載5件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:19",
+      "agent": "designer",
+      "msg": "ランキング rank-detergent-dish を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "researcher",
+      "msg": "「ゴミ袋 45L 100枚」: 取得16件→種類が合う16件→内容量を確認13件→掲載13件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "designer",
+      "msg": "ランキング rank-trash-bag-45l を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "researcher",
+      "msg": "「単3 乾電池 アルカリ 20本」: 取得31件→種類が合う28件→内容量を確認12件→掲載12件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "designer",
+      "msg": "ランキング rank-battery-aa を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "researcher",
+      "msg": "「不織布マスク 100枚」: 取得60件→種類が合う22件→内容量を確認20件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "designer",
+      "msg": "ランキング rank-mask-nonwoven を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "researcher",
+      "msg": "「ドッグフード 成犬 5kg」: 取得60件→種類が合う57件→内容量を確認53件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:20",
+      "agent": "designer",
+      "msg": "ランキング rank-dog-food を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:21",
+      "agent": "researcher",
+      "msg": "「キャットフード 成猫 2kg」: 取得60件→種類が合う60件→内容量を確認58件→掲載15件（極端な値0件を除外）"
+    },
+    {
+      "t": "11/06 18:21",
+      "agent": "designer",
+      "msg": "ランキング rank-cat-food を更新（状態: pending）"
+    },
+    {
+      "t": "11/06 18:21",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -1963,7 +1963,7 @@
       "fetched": 32,
       "confirmed": 27,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:00 JST",
+      "updated": "2026-11-06 18:13 JST",
       "status": "pending"
     },
     "rank-rice-5kg": {
@@ -2237,6 +2237,19 @@
           "code": "cafekobo:10000000"
         },
         {
+          "name": "ドリップコーヒー コーヒー 粉 150杯 ブルーマウンテン ブレンド 2袋おまけ付き 3種 飲み比べ アソート セット ( オリジナル リッチ ホテル 各50袋 ブルマン 2袋 ) 中深煎り コーヒー粉 珈琲 珈琲豆 ドリップバッグ ドリップパック 送料無料",
+          "price": 5391,
+          "shop": "DRIP COFFEE FACTORY",
+          "review_avg": 4.61,
+          "review_count": 591,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbhoo.qyx0vf27.g00tbhoo.qyx0wf6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdripcoffee%2F0400003357338%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdripcoffee%2Fi%2F10000493%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/dripcoffee/cabinet/it01/limited/dp_assort/0400003357338_ne10p.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 150.0,
+          "unit_price": 35.94,
+          "code": "dripcoffee:10000493"
+        },
+        {
           "name": "【11月】【たっぷり6種類180袋 ドリップコーヒー月刊福袋】コーヒー 福袋 珈琲 ドリップ ドリップパック ドリップバッグ 個包装 10g 大量 180杯 ギフト 贈り物 プレゼント",
           "price": 6480,
           "shop": "神戸BaySideCafe",
@@ -2365,25 +2378,12 @@
           "total": 40.0,
           "unit_price": 43.0,
           "code": "soukaidrink:10010803"
-        },
-        {
-          "name": "100袋 HONUKOPEスペシャルティ珈琲豆使用ドリップバッグコーヒーセット 送料無料 ギフト 加藤珈琲",
-          "price": 4318,
-          "shop": "グルメコーヒー豆専門!加藤珈琲店",
-          "review_avg": 4.58,
-          "review_count": 1542,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pl5fo.qyx0v50d.g00pl5fo.qyx0w5be/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgourmetcoffee%2F1005-100%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgourmetcoffee%2Fi%2F10004112%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/gourmetcoffee/cabinet/1000/1005-100r.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 100.0,
-          "unit_price": 43.18,
-          "code": "gourmetcoffee:10004112"
         }
       ],
-      "fetched": 54,
-      "confirmed": 38,
-      "excluded_outlier": 3,
-      "updated": "2026-11-06 18:03 JST",
+      "fetched": 51,
+      "confirmed": 39,
+      "excluded_outlier": 4,
+      "updated": "2026-11-06 18:15 JST",
       "status": "pending"
     },
     "rank-sparkling-water-1l": {
@@ -2601,7 +2601,7 @@
       "fetched": 29,
       "confirmed": 29,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:00 JST",
+      "updated": "2026-11-06 18:13 JST",
       "status": "pending"
     },
     "rank-water-2l": {
@@ -2816,10 +2816,10 @@
           "code": "sktadv:10000842"
         }
       ],
-      "fetched": 60,
+      "fetched": 51,
       "confirmed": 42,
-      "excluded_outlier": 1,
-      "updated": "2026-11-06 18:00 JST",
+      "excluded_outlier": 0,
+      "updated": "2026-11-06 18:13 JST",
       "status": "pending"
     },
     "rank-water-500ml": {
@@ -3033,10 +3033,10 @@
           "code": "k-home:10079123"
         }
       ],
-      "fetched": 46,
+      "fetched": 44,
       "confirmed": 41,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:01 JST",
+      "updated": "2026-11-06 18:13 JST",
       "status": "pending"
     },
     "rank-green-tea-bottle": {
@@ -3250,10 +3250,10 @@
           "code": "aburajin:10000564"
         }
       ],
-      "fetched": 50,
-      "confirmed": 37,
-      "excluded_outlier": 1,
-      "updated": "2026-11-06 18:01 JST",
+      "fetched": 49,
+      "confirmed": 36,
+      "excluded_outlier": 0,
+      "updated": "2026-11-06 18:14 JST",
       "status": "pending"
     },
     "rank-barley-tea-bag": {
@@ -3392,7 +3392,7 @@
       "fetched": 22,
       "confirmed": 10,
       "excluded_outlier": 1,
-      "updated": "2026-11-06 18:02 JST",
+      "updated": "2026-11-06 18:14 JST",
       "status": "pending"
     },
     "rank-rooibos-tea-bag": {
@@ -3607,9 +3607,9 @@
         }
       ],
       "fetched": 60,
-      "confirmed": 41,
+      "confirmed": 40,
       "excluded_outlier": 1,
-      "updated": "2026-11-06 18:02 JST",
+      "updated": "2026-11-06 18:15 JST",
       "status": "pending"
     },
     "rank-coffee-beans": {
@@ -3823,10 +3823,10 @@
           "code": "gourmetcoffee:10008587"
         }
       ],
-      "fetched": 60,
+      "fetched": 57,
       "confirmed": 40,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:03 JST",
+      "updated": "2026-11-06 18:16 JST",
       "status": "pending"
     },
     "rank-rice-10kg": {
@@ -4041,10 +4041,10 @@
           "code": "fuchigami:10000055"
         }
       ],
-      "fetched": 60,
+      "fetched": 55,
       "confirmed": 44,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:04 JST",
+      "updated": "2026-11-06 18:17 JST",
       "status": "pending"
     },
     "rank-rice-30kg": {
@@ -4259,10 +4259,10 @@
           "code": "marukichi-kayano:10000021"
         }
       ],
-      "fetched": 59,
+      "fetched": 50,
       "confirmed": 31,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:04 JST",
+      "updated": "2026-11-06 18:17 JST",
       "status": "pending"
     },
     "rank-pasta-dry": {
@@ -4480,7 +4480,7 @@
       "fetched": 16,
       "confirmed": 15,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:05 JST",
+      "updated": "2026-11-06 18:17 JST",
       "status": "pending"
     },
     "rank-oatmeal": {
@@ -4620,7 +4620,7 @@
       "fetched": 11,
       "confirmed": 9,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:05 JST",
+      "updated": "2026-11-06 18:17 JST",
       "status": "pending"
     },
     "rank-mixed-nuts": {
@@ -4666,17 +4666,17 @@
           "code": "nuthyougo:10000220"
         },
         {
-          "name": "ミックスナッツ 1kg レーズン入り ミックスナッツ 素焼きミックスナッツ 無添加ミックス トレイルミックスナッツ 大人気 ミックスナッツ 素焼きナッツ おやつ おつまみ【無添加・無塩・植物油不使用】",
-          "price": 2100,
+          "name": "健康トレイルミックスナッツ 1kg ミックスナッツ トレイルミックス プレミアム 素焼きナッツ ミックス アーモンド カシューナッツ 生くるみ レーズン クランベリー 健康 大人気！素焼きナッツ おやつ【保存料不使用・無塩】",
+          "price": 2280,
           "shop": "NUT HYOUGO 商店",
-          "review_avg": 4.45,
-          "review_count": 20,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00trtso.qyx0v9a0.g00trtso.qyx0w92b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnuthyougo%2Fitem324%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnuthyougo%2Fi%2F10000377%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nuthyougo/cabinet/item322.jpg?_ex=128x128",
+          "review_avg": 4.6,
+          "review_count": 563,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00trtso.qyx0v9a0.g00trtso.qyx0w92b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnuthyougo%2Fitem023%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnuthyougo%2Fi%2F10000035%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nuthyougo/cabinet/item023.jpg?_ex=128x128",
           "postage": "込み",
           "total": 1.0,
-          "unit_price": 2100.0,
-          "code": "nuthyougo:10000377"
+          "unit_price": 2280.0,
+          "code": "nuthyougo:10000035"
         },
         {
           "name": "ミックスナッツ 1kg 美活ミックスナッツ トレイルミックスナッツ ミックス ナッツ ドライフルーツ ミックスナッツ 大人気 ミックスナッツ 素焼きナッツ おやつ おつまみ【無塩】",
@@ -4690,19 +4690,6 @@
           "total": 1.0,
           "unit_price": 2280.0,
           "code": "nuthyougo:10000410"
-        },
-        {
-          "name": "ミックスナッツ 1kg クランベリー入り ミックスナッツ 素焼きミックスナッツ 無添加ミックス トレイルミックスナッツ 大人気 ミックスナッツ 素焼きナッツ おやつ おつまみ【無塩】",
-          "price": 2280,
-          "shop": "NUT HYOUGO 商店",
-          "review_avg": 4.69,
-          "review_count": 29,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00trtso.qyx0v9a0.g00trtso.qyx0w92b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnuthyougo%2Fitem327%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnuthyougo%2Fi%2F10000380%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nuthyougo/cabinet/item323.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 1.0,
-          "unit_price": 2280.0,
-          "code": "nuthyougo:10000380"
         },
         {
           "name": "ミックスナッツ 厳選2種類素焼き ミックスナッツ 1kg 送料無料 プレミアム 素焼きナッツ 素焼きナッツ 素焼きミックス アーモンド カシューナッツ おやつ おつまみ【無添加・無塩・植物油不使用】",
@@ -4833,12 +4820,25 @@
           "total": 2.415,
           "unit_price": 2669.5652173913045,
           "code": "sake-sugita:10009665"
+        },
+        {
+          "name": "幸せ素焼きミックスナッツ 1kg 送料無料　ミックスナッツ　大人気　素焼きミックスナッツ　自然ナッツ 素焼きナッツ　ナッツ ネコポス配送　おやつ おつまみ『無添加・無塩・植物油不使用』",
+          "price": 2680,
+          "shop": "NUT HYOUGO 商店",
+          "review_avg": 4.73,
+          "review_count": 439,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00trtso.qyx0v9a0.g00trtso.qyx0w92b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnuthyougo%2Fitem012%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnuthyougo%2Fi%2F10000017%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nuthyougo/cabinet/item012-1003.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 1.0,
+          "unit_price": 2680.0,
+          "code": "nuthyougo:10000017"
         }
       ],
-      "fetched": 58,
-      "confirmed": 38,
-      "excluded_outlier": 1,
-      "updated": "2026-11-06 18:05 JST",
+      "fetched": 53,
+      "confirmed": 36,
+      "excluded_outlier": 0,
+      "updated": "2026-11-06 18:18 JST",
       "status": "pending"
     },
     "rank-tuna-can": {
@@ -4986,51 +4986,12 @@
           "total": 24.0,
           "unit_price": 265.3333333333333,
           "code": "inaba-foods:10000016"
-        },
-        {
-          "name": "【ふるさと納税】 ツナ缶 80g 24缶 ツナ ツナフレーク 缶詰 きはだまぐろ マグロ 時短ごはん 食べきりサイズ 簡単 常温保存 非常食 保存食 買い置き おすそ分け 備蓄 防災食 防災ストック アウトドア キャンプ おつまみ 焼津 a11-223",
-          "price": 12000,
-          "shop": "静岡県焼津市",
-          "review_avg": 4.87,
-          "review_count": 279,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00siifo.qyx0v7f1.g00siifo.qyx0wca4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222127-yaizu%2Fa08-010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222127-yaizu%2Fi%2F10011382%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222127-yaizu/cabinet/y072/y072-a12-276-s-r.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 24.0,
-          "unit_price": 500.0,
-          "code": "f222127-yaizu:10011382"
-        },
-        {
-          "name": "【ふるさと納税】 ツナ缶 たっぷり 1缶80g 計24缶 まぐろ つな缶 キハダ フレーク マグロ 鮪 油漬 ライトミート 味付き アレンジ いちまる 普段使い ストック 高評価 長期保存 常温 缶詰 備蓄 防災 焼津 a12-216",
-          "price": 13500,
-          "shop": "静岡県焼津市",
-          "review_avg": 4.85,
-          "review_count": 199,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00siifo.qyx0v7f1.g00siifo.qyx0wca4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222127-yaizu%2Fa12-216%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222127-yaizu%2Fi%2F10011149%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222127-yaizu/cabinet/08701132/y244-a12-216-s-r-d.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 24.0,
-          "unit_price": 562.5,
-          "code": "f222127-yaizu:10011149"
-        },
-        {
-          "name": "【ふるさと納税】 【発送時期が選べる】 ツナ缶 缶詰 まぐろ フレーク 赤缶 常温 保存 備蓄 焼津 70g×24缶 プリンスツナ缶 赤缶 24缶入り a15-596",
-          "price": 16500,
-          "shop": "静岡県焼津市",
-          "review_avg": 4.7,
-          "review_count": 23,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00siifo.qyx0v7f1.g00siifo.qyx0wca4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222127-yaizu%2Fa12-025%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222127-yaizu%2Fi%2F10008258%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222127-yaizu/cabinet/08757828/y015-a12-025-s-r.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 24.0,
-          "unit_price": 687.5,
-          "code": "f222127-yaizu:10008258"
         }
       ],
-      "fetched": 26,
-      "confirmed": 15,
-      "excluded_outlier": 2,
-      "updated": "2026-11-06 18:05 JST",
+      "fetched": 10,
+      "confirmed": 10,
+      "excluded_outlier": 0,
+      "updated": "2026-11-06 18:18 JST",
       "status": "pending"
     },
     "rank-chicken-breast": {
@@ -5140,19 +5101,6 @@
           "code": "nikuru:10000130"
         },
         {
-          "name": "香川県産 親鶏 むね肉 鶏肉 業務用 サイズ 2kg 【到着日指定不可】",
-          "price": 1900,
-          "shop": "坂口商店 楽天市場店",
-          "review_avg": 4.96,
-          "review_count": 23,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r0d5o.qyx0v02a.g00r0d5o.qyx0wd35/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-sschicken%2Foyamune2000%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fauc-sschicken%2Fi%2F10000041%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/auc-sschicken/cabinet/commodity/omune-2kg.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 2.0,
-          "unit_price": 950.0,
-          "code": "auc-sschicken:10000041"
-        },
-        {
           "name": "★送料無料★(ゆうパックチルド便)→関東・関西・中部・北陸・中国・四国・九州★香川県産 さぬき匠の若どり 鶏肉 むね肉 4kg (2kg×2個) 国産 若鶏むね肉 業務用 冷蔵発送",
           "price": 4070,
           "shop": "坂口商店 楽天市場店",
@@ -5216,25 +5164,12 @@
           "total": 2.0,
           "unit_price": 1310.0,
           "code": "auc-sschicken:10000111"
-        },
-        {
-          "name": "【ふるさと納税】鹿児島県産 若鶏ムネ肉(計8kg・2kg×4袋) 鶏むね肉 小分け 鶏肉 むね肉 鶏肉 むね 【まつぼっくり】matu-7218R8",
-          "price": 21000,
-          "shop": "鹿児島県長島町",
-          "review_avg": 4.67,
-          "review_count": 127,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00s9p6o.qyx0v17d.g00s9p6o.qyx0w798/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff464040-nagashima%2Fmatu-446%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff464040-nagashima%2Fi%2F10000644%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f464040-nagashima/cabinet/10539196/10709162/matu-446.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 8.0,
-          "unit_price": 2625.0,
-          "code": "f464040-nagashima:10000644"
         }
       ],
-      "fetched": 18,
-      "confirmed": 14,
+      "fetched": 14,
+      "confirmed": 12,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:06 JST",
+      "updated": "2026-11-06 18:18 JST",
       "status": "pending"
     },
     "rank-diaper-tape-m": {
@@ -5690,84 +5625,6 @@
           "code": "kurashikenkou:10214970"
         },
         {
-          "name": "【公式】【6-11kg / Mサイズ】【132枚 （44枚×3パック）】Mirafeel ミラフィール オムツ プレゼント パンツ かぶれにくい ギフト 肌に優しい 高級 かわいい パンツタイプ テープタイプ 肌に優しいオムツ 高級オムツ かわいいオムツ 敏感肌オムツ",
-          "price": 6204,
-          "shop": "Mirafeel",
-          "review_avg": 4.39,
-          "review_count": 23,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7eao.qyx0v38d.g00u7eao.qyx0wdf1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmirafeel%2Fmirafeel-5%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmirafeel%2Fi%2F10000007%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mirafeel/cabinet/2511notice/0831-msize.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 132.0,
-          "unit_price": 47.0,
-          "code": "mirafeel:10000007"
-        },
-        {
-          "name": "【速配】大人用紙おむつ パンツ サルバ うす型やわ楽パンツ Mサイズ(腰周り：60〜90cm) ケース(合計96枚入[24枚×4袋]) | 大人用紙オムツ パンツタイプ 紙オムツ 大人用おむつ 紙オムツ 大人 紙パンツ 紙おむつ大人用 失禁パンツ 介護用おむつ 介護用オムツ 介護用パンツ",
-          "price": 6336,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.71,
-          "review_count": 451,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10005817%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10005817%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/00309601/g00641-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 96.0,
-          "unit_price": 66.0,
-          "code": "himawari-kaigo:10005817"
-        },
-        {
-          "name": "ライフリー 超うす型下着感覚パンツ 2回吸収 Mサイズ 34枚 3袋セット 1箱 送料無料 ユニ・チャーム 大人用おむつ 介護用品 紙おむつ パンツタイプ お出かけ 通気シート 消臭　ユニ・チャーム公式ショップ",
-          "price": 8316,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.72,
-          "review_count": 25,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F891x3%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10001370%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/shitagikankaku/100180.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 102.0,
-          "unit_price": 81.52941176470588,
-          "code": "unicharm:10001370"
-        },
-        {
-          "name": "【ケース】ライフリー 超うす型下着感覚パンツ 2回 M 24枚×3袋 [ 公式ショップ ] ユニ・チャーム公式 パンツタイプ 尿もれ 軽失禁 歩けるおむつ 介護 下着感覚 まとめ買い ユニチャーム【公式ショップ】",
-          "price": 6105,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.76,
-          "review_count": 79,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F358%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10000779%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/100176.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 72.0,
-          "unit_price": 84.79166666666667,
-          "code": "unicharm:10000779"
-        },
-        {
-          "name": "【速配】 大人用紙おむつ パンツタイプ ライフリー うす型軽快パンツ Mサイズ 市販用 パンツ うす型 ケース(22枚×4袋入) | 紙パンツ うす型 失禁用品 大人用紙オムツ 紙おむつ 大人 紙おむつ大人用 介護用品 ユニ・チャーム",
-          "price": 7480,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.86,
-          "review_count": 22,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10002555%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10002555%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/04362480/g02111-case-sokuhai.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 88.0,
-          "unit_price": 85.0,
-          "code": "himawari-kaigo:10002555"
-        },
-        {
-          "name": "ライフリー パンツタイプ 長時間あんしんうす型パンツ Mサイズ 4回吸収 30枚入 【ライフリー　中度アウター】 介護用おむつ",
-          "price": 2618,
-          "shop": "楽天24エクスプレス",
-          "review_avg": 4.82,
-          "review_count": 22,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.qyx0vdc7.g00ugyno.qyx0w533/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4903111957477%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutensokuhaimart%2Fi%2F10018813%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/477/4903111957477.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 30.0,
-          "unit_price": 87.26666666666667,
-          "code": "rakutensokuhaimart:10018813"
-        },
-        {
           "name": "おむつ グーン パンツ 吸収 パンツ ビッグ ビッグより大きい スーパーBIG L M Lサイズ Mサイズ 紙おむつ 紙オムツ ベビー 赤ちゃん キッズ 消耗品 まとめ買い 大容量 保育園 幼稚園 エリエール",
           "price": 5980,
           "shop": "こどもラボ",
@@ -5779,64 +5636,12 @@
           "total": 66.0,
           "unit_price": 90.60606060606061,
           "code": "kyarahouse:10133966"
-        },
-        {
-          "name": "ライフリー 長時間あんしんうす型パンツ M 30枚 2袋 ユニ・チャーム公式 大人用紙おむつ 介護おむつ パンツタイプ 薄型 4回吸収 600ml やわらかストレッチ すきまモレ0 背モレブロック Ag+消臭 30枚×2 まとめ買い【公式ショップ】",
-          "price": 5544,
-          "shop": "ユニ・チャームダイレクトショップ",
-          "review_avg": 4.67,
-          "review_count": 36,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q215o.qyx0vce4.g00q215o.qyx0w76f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funicharm%2F383%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Funicharm%2Fi%2F10001164%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/unicharm/cabinet/nursing_care/pants/usuan/100211.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 60.0,
-          "unit_price": 92.4,
-          "code": "unicharm:10001164"
-        },
-        {
-          "name": "ライフリー パンツタイプ うす型軽快パンツ Mサイズ 2回吸収 大人用おむつ(32枚入)【xe8】【ライフリー　中度アウター】",
-          "price": 2970,
-          "shop": "楽天24",
-          "review_avg": 4.72,
-          "review_count": 47,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.qyx0v1ee.g00r136o.qyx0w443/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fe367266h%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10244012%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/938/4903111540938.jpg?_ex=128x128",
-          "postage": "別",
-          "total": 32.0,
-          "unit_price": 92.8125,
-          "code": "rakuten24:10244012"
-        },
-        {
-          "name": "大人用紙おむつ ネピアテンダー あんしんフィットパンツ Mサイズ ケース(合計80枚入[20枚×4袋]) ｜ 大人用紙おむつ 介護用おむつ パンツ型おむつ 大人用おむつ 尿漏れパンツ 介護用オムツ 介護パンツ 介護用パンツ 大人用 紙パンツ 失禁パンツ 失禁用品 介護用品",
-          "price": 7436,
-          "shop": "ひまわり(介護用品専門店)",
-          "review_avg": 4.81,
-          "review_count": 62,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pve3o.qyx0v7d1.g00pve3o.qyx0w0de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhimawari-kaigo%2F10000279%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhimawari-kaigo%2Fi%2F10000279%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/himawari-kaigo/cabinet/nepia/g004270-case.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 80.0,
-          "unit_price": 92.95,
-          "code": "himawari-kaigo:10000279"
-        },
-        {
-          "name": "まとめ買い DFree リハビリ うす型パンツ Mサイズ 男女共用 22枚×4袋 | リハビリパンツ 大人用 介護用 紙パンツ 大人用紙おむつ 大人用おむつ 大人用紙オムツ 大人用オムツ オムツ おむつ 介護用おむつ 介護 大人おむつ 紙おむつ 介護オムツ 薄型パンツ",
-          "price": 8279,
-          "shop": "DFree公式ショップ",
-          "review_avg": 4.68,
-          "review_count": 438,
-          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u1sho.qyx0v97a.g00u1sho.qyx0wd10/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdfree%2Ftwj-sp300m-003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdfree%2Fi%2F10000010%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
-          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/dfree/cabinet/08419397/pants_m4_01.jpg?_ex=128x128",
-          "postage": "込み",
-          "total": 88.0,
-          "unit_price": 94.07954545454545,
-          "code": "dfree:10000010"
         }
       ],
-      "fetched": 41,
-      "confirmed": 26,
-      "excluded_outlier": 1,
-      "updated": "2026-11-06 18:07 JST",
+      "fetched": 12,
+      "confirmed": 5,
+      "excluded_outlier": 0,
+      "updated": "2026-11-06 18:18 JST",
       "status": "pending"
     },
     "rank-diaper-pants-l": {
@@ -6246,7 +6051,7 @@
       "fetched": 39,
       "confirmed": 13,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:07 JST",
+      "updated": "2026-11-06 18:19 JST",
       "status": "pending"
     },
     "rank-detergent-dish": {
@@ -6334,7 +6139,7 @@
       "fetched": 60,
       "confirmed": 5,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:08 JST",
+      "updated": "2026-11-06 18:19 JST",
       "status": "pending"
     },
     "rank-trash-bag-45l": {
@@ -6526,7 +6331,7 @@
       "fetched": 16,
       "confirmed": 13,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:08 JST",
+      "updated": "2026-11-06 18:20 JST",
       "status": "pending"
     },
     "rank-battery-aa": {
@@ -6704,7 +6509,7 @@
       "fetched": 28,
       "confirmed": 12,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:08 JST",
+      "updated": "2026-11-06 18:20 JST",
       "status": "pending"
     },
     "rank-mask-nonwoven": {
@@ -6922,7 +6727,7 @@
       "fetched": 22,
       "confirmed": 20,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:08 JST",
+      "updated": "2026-11-06 18:20 JST",
       "status": "pending"
     },
     "rank-dog-food": {
@@ -7140,7 +6945,7 @@
       "fetched": 57,
       "confirmed": 53,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:09 JST",
+      "updated": "2026-11-06 18:20 JST",
       "status": "pending"
     },
     "rank-cat-food": {
@@ -7358,7 +7163,442 @@
       "fetched": 60,
       "confirmed": 58,
       "excluded_outlier": 0,
-      "updated": "2026-11-06 18:09 JST",
+      "updated": "2026-11-06 18:21 JST",
+      "status": "pending"
+    },
+    "rank-black-tea-bag": {
+      "slug": "rank-black-tea-bag",
+      "id": "black-tea-bag",
+      "group": "飲料",
+      "keyword": "紅茶 ティーバッグ",
+      "title": "紅茶のティーバッグの単価ランキング｜1個あたりの価格で比べる",
+      "basis": {
+        "base": "個",
+        "label": "1個あたり"
+      },
+      "notes": [
+        "1個は、ティーバッグ1袋です。茶葉の量・種類・風味は商品ごとに違います。",
+        "アソートセットは、種類の構成が違います。"
+      ],
+      "items": [
+        {
+          "name": "オーガニック ルイボスティー ハイグレード ティーバッグ 100包 【送料無料】 植物由来 ティーバッグ 有機JAS なごみ メガ盛り ノンカフェイン カフェインレス 妊活 お茶 ハーブティー ルイボス茶 紅茶 温活 マタニティ 100個入り ランキング ギフト",
+          "price": 1404,
+          "shop": "アロマ ルイボスnaturalshopなごみ",
+          "review_avg": 4.77,
+          "review_count": 1235,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qlomo.qyx0vf25.g00qlomo.qyx0wffd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagomisabo%2F100p%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnagomisabo%2Fi%2F10000199%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nagomisabo/cabinet/img_rbs/100p.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 100.0,
+          "unit_price": 14.04,
+          "code": "nagomisabo:10000199"
+        },
+        {
+          "name": "セイロンティーダージリンブレンド ティーバッグ 100個入 紅茶 ダージリンティー セイロンティー 水出し アイスティー ブレンド 大容量 大袋 たっぷり お得 ティーパック 送料無料 ティーライフ",
+          "price": 1590,
+          "shop": "TEALIFE+ ルイボス専門店",
+          "review_avg": 4.44,
+          "review_count": 470,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rtnpo.qyx0v45b.g00rtnpo.qyx0wda6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftealife-cafe%2F90659%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftealife-cafe%2Fi%2F10000022%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tealife-cafe/cabinet/drink/ceylon/97036_ice_thumb.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 100.0,
+          "unit_price": 15.9,
+          "code": "tealife-cafe:10000022"
+        },
+        {
+          "name": "【ポイント10倍】有機ルイボスティー（2g×80包）水出しOK ノンカフェイン 80包入 ルイボスティー オーガニック ルイボス茶　ティーバッグタイプ オーガランド パック ダイエット 健康 酵素 ポリフェノール 送料無料 ポイント消化 送料無料",
+          "price": 1280,
+          "shop": "サプリ専門店 オーガランド",
+          "review_avg": 4.71,
+          "review_count": 2054,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pzamo.qyx0vad7.g00pzamo.qyx0w64b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foga%2Frbt_001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Foga%2Fi%2F10266418%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/oga/cabinet/item_img/shohin/241126_rbt_1_01.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 80.0,
+          "unit_price": 16.0,
+          "code": "oga:10266418"
+        },
+        {
+          "name": "オーガニック ルイボスティー ハイグレード ティーバッグ 60包 【送料無料】 有機JAS なごみ メガ盛り ノンカフェイン カフェインレス 妊活 お茶 ハーブティー ルイボス茶 紅茶 温活 マタニティ 60個入り ランキング ギフト",
+          "price": 1080,
+          "shop": "アロマ ルイボスnaturalshopなごみ",
+          "review_avg": 4.65,
+          "review_count": 2869,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qlomo.qyx0vf25.g00qlomo.qyx0wffd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagomisabo%2F60p%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnagomisabo%2Fi%2F10000287%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nagomisabo/cabinet/img_rbs/60p.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 60.0,
+          "unit_price": 18.0,
+          "code": "nagomisabo:10000287"
+        },
+        {
+          "name": "【10%OFF】 紅茶 ティーバッグ 福袋 選べる90包 jaftea セイロンファミリー フレーバーティー ティーパック 送料無料 個包装 アールグレイ ベリー ピーチ ノンカフェイン ルイボスティー カモミール ペパーミント ギフト かわいい おしゃれ プレゼント",
+          "price": 1750,
+          "shop": "内祝いのギフトランドショーワ",
+          "review_avg": 4.74,
+          "review_count": 341,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tc14o.qyx0vdfa.g00tc14o.qyx0w93c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgiftland-showa%2F48236-01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgiftland-showa%2Fi%2F10000073%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/giftland-showa/cabinet/bargain2/07150349/48236-01_001.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 90.0,
+          "unit_price": 19.444444444444443,
+          "code": "giftland-showa:10000073"
+        },
+        {
+          "name": "黒豆ルイボスティーこだわりブレンド 100包入 1〜10袋 ノンカフェイン カフェインレス ハーブティー ミネラル 黒豆茶 お茶 ルイボス茶 紅茶 水出し 冷茶 ティーバッグ ティーパック お得 健康茶 大容量 送料無料 ティーライフ",
+          "price": 1980,
+          "shop": "TEALIFE+ ルイボス専門店",
+          "review_avg": 4.8,
+          "review_count": 871,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rtnpo.qyx0v45b.g00rtnpo.qyx0wda6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftealife-cafe%2F96291%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftealife-cafe%2Fi%2F10004934%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tealife-cafe/cabinet/rooibostea/k-rooibos/97035_thumb.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 100.0,
+          "unit_price": 19.8,
+          "code": "tealife-cafe:10004934"
+        },
+        {
+          "name": "【楽天1位】 はちみつ紅茶 ハチミツティー 2箱 50包 25袋入り2箱セット はちみつ紅茶 JB Honey`s ハニー 蜂蜜 紅茶 ティーバッグ セイロンファミリー スリランカ リラックス カフェ 蜂蜜紅茶 ノンカフェイン メール便 送料無料",
+          "price": 1000,
+          "shop": "ハンファダイレクト楽天市場店",
+          "review_avg": 4.51,
+          "review_count": 5483,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qjlso.qyx0v2f7.g00qjlso.qyx0w8e3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhanwha%2Fcf-h-tea-2set%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhanwha%2Fi%2F10001756%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hanwha/cabinet/09813689/imgrc0149396897.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 50.0,
+          "unit_price": 20.0,
+          "code": "hanwha:10001756"
+        },
+        {
+          "name": "＜50包に増量中！しかも価格据え置き!!＞ はちみつ紅茶 50包 (2箱分)［メール便］【送料無料】【3～4営業日以内に出荷】 増量 25パック 2箱 はちみつティー ハチミツティー ハチミツ紅茶 蜂蜜紅茶 はちみつ 蜂蜜 紅茶 JB Honey `s セイロンファミリー",
+          "price": 1000,
+          "shop": "旨い食材お取り寄せ めしや",
+          "review_avg": 4.35,
+          "review_count": 447,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qvx2o.qyx0v86a.g00qvx2o.qyx0w0e6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaisenshop%2F34322-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkaisenshop%2Fi%2F10015437%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kaisenshop/cabinet/item51/41011-1b.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 50.0,
+          "unit_price": 20.0,
+          "code": "kaisenshop:10015437"
+        },
+        {
+          "name": "【お買い物マラソン開催中！ 11/11 1:59迄】 和紅茶 ティーバッグ ゴクゴクすっきり 100個入 水出し紅茶 紅茶 国産 ポット用 ホット アイスティー 水出し 静岡茶 牧之原茶 ティーパック お茶 ギフト 送料無料 パック",
+          "price": 2128,
+          "shop": "みずたま農園製茶場",
+          "review_avg": 4.62,
+          "review_count": 419,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tt6ko.qyx0v4ee.g00tt6ko.qyx0w7ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmizutama-teafarm%2F1413%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmizutama-teafarm%2Fi%2F10000039%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mizutama-teafarm/cabinet/tea/black/gokuwa-tb/1413-01-03.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 100.0,
+          "unit_price": 21.28,
+          "code": "mizutama-teafarm:10000039"
+        },
+        {
+          "name": "お茶 ティーパック 紅茶 静岡茶 日本茶 がぶがぶ飲める静岡紅茶 2g×50包 メール便配送 送料無料 茶葉 がぶ飲み 大容量 お徳用 お買い得 ティーバック ティーバッグ パック 発酵茶 和紅茶 ギフト お茶葉 国産 健康茶 静岡県",
+          "price": 1080,
+          "shop": "【 お茶の荒畑園 楽天市場店 】",
+          "review_avg": 4.69,
+          "review_count": 228,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rau6o.qyx0v808.g00rau6o.qyx0w04a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farahata%2F16208%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Farahata%2Fi%2F10001288%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/arahata/cabinet/product/08860757/1.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 50.0,
+          "unit_price": 21.6,
+          "code": "arahata:10001288"
+        },
+        {
+          "name": "『紅茶ティーバッグ』3g×33包　2袋セット国産無農薬紅茶【無農薬】【無添加】【和紅茶】【静岡産】【送料無料】",
+          "price": 1650,
+          "shop": "無農薬茶と紅茶の水車むら農園",
+          "review_avg": 4.67,
+          "review_count": 912,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q9aqo.qyx0v70c.g00q9aqo.qyx0w15a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsuisya%2F10000052%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsuisya%2Fi%2F10000052%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/suisya/cabinet/00524352/02424069/imgrc0128496530.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 66.0,
+          "unit_price": 25.0,
+          "code": "suisya:10000052"
+        },
+        {
+          "name": "『しょうが紅茶ティーバッグ』3g×30包 　2袋セット無農薬栽培国産紅茶と鹿児島県産黄金しょうが使用の生姜紅茶ティーバッグ【無添加】水車むら農園 【国産紅茶・和紅茶・地紅茶・静岡産】【送料無料】",
+          "price": 1860,
+          "shop": "無農薬茶と紅茶の水車むら農園",
+          "review_avg": 4.67,
+          "review_count": 230,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q9aqo.qyx0v70c.g00q9aqo.qyx0w15a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsuisya%2F10001458%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsuisya%2Fi%2F10001458%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/suisya/cabinet/00524352/03268622/imgrc0128496738.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 60.0,
+          "unit_price": 31.0,
+          "code": "suisya:10001458"
+        },
+        {
+          "name": "はちみつ紅茶 30袋 1000円ポッキリ 送料無料 紅茶 ティーバッグ 濃厚 極上 JB ハチミツ紅茶 ティーパック ノンカフェイン ルイボスティー カモミール ミント かわいい セイロンファミリー 蜂蜜紅茶 お試し 千円ぽっきり",
+          "price": 1000,
+          "shop": "内祝いのギフトランドショーワ",
+          "review_avg": 4.47,
+          "review_count": 240,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tc14o.qyx0vdfa.g00tc14o.qyx0w93c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgiftland-showa%2F48890-01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgiftland-showa%2Fi%2F10000430%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/giftland-showa/cabinet/food/12695868/48890-01_01_2.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 30.0,
+          "unit_price": 33.333333333333336,
+          "code": "giftland-showa:10000430"
+        },
+        {
+          "name": "【期間限定特価+はちみつチャイ付】【送料無料】ティーアース はちみつ紅茶 50g(2g×25袋)(5個組)ティーバッグ 個包装タイプ スリランカ産セイロン茶 ポーランド産はちみつ使用 蜂蜜 ハチミツ お茶 ハニーティー TEARTH",
+          "price": 4698,
+          "shop": "プリセプト通販事業部",
+          "review_avg": 4.83,
+          "review_count": 240,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rrkjo.qyx0v0db.g00rrkjo.qyx0w0fe/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpricept%2Fb8685105-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fpricept%2Fi%2F10000874%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/pricept/cabinet/sell/sshohin/pc_hmk5_2411.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 125.0,
+          "unit_price": 37.584,
+          "code": "pricept:10000874"
+        },
+        {
+          "name": "紅茶 ティーバッグ アーマッドティー お試しセット 25包(11種類) フルーツティー アソート 送料無料 メール便 yp2",
+          "price": 1080,
+          "shop": "いきいきショップ【ねんりん】",
+          "review_avg": 4.62,
+          "review_count": 256,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00s2nmo.qyx0v33a.g00s2nmo.qyx0wfb6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnenrin%2Fahmad-tb-trial-msm%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnenrin%2Fi%2F10000745%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nenrin/cabinet/item/tb001/ahmad_25ps_1.jpg?_ex=128x128",
+          "postage": "込み",
+          "total": 25.0,
+          "unit_price": 43.2,
+          "code": "nenrin:10000745"
+        }
+      ],
+      "fetched": 58,
+      "confirmed": 38,
+      "excluded_outlier": 4,
+      "updated": "2026-11-06 18:15 JST",
+      "status": "pending"
+    },
+    "rank-flour-soft": {
+      "slug": "rank-flour-soft",
+      "id": "flour-soft",
+      "group": "食品",
+      "keyword": "薄力粉 1kg",
+      "title": "薄力粉の単価ランキング｜1kgあたりの価格で比べる",
+      "basis": {
+        "base": "kg",
+        "label": "1kgあたり"
+      },
+      "notes": [
+        "国産・外国産、銘柄、用途（菓子・料理）は商品ごとに違います。",
+        "賞味期限、保存方法は商品ページで確認してください。",
+        "送料が別の商品があります。表の送料表示を確認し、合計で比べてください。"
+      ],
+      "items": [
+        {
+          "name": "理研農産 小麦粉 薄力粉 1kg 佐賀県産小麦100%使用 九州 佐賀 薄力小麦粉",
+          "price": 298,
+          "shop": "かごしま産直便",
+          "review_avg": 4.95,
+          "review_count": 20,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r0vfo.qyx0v5bf.g00r0vfo.qyx0w468/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkago-cyoku%2Fkonarui-007%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkago-cyoku%2Fi%2F10000260%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kago-cyoku/cabinet/akiko/02564485/img59628608.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 298.0,
+          "code": "kago-cyoku:10000260"
+        },
+        {
+          "name": "薄力粉 1kg 【尾張製粉】「安くておいしい」とレビュー高評価！お菓子や料理に最適な薄力小麦粉ポイント2倍【3,780円(税込)以上送料無料】【RCP】",
+          "price": 324,
+          "shop": "尾張名古屋発 新鮮小麦粉の麺工房",
+          "review_avg": 4.58,
+          "review_count": 267,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pur7o.qyx0v540.g00pur7o.qyx0w9b3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fowari%2Fhakuriki-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fowari%2Fi%2F10000332%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/owari/cabinet/ikou_20100127/06459504/imgrc0091422636.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 324.0,
+          "code": "owari:10000332"
+        },
+        {
+          "name": "日清製粉・薄力粉 バイオレット 1kg （チャック袋入）｜小麦粉",
+          "price": 494,
+          "shop": "プロフーズ",
+          "review_avg": 4.77,
+          "review_count": 31,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pw95o.qyx0v80b.g00pw95o.qyx0wc16/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fprofoods%2F10000496%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fprofoods%2Fi%2F10000496%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/profoods/cabinet/r_shouhinup03/1010300_1.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 494.0,
+          "code": "profoods:10000496"
+        },
+        {
+          "name": "九州産薄力粉 名月 1kg",
+          "price": 505,
+          "shop": "マルサンパントリー",
+          "review_avg": 4.52,
+          "review_count": 60,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q1ozo.qyx0v93f.g00q1ozo.qyx0w5b3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmarusanpantry%2F10004509%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmarusanpantry%2Fi%2F10004509%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/marusanpantry/cabinet/tenpo/tenpo3/imgrc0081486855.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 505.0,
+          "code": "marusanpantry:10004509"
+        },
+        {
+          "name": "薄力粉 スーパーバイオレット 1kg　賞味期限2027.2.28",
+          "price": 505,
+          "shop": "マルサンパントリー",
+          "review_avg": 4.79,
+          "review_count": 42,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q1ozo.qyx0v93f.g00q1ozo.qyx0w5b3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmarusanpantry%2F653971%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmarusanpantry%2Fi%2F10000009%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/marusanpantry/cabinet/tenpo/tenpo3/imgrc0081487429.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 505.0,
+          "code": "marusanpantry:10000009"
+        },
+        {
+          "name": "日清製粉・薄力粉 スーパーバイオレット 1kg （チャック袋入）｜小麦粉",
+          "price": 528,
+          "shop": "プロフーズ",
+          "review_avg": 4.56,
+          "review_count": 34,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pw95o.qyx0v80b.g00pw95o.qyx0wc16/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fprofoods%2F10000493%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fprofoods%2Fi%2F10000493%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/profoods/cabinet/image9/1010270_2.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 528.0,
+          "code": "profoods:10000493"
+        },
+        {
+          "name": "スーパーバイオレット　1kg / 薄力粉 小麦粉 スポンジケーキ クッキー 製菓材料",
+          "price": 530,
+          "shop": "ホームメイドショップKIKUYA",
+          "review_avg": 4.63,
+          "review_count": 101,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pswwo.qyx0vc09.g00pswwo.qyx0wfbd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkikuya%2F11000%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkikuya%2Fi%2F10000005%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kikuya/cabinet/04469481/imgrc0078786431.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 530.0,
+          "code": "kikuya:10000005"
+        },
+        {
+          "name": "北海道産薄力粉 ドルチェ 1kg",
+          "price": 541,
+          "shop": "マルサンパントリー",
+          "review_avg": 4.8,
+          "review_count": 69,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00q1ozo.qyx0v93f.g00q1ozo.qyx0w5b3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmarusanpantry%2F653973%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmarusanpantry%2Fi%2F10000010%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/marusanpantry/cabinet/tenpo/tenpo3/imgrc0081386857.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 541.0,
+          "code": "marusanpantry:10000010"
+        },
+        {
+          "name": "江別製粉・薄力粉 ドルチェ 1kg （チャック袋入）｜小麦粉",
+          "price": 548,
+          "shop": "プロフーズ",
+          "review_avg": 4.73,
+          "review_count": 90,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pw95o.qyx0v80b.g00pw95o.qyx0wc16/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fprofoods%2F10000497%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fprofoods%2Fi%2F10000497%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/profoods/cabinet/r_shouhinup03/1010320_1.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 548.0,
+          "code": "profoods:10000497"
+        },
+        {
+          "name": "特宝笠　1kg / 薄力粉 小麦粉 スポンジケーキ クッキー 製菓材料",
+          "price": 575,
+          "shop": "ホームメイドショップKIKUYA",
+          "review_avg": 4.76,
+          "review_count": 75,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pswwo.qyx0vc09.g00pswwo.qyx0wfbd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkikuya%2F11082%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkikuya%2Fi%2F10001355%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kikuya/cabinet/11082.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 575.0,
+          "code": "kikuya:10001355"
+        },
+        {
+          "name": "薄力粉 クーヘン 1Kg /北海道産 北海道産小麦100％ 菓子用粉 国産薄力粉 北海道産薄力粉 江別製粉",
+          "price": 590,
+          "shop": "こだわり食材 572310.com 楽天店",
+          "review_avg": 4.69,
+          "review_count": 72,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pp13o.qyx0ve27.g00pp13o.qyx0w6f7/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnk%2F385933%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnk%2Fi%2F10000023%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nk/cabinet/01585515/imgrc0124931422.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 590.0,
+          "code": "nk:10000023"
+        },
+        {
+          "name": "薄力粉 北海道産小麦100%(1kg)【イチオシ】【江別製粉】[薄力粉 北海道産小麦 粉類 パン用粉 うどん]",
+          "price": 610,
+          "shop": "楽天24",
+          "review_avg": 4.55,
+          "review_count": 49,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.qyx0v1ee.g00r136o.qyx0w443/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fx212460h%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10252643%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/036/4967469002036.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 610.0,
+          "code": "rakuten24:10252643"
+        },
+        {
+          "name": "ドルチェ 1kg / 薄力粉 小麦粉 国産 北海道産 スポンジケーキ クッキー 製菓材料",
+          "price": 620,
+          "shop": "ホームメイドショップKIKUYA",
+          "review_avg": 4.64,
+          "review_count": 80,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pswwo.qyx0vc09.g00pswwo.qyx0wfbd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkikuya%2F11012%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkikuya%2Fi%2F10000015%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kikuya/cabinet/04469481/imgrc0078786434.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 620.0,
+          "code": "kikuya:10000015"
+        },
+        {
+          "name": "ファリーヌ　1kg / 薄力粉 小麦粉 国産 北海道産 スポンジケーキ クッキー 製菓材料",
+          "price": 625,
+          "shop": "ホームメイドショップKIKUYA",
+          "review_avg": 4.67,
+          "review_count": 42,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pswwo.qyx0vc09.g00pswwo.qyx0wfbd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkikuya%2F11054%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkikuya%2Fi%2F10000046%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kikuya/cabinet/11054.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 625.0,
+          "code": "kikuya:10000046"
+        },
+        {
+          "name": "ママパン 薄力粉 ドルチェ 1kg 菓子用小麦粉 北海道産 江別製粉 国産小麦粉 シフォンケーキ スポンジケーキ パウンドケーキ クッキー_",
+          "price": 653,
+          "shop": "ママパン",
+          "review_avg": 4.71,
+          "review_count": 38,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00pldco.qyx0vadf.g00pldco.qyx0w452/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmamapan%2F1100t165%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmamapan%2Fi%2F10003811%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mamapan/cabinet/flour/flour2/1100t165_768.jpg?_ex=128x128",
+          "postage": "別",
+          "total": 1.0,
+          "unit_price": 653.0,
+          "code": "mamapan:10003811"
+        }
+      ],
+      "fetched": 27,
+      "confirmed": 21,
+      "excluded_outlier": 0,
+      "updated": "2026-11-06 18:18 JST",
       "status": "pending"
     }
   }
