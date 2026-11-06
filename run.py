@@ -3,9 +3,12 @@
   python run.py approve SLUG     確認待ちの記事を公開に回す
   python run.py reject SLUG      確認待ちの記事を破棄する
   python run.py redo SLUG        確認待ちの記事を取り下げ、同じ話題を次回作り直す
+  python run.py demand           候補キーワードの需要の目安を計測する
   python run.py report           分析と画面の再生成のみ
 """
+import json
 import sys
+import time
 
 from office import agents, core, render
 from office.core import say
@@ -47,6 +50,21 @@ def daily(cfg, state):
         say(state, "designer", f"{slug} を組版（状態: {status}）", done=True, status=f"{slug} を組版済み")
 
 
+def demand(cfg):
+    from office import rakuten
+    out = []
+    for kw in cfg.get("demand_candidates", []):
+        try:
+            r = rakuten.probe(kw, cfg["site_url"], cfg.get("min_price", 0))
+        except Exception as e:
+            r = {"keyword": kw, "error": type(e).__name__}
+        out.append(r)
+        print(r)
+        time.sleep(1.2)  # 楽天APIは1秒1回程度に抑える
+    core.DATA.mkdir(exist_ok=True)
+    (core.DATA / "demand.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def set_status(state, slug, new):
     for a in state["articles"]:
         if a["slug"] == slug and a["status"] == "pending":
@@ -63,6 +81,9 @@ def main():
         args.remove("--mock")
     cmd = args[0] if args else "daily"
     cfg, state = core.load_config(), core.load_state()
+    if cmd == "demand":
+        demand(cfg)
+        return
     if cmd == "daily":
         daily(cfg, state)
     elif cmd == "approve":

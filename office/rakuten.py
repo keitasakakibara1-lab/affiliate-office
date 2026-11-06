@@ -115,3 +115,25 @@ def mock_items(keyword, hits):
         "review_avg": a, "review_count": c,
         "url": f"https://example.com/sample/{i + 1}", "image": "",
     } for i, (p, a, c) in enumerate(base[:hits])]
+
+
+def probe(keyword, referer, min_price=0):
+    """需要の目安：検索ヒット総数と、上位30件のレビュー件数・価格。記事は作らない。"""
+    app, key = _env("RAKUTEN_APP_ID"), _env("RAKUTEN_ACCESS_KEY")
+    q = {"format": "json", "formatVersion": 2, "applicationId": app, "accessKey": key,
+         "keyword": keyword, "hits": 30, "sort": "-reviewCount", "availability": 1}
+    if min_price:
+        q["minPrice"] = min_price
+    data = _get(q, referer)
+    its = data.get("items") or data.get("Items") or []
+    its = [i.get("Item", i) for i in its]
+    rc = sorted((int(i.get("reviewCount") or 0) for i in its), reverse=True)
+    pr = sorted(int(i.get("itemPrice") or 0) for i in its)
+    return {
+        "keyword": keyword,
+        "total_hits": int(data.get("count") or 0),
+        "top_review": rc[0] if rc else 0,
+        "sum_review_top30": sum(rc),
+        "items_review_100plus": sum(1 for x in rc if x >= 100),
+        "median_price": pr[len(pr) // 2] if pr else 0,
+    }

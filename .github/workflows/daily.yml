@@ -10,6 +10,9 @@ on:
       redo:
         description: "取り下げて作り直す記事のslug（任意）"
         required: false
+      demand:
+        description: "需要の計測だけ行う場合は true"
+        required: false
 
 permissions:
   contents: write
@@ -38,7 +41,9 @@ jobs:
           RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
           RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
           REDO: ${{ github.event.inputs.redo }}
+          DEMAND: ${{ github.event.inputs.demand }}
         run: |
+          if [ "$DEMAND" = "true" ]; then python run.py demand; exit 0; fi
           if [ -n "$REDO" ]; then python run.py redo "$REDO"; fi
           python run.py daily
       - name: 反映
