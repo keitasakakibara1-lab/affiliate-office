@@ -12,10 +12,12 @@ from office.core import say
 
 
 def daily(cfg, state):
+    tried = set()  # 同じ実行の中で、同じ話題を繰り返さない
     for _ in range(cfg["max_articles_per_day"]):
-        plan = agents.plan(state, cfg)
+        plan = agents.plan(state, cfg, tried)
         if not plan:
             break
+        tried.add(plan["keyword"])
         items, sample = agents.research(state, cfg, plan["keyword"])
         if not items:
             continue

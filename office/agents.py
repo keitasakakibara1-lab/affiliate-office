@@ -8,22 +8,28 @@ from .core import say, llm_available, llm_json
 NG_WORDS = ["最安", "絶対", "必ず", "No.1", "ナンバーワン", "奇跡", "治る", "痩せる", "効果が出", "業界最高"]
 
 WRITER_SYSTEM = """あなたは比較記事の執筆担当です。次の規則を厳守します。
-- 提供された商品データ（名称・価格・レビュー平均・レビュー件数）に書かれた事実だけを使う。仕様・性能・効果を推測で書かない。
+- 提供された商品データ（label・名称・価格・レビュー平均・レビュー件数）に書かれた事実だけを使う。仕様・性能・効果を推測で書かない。
+- 本文で商品を指すときは、各商品の label（例：商品A）を使う。添字 i や「i=0」「商品0」のような番号は本文に書かない。商品名・リンク・価格は、本文とは別に表と商品カードで表示される。
 - 各おすすめには「向いている人」「選ぶ理由」「弱み（トレードオフ）」を必ず書く。弱みが書けない商品は選ばない。
-- 「最安」「絶対」「No.1」など断定・最上級表現、健康や医療の効果を示す表現は使わない。
-- 数字はデータにあるものだけ。レビューは「件数が多い」など事実で表現し、評価の優劣を断定しない。
-- キーワードの商品種別に当てはまらない商品（例：ハブの検索に出たSDカードリーダー単体、ケース、ケーブルのみ）は picks に含めない。種別が合う商品が3件未満なら picks は空配列にする。
+- キーワードの商品種別に当てはまらない商品（例：ハブの検索に出たSDカードリーダー単体、ケース、ケーブルのみ）は picks に含めない。種別が合う商品が3件未満なら picks は空配列にする。除外した商品がある場合は、lead で除外した旨と理由を1文書く。
+- 件数・評価・価格の範囲は、picks に載せた商品だけで計算した値にする。
+- 商品名に価格・クーポン・セール・期間の表記がある場合でも、価格はデータの値を使う。lead か faq で「商品名にクーポンやセールの表記があるが、実際の価格・期間は購入ページで確認が必要」と、全体に向けて1か所で注意する。
+- 容量・サイズなどが商品名に複数併記されている商品は、その商品の弱みに「複数の表記がある」ことを書く。
+- 認証・受賞・ランキング（「1位」「〇冠」「PSE認証」など）は商品名に書かれた販売者の表記にすぎない。「商品名に〜と記載」と表現し、事実として断定しない。
+- 「軽量」などの検索語を裏付けるデータがない場合は、lead に「軽さなどは実測比較ではない」と書く。
+- 価格帯は「1,500円台」のように書き、「前半」「後半」は使わない。
+- 「最安」「絶対」「No.1」など断定・最上級表現、健康や医療の効果を示す表現は使わない。レビューは件数や平均評価という事実で表現し、優劣を断定しない。
 - 出力はJSONのみ。キー: title, lead, picks[{i, who_for, point, tradeoff}], faq[{q, a}]。iは商品データの添字。"""
 
 
 # ---------- 企画（ナツメ） ----------
-def plan(state, cfg):
+def plan(state, cfg, exclude=()):
     from collections import Counter
     arts = state["articles"]
     rej = Counter(a["keyword"] for a in arts if a["status"] == "rejected")
     withdrawn = {a["keyword"] for a in arts if a["status"] == "withdrawn"}
     kept = {a["keyword"] for a in arts if a["status"] not in ("rejected", "withdrawn")}
-    skip = kept | {k for k, n in rej.items() if n >= 2}
+    skip = kept | {k for k, n in rej.items() if n >= 2} | set(exclude)
     cands = [t for t in cfg["topics"] if t not in skip]
     # 取り下げた話題 → 差し戻された話題 → 新しい話題 の順で優先する
     cands.sort(key=lambda t: 0 if t in withdrawn else (1 if rej.get(t) else 2))
@@ -77,7 +83,7 @@ def write(state, kw, angle, items):
 
 def _items_json(items):
     import json
-    slim = [{"i": i, **{k: v for k, v in it.items() if k in ("name", "price", "review_avg", "review_count")}}
+    slim = [{"i": i, "label": f"商品{chr(65 + i)}", **{k: v for k, v in it.items() if k in ("name", "price", "review_avg", "review_count")}}
             for i, it in enumerate(items)]
     return json.dumps(slim, ensure_ascii=False)
 
@@ -103,6 +109,19 @@ def _mock_article(kw, items):
     }
 
 
+
+def _page_text(article, items):
+    """公開ページの表示内容をテキスト化する（審査用）。"""
+    from . import render
+    html_ = render.article_html({
+        "slug": "x", "sample": False, "items": items, "content": article,
+        "fetched_at": core.now().strftime("%Y-%m-%d %H:%M JST"),
+    })
+    html_ = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", html_, flags=re.S)
+    html_ = re.sub(r'<img[^>]*alt="([^"]*)"[^>]*>', r" [画像:\1] ", html_)
+    html_ = re.sub(r"<a [^>]*>", " [リンク] ", html_)
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html_))
+
 # ---------- 審査（クリ）：公開前の関門 ----------
 def review(state, article, items, sample):
     problems = []
@@ -119,6 +138,8 @@ def review(state, article, items, sample):
     for w in NG_WORDS:
         if w in body:
             problems.append(f"禁止表現「{w}」")
+    if re.search(r"i\s*=\s*\d|商品\s*\d+(?=[はのとがをも、。・）)\s])", body):
+        problems.append("内部番号（i=0・商品0など）が本文に残っている")
     if len(article.get("picks", [])) < 2:
         problems.append("比較対象が2商品未満")
     # 本文中の数字が商品データに由来するか（価格・件数の捏造を検知）
@@ -136,11 +157,18 @@ def review(state, article, items, sample):
     # LLMによる二次審査（任意）
     if llm_available() and not problems:
         try:
+            page = _page_text(article, items)
             r = llm_json(
-                "あなたは広告審査担当です。景品表示法・ステマ規制・Googleのスパムポリシーの観点で、"
-                "根拠のない断定、誇大表現、薄い内容を指摘します。JSONのみ。",
-                f"記事:\n{body}\n商品データ:\n{_items_json(items)}\n"
-                '{"problems":["具体的な問題..."]}を返して。問題がなければ空配列。',
+                "あなたは広告審査担当です。渡すのは、公開される記事ページの全表示内容"
+                "（広告表示・比較表・商品カード・リンク・画像を含む）です。"
+                "根拠のない断定や誇大表現、誤認を招く価格・数値の扱い、データと矛盾する記述、"
+                "内部番号やテンプレートの露出、広告表示の欠落（ページ内に表示があれば問題なし）の"
+                "『重大な問題』だけを指摘します。"
+                "このサイトは実機検証をせず、価格・レビュー件数・平均評価で比べるデータ比較の記事です。"
+                "実機検証がないこと自体、文章の好み、軽微な表現は指摘しません。"
+                "記事内で検証していないと明示されていれば問題なしです。JSONのみで答えます。",
+                f"ページ内容:\n{page}\n商品データ:\n{_items_json(items)}\n"
+                '{"problems":["具体的な重大問題..."]}を返して。なければ空配列。',
                 3000,
             )
             problems += r.get("problems", [])
