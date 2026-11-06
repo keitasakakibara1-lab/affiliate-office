@@ -25,11 +25,39 @@ th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:to
 PR_TEXT = "本記事は広告（アフィリエイトリンク）を含みます。リンク経由で購入された場合、運営者に報酬が支払われることがあります。"
 
 
-def _page(title, body, noindex=False):
+_SITE = {"url": "", "name": ""}
+
+
+def _page(title, body, noindex=False, desc="", path="", date=""):
+    import json as _json
     robots = '<meta name="robots" content="noindex">' if noindex else ""
+    url = _SITE["url"].rstrip("/") + "/" + path if _SITE["url"] else ""
+    meta = ""
+    if desc:
+        meta += f'<meta name="description" content="{E(desc)}">'
+    if url and not noindex:
+        meta += (f'<link rel="canonical" href="{E(url)}"><meta property="og:type" content="article">'
+                 f'<meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">'
+                 f'<meta property="og:url" content="{E(url)}"><meta property="og:site_name" content="{E(_SITE["name"])}">')
+        if date:
+            ld = {"@context": "https://schema.org", "@type": "Article", "headline": title,
+                  "datePublished": date, "dateModified": date, "mainEntityOfPage": url}
+            meta += '<script type="application/ld+json">' + _json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+    foot = '<p class="note" style="margin-top:32px"><a href="about.html">運営者情報・記事の作り方</a></p>'
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
-            f'<meta name="viewport" content="width=device-width,initial-scale=1">{robots}'
-            f"<title>{E(title)}</title><style>{CSS}</style></head><body><div class=\"wrap\">{body}</div></body></html>")
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">{robots}{meta}'
+            f"<title>{E(title)}</title><style>{CSS}</style></head><body><div class=\"wrap\">{body}{foot}</div></body></html>")
+
+
+def about_html(cfg):
+    body = (f'<p><a href="index.html">← 記事一覧</a></p><div class="pr">{PR_TEXT}</div><h1>運営者情報・記事の作り方</h1>'
+            f"<h2>このサイトについて</h2><p>{E(cfg['site_name'])}は、楽天市場の商品を、価格・レビュー・商品ページの記載仕様という確認できる情報で比べるサイトです。個人が運営しています。</p>"
+            "<h2>記事の作り方</h2><p>楽天市場の公式API（楽天ウェブサービス）で商品情報を取得し、AI（Claude）が下書きを作成します。"
+            "商品ページの説明文から抜き出した仕様は、原文と照合して確認できた値だけを使います。公開前に運営者が内容を確認し、承認した記事だけを掲載しています。</p>"
+            "<h2>広告について</h2><p>当サイトは楽天アフィリエイトを利用しており、記事内のリンクから購入されると運営者に報酬が入ります。"
+            "報酬の有無で商品の順位や評価を変えることはありません。</p>"
+            "<h2>掲載内容の限界</h2><p>実機での検証や測定は行っていません。価格・在庫・仕様は変わるため、購入前に必ず商品ページでご確認ください。誤りに気づかれた場合は、修正しますので運営者へお知らせください。</p>")
+    return _page("運営者情報・記事の作り方", body, desc="サイトの運営者情報、記事の作り方、広告（アフィリエイト）の扱いについて。", path="about.html")
 
 
 def article_html(a):
@@ -77,7 +105,8 @@ def article_html(a):
         f"<p class=\"note\">データ取得日時：{E(a['fetched_at'])}。価格・在庫は変動します。購入前に販売ページでご確認ください。</p>"
         f"{spec_tbl}<h2>タイプ別のおすすめ</h2>{picks}<h2>よくある疑問</h2>{faq}"
     )
-    return _page(d["title"], body, noindex=bool(a.get("sample")))
+    return _page(d["title"], body, noindex=bool(a.get("sample")), desc=d["lead"][:110],
+                 path=f'{a["slug"]}.html', date=a["fetched_at"][:10])
 
 
 def index_html(cfg, arts):
@@ -87,7 +116,8 @@ def index_html(cfg, arts):
     ) or "<li>公開済みの記事はまだありません。</li>"
     body = (f"<h1>{E(cfg['site_name'])}</h1><div class=\"pr\">{PR_TEXT}</div>"
             f"<p>購入前の比較で迷わないための、数字で確認できる範囲の比較メモです。</p><ul>{lis}</ul>")
-    return _page(cfg["site_name"], body, noindex=all(a.get("sample") for a in arts))
+    return _page(cfg["site_name"], body, noindex=all(a.get("sample") for a in arts),
+                 desc=f'{cfg["site_name"]}：楽天市場の商品を、価格・レビュー・記載仕様で比べる比較メモ。')
 
 
 def bear_svg(color):
@@ -142,11 +172,20 @@ def build(cfg, state):
     for old in list(core.DOCS.glob("*.html")) + list(core.REVIEW.glob("*.html")):
         old.unlink()
     public = [a for a in state["articles"] if a["status"] in ("published", "sample")]
-    for a in public:
-        (core.DOCS / f"{a['slug']}.html").write_text(article_html(a), encoding="utf-8")
     for a in state["articles"]:
         if a["status"] == "pending":
             (core.REVIEW / f"{a['slug']}.html").write_text(article_html(a), encoding="utf-8")
+    _SITE["url"], _SITE["name"] = cfg.get("site_url", ""), cfg.get("site_name", "")
+    for a in public:  # URL設定後に再生成（canonical用）
+        (core.DOCS / f"{a['slug']}.html").write_text(article_html(a), encoding="utf-8")
     (core.DOCS / "index.html").write_text(index_html(cfg, public), encoding="utf-8")
+    (core.DOCS / "about.html").write_text(about_html(cfg), encoding="utf-8")
+    base = cfg.get("site_url", "").rstrip("/")
+    urls = [base + "/", base + "/about.html"] + [f"{base}/{a['slug']}.html" for a in public if not a.get("sample")]
+    lastmod = {f"{base}/{a['slug']}.html": a["fetched_at"][:10] for a in public}
+    sm = "".join(f"<url><loc>{E(u)}</loc>" + (f"<lastmod>{lastmod[u]}</lastmod>" if u in lastmod else "") + "</url>" for u in urls)
+    (core.DOCS / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + sm + "</urlset>", encoding="utf-8")
+    (core.DOCS / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
     # 運営画面は公開サイトに含めない（収益やログが外部に出るため）
     (core.REVIEW / "office.html").write_text(office_html(cfg, state), encoding="utf-8")
