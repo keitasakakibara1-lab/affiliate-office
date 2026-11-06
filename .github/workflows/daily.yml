@@ -7,6 +7,9 @@ on:
       approve:
         description: "公開に回す記事のslug（任意）"
         required: false
+      redo:
+        description: "取り下げて作り直す記事のslug（任意）"
+        required: false
 
 permissions:
   contents: write
@@ -30,7 +33,10 @@ jobs:
           RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
           RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
           RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
-        run: python run.py daily
+          REDO: ${{ github.event.inputs.redo }}
+        run: |
+          if [ -n "$REDO" ]; then python run.py redo "$REDO"; fi
+          python run.py daily
       - name: 反映
         run: |
           git config user.name "office-bot"

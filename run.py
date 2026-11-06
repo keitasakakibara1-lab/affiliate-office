@@ -2,6 +2,7 @@
   python run.py daily [--mock]   企画→調査→執筆→審査→制作→分析を回す
   python run.py approve SLUG     確認待ちの記事を公開に回す
   python run.py reject SLUG      確認待ちの記事を破棄する
+  python run.py redo SLUG        確認待ちの記事を取り下げ、同じ話題を次回作り直す
   python run.py report           分析と画面の再生成のみ
 """
 import sys
@@ -59,6 +60,8 @@ def main():
         set_status(state, args[1], "published")
     elif cmd == "reject":
         set_status(state, args[1], "rejected")
+    elif cmd == "redo":
+        set_status(state, args[1], "withdrawn")
     elif cmd != "report":
         sys.exit(__doc__)
     agents.analyze(state)

@@ -19,9 +19,14 @@ WRITER_SYSTEM = """あなたは比較記事の執筆担当です。次の規則�
 # ---------- 企画（ナツメ） ----------
 def plan(state, cfg):
     from collections import Counter
-    rej = Counter(a["keyword"] for a in state["articles"] if a["status"] == "rejected")
-    used = {a["keyword"] for a in state["articles"] if a["status"] != "rejected"} | {k for k, n in rej.items() if n >= 2}
-    cands = [t for t in cfg["topics"] if t not in used]
+    arts = state["articles"]
+    rej = Counter(a["keyword"] for a in arts if a["status"] == "rejected")
+    withdrawn = {a["keyword"] for a in arts if a["status"] == "withdrawn"}
+    kept = {a["keyword"] for a in arts if a["status"] not in ("rejected", "withdrawn")}
+    skip = kept | {k for k, n in rej.items() if n >= 2}
+    cands = [t for t in cfg["topics"] if t not in skip]
+    # 取り下げた話題 → 差し戻された話題 → 新しい話題 の順で優先する
+    cands.sort(key=lambda t: 0 if t in withdrawn else (1 if rej.get(t) else 2))
     if not cands:
         say(state, "planner", "候補キーワードが尽きました。config.jsonに追加してください", status="ネタ切れ")
         return None

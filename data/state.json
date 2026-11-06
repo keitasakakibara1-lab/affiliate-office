@@ -146,7 +146,7 @@
     {
       "slug": "20261106-001",
       "keyword": "モバイルバッテリー 軽量",
-      "status": "rejected",
+      "status": "withdrawn",
       "sample": false,
       "problems": [
         "データにない数字「1500」",
@@ -258,7 +258,7 @@
     {
       "slug": "20261106-002",
       "keyword": "USBハブ Type-C",
-      "status": "rejected",
+      "status": "withdrawn",
       "sample": false,
       "problems": [
         "データにない数字「1000」",
@@ -369,7 +369,7 @@
     {
       "slug": "20261106-003",
       "keyword": "モバイルバッテリー 軽量",
-      "status": "rejected",
+      "status": "withdrawn",
       "sample": false,
       "problems": [
         "データにない数字「400」"
