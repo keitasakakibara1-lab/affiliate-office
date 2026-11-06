@@ -26,7 +26,7 @@ def configured():
 def diagnose():
     """鍵の値は出さず、形式だけを表示する。"""
     app, key, aff = _env("RAKUTEN_APP_ID"), _env("RAKUTEN_ACCESS_KEY"), _env("RAKUTEN_AFFILIATE_ID")
-    print(f"[診断] applicationId: 長さ{len(app)} UUID形式={bool(UUID_RE.fullmatch(app))} / "
+    print(f"[診断] applicationId: 長さ{len(app)} UUID形式={bool(UUID_RE.fullmatch(app))} 末尾6文字={app[-6:]} / "
           f"accessKey: 長さ{len(key)} pk_始まり={key.startswith('pk_')} / affiliateId: 長さ{len(aff)}")
 
 
