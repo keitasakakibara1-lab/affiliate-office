@@ -1,0 +1,21 @@
+{
+  "site_name": "選び方メモ",
+  "site_url": "https://keitasakakibara1-lab.github.io/affiliate-office/",
+  "model": "claude-sonnet-5-5",
+  "max_articles_per_day": 2,
+  "require_human_approval": true,
+  "items_per_article": 5,
+  "min_price": 1000,
+  "topics": [
+    "電気ケトル",
+    "ワイヤレスマウス 静音",
+    "モバイルバッテリー 軽量",
+    "デスクライト クリップ式",
+    "ブックスタンド 折りたたみ",
+    "ハンドブレンダー",
+    "卓上加湿器",
+    "USBハブ Type-C",
+    "ノートPCスタンド",
+    "ステンレスタンブラー 保温"
+  ]
+}
