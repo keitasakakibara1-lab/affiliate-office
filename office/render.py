@@ -18,6 +18,7 @@ th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:to
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
 .btn{display:inline-block;background:var(--acc);color:#fff;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:.9rem}
 .note{font-size:.8rem;color:var(--mut)}a{color:var(--acc)}
+.gal{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.gal img{width:128px;height:128px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#fff}
 .sample{background:#fff3cd;color:#7a5b00;padding:8px 12px;border-radius:8px;font-size:.85rem}
 """
 
@@ -41,10 +42,17 @@ def article_html(a):
     picks = ""
     for p in d["picks"]:
         it = items[p["i"]]
+        imgs = it.get("images") or ([it["image"]] if it.get("image") else [])
+        gal = "".join(
+            f'<a href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">'
+            f'<img src="{E(u)}" alt="{E(it["name"][:60])}" loading="lazy" width="128" height="128"></a>'
+            for u in imgs[:3]
+        )
+        gallery = f'<div class="gal">{gal}</div>' if gal else ""
         picks += (
             f'<div class="card"><b>{E(it["name"])}</b><br>'
             f'<span class="note">{it["price"]:,}円 ／ レビュー {it["review_avg"]:.2f}（{it["review_count"]:,}件）</span>'
-            f'<p><b>向いている人：</b>{E(p["who_for"])}<br><b>選ぶ理由：</b>{E(p["point"])}<br>'
+            f'{gallery}<p><b>向いている人：</b>{E(p["who_for"])}<br><b>選ぶ理由：</b>{E(p["point"])}<br>'
             f'<b>弱み：</b>{E(p["tradeoff"])}</p>'
             f'<a class="btn" href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">楽天市場で見る</a></div>'
         )

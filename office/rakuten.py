@@ -87,8 +87,9 @@ def search(keyword, hits, referer, min_price=0):
         avg = float(it.get("reviewAverage") or 0)
         if count < 20:  # レビューが薄い商品は比較の根拠にならない
             continue
-        imgs = it.get("mediumImageUrls") or []
-        img = imgs[0] if imgs and isinstance(imgs[0], str) else (imgs[0].get("imageUrl") if imgs else "")
+        raw = it.get("mediumImageUrls") or []
+        imgs = [x if isinstance(x, str) else x.get("imageUrl", "") for x in raw]
+        imgs = [u for u in imgs if u][:3]  # APIが返す最大3枚（128×128）
         items.append({
             "name": it["itemName"],
             "price": int(it["itemPrice"]),
@@ -96,7 +97,8 @@ def search(keyword, hits, referer, min_price=0):
             "review_avg": avg,
             "review_count": count,
             "url": it.get("affiliateUrl") or it["itemUrl"],
-            "image": img,
+            "image": imgs[0] if imgs else "",
+            "images": imgs,
         })
         if len(items) >= hits:
             break
