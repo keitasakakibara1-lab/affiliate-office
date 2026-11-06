@@ -43,7 +43,7 @@ def _get(q, referer):
         return json.load(r)
 
 
-def search(keyword, hits, referer, min_price=0):
+def search(keyword, hits, referer, min_price=0, page=1):
     app, key, aff = _env("RAKUTEN_APP_ID"), _env("RAKUTEN_ACCESS_KEY"), _env("RAKUTEN_AFFILIATE_ID")
     q = {
         "format": "json",
@@ -58,6 +58,8 @@ def search(keyword, hits, referer, min_price=0):
     }
     if min_price:
         q["minPrice"] = min_price
+    if page > 1:
+        q["page"] = page
     if aff:
         q["affiliateId"] = aff
 

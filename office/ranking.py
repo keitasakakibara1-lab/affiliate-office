@@ -81,9 +81,23 @@ def build(state, cfg, rk):
     if core.MOCK or not rakuten.configured() or not llm_available():
         say(state, "researcher", f"「{rk['keyword']}」の単価ランキングは、APIキー未設定のため作成しません")
         return None
-    items = rakuten.search(rk["keyword"], 30, cfg["site_url"], cfg.get("min_price", 0))
+    import time
+    items, seen = [], set()
+    for page in range(1, rk.get("pages", 2) + 1):  # 候補を増やすため2ページ取得（1秒1回程度に抑える）
+        for it in rakuten.search(rk["keyword"], 30, cfg["site_url"], cfg.get("min_price", 0), page):
+            if it.get("code") not in seen:
+                seen.add(it.get("code"))
+                items.append(it)
+        time.sleep(1.2)
     fetched = len(items)
-    n = extract_amounts(state, rk, items)
+    req, exc = rk.get("require", []), rk.get("exclude", [])
+    items = [it for it in items
+             if (not req or any(w in it["name"] for w in req)) and not any(w in it["name"] for w in exc)]
+    matched = len(items)
+    n = 0
+    for k in range(0, len(items), 30):  # 長くなりすぎないよう30件ずつ抽出
+        chunk = items[k:k + 30]
+        n += extract_amounts(state, rk, chunk)
     rows = []
     for it in items:
         if it.get("total"):
@@ -111,10 +125,10 @@ def build(state, cfg, rk):
     except Exception:
         pass
     say(state, "researcher",
-        f"「{rk['keyword']}」: {fetched}件中{n}件で内容量を確認、{len(rows)}件を掲載（極端な値{excluded_outlier}件を除外）", done=True)
+        f"「{rk['keyword']}」: 取得{fetched}件→種類が合う{matched}件→内容量を確認{n}件→掲載{len(rows)}件（極端な値{excluded_outlier}件を除外）", done=True)
     return {
         "slug": "rank-" + rk["id"], "id": rk["id"], "keyword": rk["keyword"], "title": rk["title"],
         "basis": rk["basis"], "notes": rk.get("notes", []), "items": rows,
-        "fetched": fetched, "confirmed": n, "excluded_outlier": excluded_outlier,
+        "fetched": matched, "confirmed": n, "excluded_outlier": excluded_outlier,
         "updated": core.now().strftime("%Y-%m-%d %H:%M JST"),
     }
