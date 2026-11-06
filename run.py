@@ -24,8 +24,12 @@ def daily(cfg, state):
         spec_cols = agents.extract_specs(state, plan["keyword"], items)
         if not sample:
             agents.record_prices(items)
-        article = agents.write(state, plan["keyword"], plan["angle"], items)
-        problems = agents.review(state, article, items, sample)
+        try:
+            article = agents.write(state, plan["keyword"], plan["angle"], items)
+            problems = agents.review(state, article, items, sample)
+        except Exception as e:  # 1記事の失敗で、他の記事と状態を失わない
+            say(state, "writer", f"「{plan['keyword']}」の執筆・審査に失敗、見送り（{type(e).__name__}）")
+            continue
         slug = f"{core.now():%Y%m%d}-{len(state['articles']) + 1:03d}"
         if problems:
             status = "rejected"

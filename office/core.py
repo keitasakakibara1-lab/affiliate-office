@@ -80,9 +80,12 @@ def llm(system, user, max_tokens=4000):
 
 def llm_json(system, user, max_tokens=4000):
     text = ""
-    for _ in range(2):  # 空応答などは1回だけやり直す
+    for _ in range(3):  # 空応答・JSON崩れは2回までやり直す
         text = llm(system, user, max_tokens)
         m = re.search(r"\{.*\}", text, re.S)
         if m:
-            return json.loads(m.group(0))
+            try:
+                return json.loads(m.group(0))
+            except json.JSONDecodeError:
+                continue
     raise ValueError("JSONが返らなかった: " + text[:200])
