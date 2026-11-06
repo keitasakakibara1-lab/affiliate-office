@@ -17,50 +17,15 @@
       "status": "審査通過"
     },
     "designer": {
-      "done": 98,
-      "status": "ランキング rank-cat-food を更新（状態: pending）"
+      "done": 104,
+      "status": "rank-drip-coffee を published にしました"
     },
     "analyst": {
-      "done": 13,
+      "done": 14,
       "status": "収益を集計済み"
     }
   },
   "log": [
-    {
-      "t": "11/06 18:18",
-      "agent": "designer",
-      "msg": "ランキング rank-chicken-breast を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「薄力粉 1kg」: 取得32件→種類が合う27件→内容量を確認21件→掲載15件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "designer",
-      "msg": "ランキング rank-flour-soft を更新（状態: pending）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「おむつ テープ Mサイズ」は内容量を確認できた商品が3件のみ。更新を見送り"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「おむつ テープ Sサイズ」は内容量を確認できた商品が2件のみ。更新を見送り"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "researcher",
-      "msg": "「おむつ パンツ Mサイズ」: 取得43件→種類が合う12件→内容量を確認5件→掲載5件（極端な値0件を除外）"
-    },
-    {
-      "t": "11/06 18:18",
-      "agent": "designer",
-      "msg": "ランキング rank-diaper-pants-m を更新（状態: pending）"
-    },
     {
       "t": "11/06 18:19",
       "agent": "researcher",
@@ -423,6 +388,41 @@
     },
     {
       "t": "11/06 18:34",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 18:40",
+      "agent": "designer",
+      "msg": "rank-sparkling-water を published にしました"
+    },
+    {
+      "t": "11/06 18:40",
+      "agent": "designer",
+      "msg": "rank-sparkling-water-1l を published にしました"
+    },
+    {
+      "t": "11/06 18:40",
+      "agent": "designer",
+      "msg": "rank-water-2l を published にしました"
+    },
+    {
+      "t": "11/06 18:40",
+      "agent": "designer",
+      "msg": "rank-water-500ml を published にしました"
+    },
+    {
+      "t": "11/06 18:40",
+      "agent": "designer",
+      "msg": "rank-rice-10kg を published にしました"
+    },
+    {
+      "t": "11/06 18:40",
+      "agent": "designer",
+      "msg": "rank-drip-coffee を published にしました"
+    },
+    {
+      "t": "11/06 18:40",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -1964,7 +1964,7 @@
       "confirmed": 27,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "published"
     },
     "rank-drip-coffee": {
       "slug": "rank-drip-coffee",
@@ -2182,7 +2182,7 @@
       "confirmed": 39,
       "excluded_outlier": 4,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "published"
     },
     "rank-sparkling-water-1l": {
       "slug": "rank-sparkling-water-1l",
@@ -2400,7 +2400,7 @@
       "confirmed": 29,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "published"
     },
     "rank-water-2l": {
       "slug": "rank-water-2l",
@@ -2618,7 +2618,7 @@
       "confirmed": 42,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "published"
     },
     "rank-water-500ml": {
       "slug": "rank-water-500ml",
@@ -2835,7 +2835,7 @@
       "confirmed": 41,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "published"
     },
     "rank-green-tea-bottle": {
       "slug": "rank-green-tea-bottle",
@@ -3843,7 +3843,7 @@
       "confirmed": 44,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "published"
     },
     "rank-rice-30kg": {
       "slug": "rank-rice-30kg",
