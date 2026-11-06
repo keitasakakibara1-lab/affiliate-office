@@ -71,7 +71,7 @@ def _save_cache(c):
 
 def _key(rk, it):
     import hashlib
-    h = hashlib.md5((it["name"] + "|" + (it.get("caption") or "")[:400]).encode("utf-8")).hexdigest()[:8]
+    h = hashlib.md5((it["name"] + "|" + (it.get("caption") or "")[:400] + "|" + (rk.get("spec") or "")).encode("utf-8")).hexdigest()[:8]
     return f"{rk['id']}:{it.get('code', '')}:{h}"
 
 
@@ -137,7 +137,7 @@ def build(state, cfg, rk):
                 items.append(it)
         time.sleep(1.2)
     fetched = len(items)
-    req, exc = rk.get("require", []), rk.get("exclude", [])
+    req, exc = rk.get("require", []), ["ふるさと納税"] + rk.get("exclude", [])  # 返礼品は通常の購入ではないため全体で除外
     items = [it for it in items
              if (not req or any(w in it["name"] for w in req)) and not any(w in it["name"] for w in exc)]
     matched = len(items)
