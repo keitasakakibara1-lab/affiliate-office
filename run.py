@@ -1,6 +1,6 @@
 """使い方:
   python run.py daily [--mock]   企画→調査→執筆→審査→制作→分析を回す
-  python run.py approve SLUG     確認待ちの記事を公開に回す
+  python run.py approve SLUG     確認待ちの記事・ランキングを公開に回す（カンマ区切りで複数、ALL-RANKINGS で全ランキング）
   python run.py reject SLUG      確認待ちの記事を破棄する
   python run.py redo SLUG        確認待ちの記事を取り下げ、同じ話題を次回作り直す
   python run.py demand           候補キーワードの需要の目安を計測する
@@ -115,7 +115,13 @@ def main():
     if cmd == "daily":
         daily(cfg, state)
     elif cmd == "approve":
-        set_status(state, args[1], "published")
+        spec = args[1]
+        if spec == "ALL-RANKINGS":  # 確認待ちのランキングをすべて公開に回す
+            slugs = [k for k, r in state.get("rankings", {}).items() if r["status"] == "pending"]
+        else:
+            slugs = [x.strip() for x in spec.split(",") if x.strip()]
+        for slug in slugs:
+            set_status(state, slug, "published")
     elif cmd == "reject":
         set_status(state, args[1], "rejected")
     elif cmd == "redo":

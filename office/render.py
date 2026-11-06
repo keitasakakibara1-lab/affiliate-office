@@ -113,7 +113,7 @@ def article_html(a):
                  path=f'{a["slug"]}.html', date=a["fetched_at"][:10])
 
 
-def ranking_html(r):
+def ranking_html(r, related=()):
     base = r["basis"]["base"]
     unit = {"L": "L", "kg": "kg", "個": "個"}[base]
     label = r["basis"]["label"]
@@ -141,12 +141,18 @@ def ranking_html(r):
         f"{rows}"
         f"<p class=\"note\">価格は取得時点のものです。商品名に期間限定価格やクーポンの記載がある場合、期間外は価格が変わります。「送料別」は楽天のデータ上で送料が別になっている商品で、条件付きの送料無料を含みます。送料を足すと順位が変わることがあります。商品名は販売者の表記です。単価の安さは、味・品質・好みへの合い方を示すものではありません。</p>"
         f"<h2>選ぶときの注意</h2><ul>{notes}</ul>"
+        + (("<h2>ほかのランキング</h2><ul>" + "".join(f'<li><a href="{E(x["slug"])}.html">{E(x["title"])}</a></li>' for x in related) + "</ul>") if related else "")
     )
     return _page(r["title"], body, desc=f"{r['keyword']}を{label}の価格で比べたランキング。毎日更新。", path=f"{r['slug']}.html", date=r["updated"][:10])
 
 
 def index_html(cfg, arts, ranks=()):
-    rk = "".join(f'<li><a href="{E(r["slug"])}.html">{E(r["title"])}</a> <span class=note>毎日更新</span></li>' for r in ranks)
+    groups = {}
+    for r in ranks:
+        groups.setdefault(r.get("group", "その他"), []).append(r)
+    rk = "".join(
+        f"<li><b>{E(g)}</b><ul>" + "".join(f'<li><a href="{E(r["slug"])}.html">{E(r["title"])}</a></li>' for r in rs) + "</ul></li>"
+        for g, rs in groups.items())
     lis = rk + "".join(
         f'<li><a href="{E(a["slug"])}.html">{E(a["content"]["title"])}</a>'
         f'{" <span class=note>(サンプル)</span>" if a.get("sample") else ""}</li>' for a in arts
@@ -216,8 +222,10 @@ def build(cfg, state):
     for a in public:  # URL設定後に再生成（canonical用）
         (core.DOCS / f"{a['slug']}.html").write_text(article_html(a), encoding="utf-8")
     rpub = [r for r in state.get("rankings", {}).values() if r["status"] == "published"]
+    def _rel(r):
+        return [x for x in rpub if x["slug"] != r["slug"] and x.get("group") == r.get("group")][:8]
     for r in rpub:
-        (core.DOCS / f"{r['slug']}.html").write_text(ranking_html(r), encoding="utf-8")
+        (core.DOCS / f"{r['slug']}.html").write_text(ranking_html(r, _rel(r)), encoding="utf-8")
     for r in state.get("rankings", {}).values():
         if r["status"] == "pending":
             (core.REVIEW / f"{r['slug']}.html").write_text(ranking_html(r), encoding="utf-8")
