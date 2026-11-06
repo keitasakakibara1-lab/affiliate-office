@@ -1,27 +1,27 @@
 {
   "agents": {
     "planner": {
-      "done": 6,
-      "status": "「モバイルバッテリー 軽量」を企画済み"
+      "done": 8,
+      "status": "「ノートPCスタンド」を企画済み"
     },
     "researcher": {
-      "done": 6,
+      "done": 8,
       "status": "商品データ取得済み"
     },
     "writer": {
-      "done": 6,
+      "done": 8,
       "status": "執筆済み"
     },
     "reviewer": {
-      "done": 6,
+      "done": 8,
       "status": "差し戻し"
     },
     "designer": {
-      "done": 6,
-      "status": "20261106-006 を組版済み"
+      "done": 9,
+      "status": "20261106-008 を組版済み"
     },
     "analyst": {
-      "done": 3,
+      "done": 5,
       "status": "収益を集計済み"
     }
   },
@@ -193,6 +193,71 @@
     },
     {
       "t": "11/06 16:52",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "designer",
+      "msg": "20261106-004 を withdrawn にしました"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "planner",
+      "msg": "今日のお題は「ワイヤレスマウス 静音」。切り口は「価格帯別にレビュー件数と平均評価で比べる静音マウスの選び方」"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "researcher",
+      "msg": "5商品を取得（レビュー件数順）"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "writer",
+      "msg": "『静音ワイヤレスマウスの選び方｜価格帯別にレビュー件数と平均評価で比較』を書き上げました"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "reviewer",
+      "msg": "審査を通過しました"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "designer",
+      "msg": "20261106-007 を組版（状態: pending）"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "planner",
+      "msg": "今日のお題は「ノートPCスタンド」。切り口は「価格帯別に比較し、レビュー件数と平均評価で選ぶ定番モデル」"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "researcher",
+      "msg": "5商品を取得（レビュー件数順）"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "writer",
+      "msg": "『ノートPCスタンドを価格帯別に比較｜レビュー件数と平均評価で選ぶ定番5モデル』を書き上げました"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "reviewer",
+      "msg": "差し戻し：データにない数字「14042」"
+    },
+    {
+      "t": "11/06 16:59",
+      "agent": "designer",
+      "msg": "20261106-008 を組版（状態: rejected）"
+    },
+    {
+      "t": "11/06 16:59",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -531,7 +596,7 @@
     {
       "slug": "20261106-004",
       "keyword": "USBハブ Type-C",
-      "status": "pending",
+      "status": "withdrawn",
       "sample": false,
       "problems": [],
       "fetched_at": "2026-11-06 16:44 JST",
@@ -911,6 +976,268 @@
           {
             "q": "重さを比較できますか？",
             "a": "商品データで重さが確認できるのは、179gと記載された添字3のみです。ほかの商品の重さはデータにないため、比較できません。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "20261106-007",
+      "keyword": "ワイヤレスマウス 静音",
+      "status": "pending",
+      "sample": false,
+      "problems": [],
+      "fetched_at": "2026-11-06 16:59 JST",
+      "items": [
+        {
+          "name": "163連冠【COUPONで1,480円〜・超お得SALE】 ワイヤレスマウス bluetooth マウス bluetooth ワイヤレス Bluetooth 5.3 無線/有線 薄型 軽量 楽天1位 国内400,000個+販売 充電式 静音 7色LED USB パソコン PC スマホ ipad 光学式 DPIを3段階調整 最大60日持続 高精度",
+          "price": 2960,
+          "shop": "夢の森",
+          "review_avg": 4.23,
+          "review_count": 3784,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tdsyo.qyx0vab7.g00tdsyo.qyx0w014/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyumenomori%2Fb1cdsbhe%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fyumenomori%2Fi%2F10000025%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/yumenomori/cabinet/s9s3/s3mzt.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/yumenomori/cabinet/s9s3/s3mzt.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/yumenomori/cabinet/s9s3/1.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/yumenomori/cabinet/s9s3/2.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "＼ポイント10倍!!／【静・軽・薄】「楽天1位」 Bluetooth マウス 無線 静音 有線 ワイヤレスマウス 超薄型 軽量 ブルートゥース 充電式 省エネルギー 2.4GHz 3DPIモード 光学式 高感度 Mac/Windows/surface/Microsoft Proに対応 TELEC認証取得済み 送料無料 newlife2026",
+          "price": 1380,
+          "shop": "ASKRTECH",
+          "review_avg": 4.28,
+          "review_count": 2832,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbi3o.qyx0v56d.g00tbi3o.qyx0wa29/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faskrtech%2Fq23%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Faskrtech%2Fi%2F10000300%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/askrtech/cabinet/09154272/test/q23-0912.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/askrtech/cabinet/09154272/test/q23-0912.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/askrtech/cabinet/08847615/coupon/imgrc0151938076.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/askrtech/cabinet/09434495/imgrc0138201561.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【SALE】 ロジクール ワイヤレスマウス M220 無線 マウス 静音 小型 左右対称 ワイヤレス windows mac chrome M220CG M220OW M220RO 国内正規品 3年間無償保証",
+          "price": 1350,
+          "shop": "ロジクール 公式ストア",
+          "review_avg": 4.58,
+          "review_count": 1856,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpxdo.qyx0v2d4.g00tpxdo.qyx0w5f4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flogicool%2Fm220gr%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Flogicool%2Fi%2F10000275%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/logicool/cabinet/expl/mice/m220gr/m220gr_s_.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/logicool/cabinet/expl/mice/m220gr/m220gr_s_.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/logicool/cabinet/prd/mice/m220gr/m220gr_2_r.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/logicool/cabinet/prd/mice/m220gr/m220gr_3_r.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【最大15%OFF★11/11まで】 マウス Bluetooth ワイヤレスマウス 充電式 マウス ワイヤレス パソコンマウス 小型 薄型 静音 無線 ブルートゥース Mac PC Macbook usb ノートパソコン タブレット 高感度 Windows Chromebook iPad Surface 送料無料 軽量",
+          "price": 1280,
+          "shop": "WAYetTO",
+          "review_avg": 4.04,
+          "review_count": 1771,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u9guo.qyx0vb34.g00u9guo.qyx0wef2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fwayetto%2Fwtms0001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fwayetto%2Fi%2F10000005%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/wayetto/cabinet/09979914/10551015/imgrc0083822402.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/wayetto/cabinet/09979914/10551015/imgrc0083822402.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/wayetto/cabinet/img-up_1_777/1264_k1_247343_22.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/wayetto/cabinet/09139906/imgrc0089107262.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【11/4 お買い物マラソン30%OFFクーポン】UGREEN 人間工学 ワイヤレスマウス 6ボタン コスパ最高マウス 無線2.4GHz 静音マウス5段階DPI切替 4000DPI ノートPC MacBook Chromebook パソコンなど対応 Mac Windows PC Laptop Macbook多機種対応 ピンク ブラック 出張 マウス",
+          "price": 2249,
+          "shop": "UGREEN公式楽天市場店",
+          "review_avg": 4.54,
+          "review_count": 1722,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u0fbo.qyx0veda.g00u0fbo.qyx0w72d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fugreen-gear%2F90545%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fugreen-gear%2Fi%2F10000327%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ugreen-gear/cabinet/11871349/90545-1.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/ugreen-gear/cabinet/11871349/90545-1.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/ugreen-gear/cabinet/biiino/award/90545.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/ugreen-gear/cabinet/10470939/imgrc0153125435.jpg?_ex=128x128"
+          ]
+        }
+      ],
+      "content": {
+        "title": "静音ワイヤレスマウスの選び方｜価格帯別にレビュー件数と平均評価で比較",
+        "lead": "「ワイヤレスマウス 静音」で見つかった5商品（商品A〜E）を、1,000円台と2,000円台の2つの価格帯に分け、レビュー件数と平均評価で比べました。5商品の価格は1,280円〜2,960円、レビュー平均は4.04〜4.58、レビュー件数は1,722件〜3,784件です。1,000円台は商品B・商品C・商品D、2,000円台は商品E・商品Aです。除外した商品はありません。なお、商品名にはクーポン・セール・ポイント倍率・期間などの表記がありますが、実際の価格や期間は購入ページで確認が必要です。本記事の価格は提供データの値を使っています。軽さや静かさは実測比較ではなく、商品名の表記とレビューデータだけで整理しています。「楽天1位」などの表記も、商品名に書かれた販売者の記載にすぎません。",
+        "picks": [
+          {
+            "i": 2,
+            "who_for": "1,000円台で、平均評価を重視してマウスを選びたい人",
+            "point": "1,350円で、レビュー平均は5商品の中で最も高い4.58（1,856件）です。商品名にはロジクールの型番M220、小型、左右対称、3年間無償保証と記載されています。",
+            "tradeoff": "レビュー件数は商品Aや商品Bより少なめです。商品名には「無線」とあるだけで、Bluetooth対応かどうかは読み取れません。保証の内容は商品名の記載にとどまるため、購入ページでの確認が必要です。"
+          },
+          {
+            "i": 1,
+            "who_for": "1,000円台で、レビュー件数の多さも見て選びたい人",
+            "point": "1,380円で、レビュー平均4.28、レビュー件数2,832件です。1,000円台の3商品の中では最も件数が多くなっています。商品名にはBluetoothと2.4GHzの両方が記載されています。",
+            "tradeoff": "平均評価は商品Cより低めです。商品名には「楽天1位」「TELEC認証取得済み」などの記載がありますが、販売者の表記であり、ここでは事実として確認していません。"
+          },
+          {
+            "i": 3,
+            "who_for": "とにかく価格を抑えたい人。5商品の中で最も価格が低い1,280円です。",
+            "point": "レビュー件数は1,771件あり、価格を抑えつつ一定数の評価が集まっています。商品名には小型、薄型、充電式、Bluetoothと記載されています。",
+            "tradeoff": "レビュー平均は4.04で、5商品の中で最も低い値です。商品名には「最大15%OFF」や期間の表記があり、購入時点の条件は確認が必要です。"
+          },
+          {
+            "i": 4,
+            "who_for": "2,000円台で、平均評価を重視したい人。ボタン数やDPI切替の多さも条件にしたい人にも向きます。",
+            "point": "2,249円で、レビュー平均4.54（1,722件）です。2,000円台の2商品の中では平均評価が高い方です。商品名には6ボタン、2.4GHz、5段階DPI切替、4000DPIと記載されています。",
+            "tradeoff": "レビュー件数は5商品の中で最も少なくなっています。商品名の接続方式の記載は2.4GHzのみで、Bluetooth対応は読み取れません。クーポンの表記もあり、実際の価格は購入ページで確認が必要です。"
+          },
+          {
+            "i": 0,
+            "who_for": "2,000円台で、レビュー件数の多さを優先したい人。Bluetooth接続を使いたい人にも向きます。",
+            "point": "2,960円で、レビュー件数は3,784件と5商品の中で最も多く、レビュー平均は4.23です。商品名にはBluetooth 5.3、無線/有線、充電式、3段階のDPI調整と記載されています。",
+            "tradeoff": "価格は5商品の中で最も高くなっています。平均評価は商品Cや商品Eより低めです。商品名には「COUPONで1,480円〜」とありますが、データ上の価格は2,960円で、表記と差があります。「163連冠」などの記載も販売者の表記です。"
+          }
+        ],
+        "faq": [
+          {
+            "q": "価格帯でレビューの傾向は変わりますか？",
+            "a": "今回の5商品では、1,000円台の3商品のレビュー平均は4.04〜4.58、件数は1,771件〜2,832件でした。2,000円台の2商品は平均が4.23〜4.54、件数が1,722件〜3,784件です。商品数が少ないため、価格帯全体の傾向とは言えません。"
+          },
+          {
+            "q": "レビュー件数と平均評価はどう見ればよいですか？",
+            "a": "平均評価は満足度の目安、件数は評価の集まり具合の目安になります。たとえば商品Cは平均4.58で件数1,856件、商品Aは平均4.23で件数3,784件です。どちらが優れているとは断定できないため、重視する点に合わせて選んでください。"
+          },
+          {
+            "q": "静音性や軽さはこの記事で比較できていますか？",
+            "a": "できていません。5商品とも商品名に「静音」の記載がありますが、騒音や重さを測ったデータはありません。静かさを重視する場合は、購入ページの仕様や実際のレビュー内容を確認してください。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "20261106-008",
+      "keyword": "ノートPCスタンド",
+      "status": "rejected",
+      "sample": false,
+      "problems": [
+        "データにない数字「14042」"
+      ],
+      "fetched_at": "2026-11-06 16:59 JST",
+      "items": [
+        {
+          "name": "【まとめ買いクーポン配布中】 ノートパソコンスタンド パソコンスタンド 折りたたみ式 Z型 アルミ製 軽量 角度調整 高さ調整 7段階 7+9段階 放熱 冷却 滑り止め テレワーク 在宅勤務 肩こり対策 姿勢改善 ノートPC台 タブレットスタンド 冬ギフト クリスマス",
+          "price": 2590,
+          "shop": "Dot Line 便利雑貨&レディース靴",
+          "review_avg": 4.6,
+          "review_count": 4442,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00tf97o.qyx0v9ca.g00tf97o.qyx0w63e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdotline%2F998002pcstand%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdotline%2Fi%2F10000195%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/dotline/cabinet/pc/s-laptop7dan/2607laptop/2607laptop-1.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/dotline/cabinet/pc/s-laptop7dan/2607laptop/2607laptop-1.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/dotline/cabinet/img-up_1_215/285_k1_55151_36.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/dotline/cabinet/img-up_1_215/285_k2_55151_96.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【レビュー3600件突破！】BoYata ノートパソコンスタンド N-19 ボヤタ PCスタンド 高さ調整 角度調整 アルミ合金 折りたたみ ノートPC台 11～17.3インチ MacBook Air Pro Surface Windows iPad対応 放熱 滑り止め テレワーク",
+          "price": 5299,
+          "shop": "select shop crea",
+          "review_avg": 4.72,
+          "review_count": 3634,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00rzsho.qyx0v94e.g00rzsho.qyx0wb55/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopcrea%2Fboyata1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fselectshopcrea%2Fi%2F10000069%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopcrea/cabinet/11115181/14114579/4.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopcrea/cabinet/11115181/14114579/4.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopcrea/cabinet/imgrc0099745541.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopcrea/cabinet/08176797/imgrc0146716861.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "＼複数買★MAX10％オフCP／《改良版 / 6冠達成》 パソコンスタンド ノートパソコンスタンド パソコン スタンド 軽量 角度調整 コンパクト pcスタンド ノートpc 収納袋付 滑り止め PC台 タブレット スマホ スタンド 折りたたみ 机 デスクワーク 姿勢改善 持ち運び 猫背対策",
+          "price": 1350,
+          "shop": "Zutto NE Zutto 楽天市場店",
+          "review_avg": 4.51,
+          "review_count": 2399,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00u35bo.qyx0v20d.g00u35bo.qyx0w107/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fzuttonezutto%2Fznz-0035%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fzuttonezutto%2Fi%2F10000041%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/zuttonezutto/cabinet/12441190/12441196/0035rakuten.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/zuttonezutto/cabinet/12441190/12441196/0035rakuten.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/zuttonezutto/cabinet/biiino/award/znz-00701c4b0a9a.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/zuttonezutto/cabinet/biiino/item/main-image/20240227123945_2.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "ノートパソコン スタンド ＼★楽天1位・2冠獲得／ パソコンスタンド 折りたたみ式 パソコン ノートスタンド PC ノートスタンド アルミ 合金製 ホルダー パソコン台 高さ 角度調整 滑り止め 軽量 姿勢対策 Macbook/Macbook Air 9〜17インチまでに対応 ギフト プレゼント",
+          "price": 3880,
+          "shop": "五百蔵商店",
+          "review_avg": 4.52,
+          "review_count": 2039,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00t8ouo.qyx0v287.g00t8ouo.qyx0w97d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fioroi%2Fsp-028%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fioroi%2Fi%2F10000296%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ioroi/cabinet/07520117/xxkjsp-028-zhutu.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/ioroi/cabinet/07520117/xxkjsp-028-zhutu.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/ioroi/cabinet/07520117/xxkjsp028-xc01.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/ioroi/cabinet/07520117/xxkjsp028-xc03.jpg?_ex=128x128"
+          ]
+        },
+        {
+          "name": "【楽天1位】ノートパソコン スタンド パソコン 台 PC 折りたたみ 高さ 角度 調節 持ち運び タブレット コンパクト 姿勢 腰 首 肩こり テレワーク リモート 姿勢改善 猫背対策 ストレートネック 13インチ 15.6インチ 17インチ 18インチ 19インチ Macbook Air Pro iPad",
+          "price": 1980,
+          "shop": "ホビナビ 楽天市場店",
+          "review_avg": 4.49,
+          "review_count": 1528,
+          "url": "https://hb.afl.rakuten.co.jp/hgc/g00qff7o.qyx0v5cd.g00qff7o.qyx0wb9c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhobinavi%2Fnts001-sil%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhobinavi%2Fi%2F10669698%2F&rafcid=wsc_i_is_e80a590a-ebe4-4f65-8820-b0c8d8a3d58f",
+          "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hobinavi/cabinet/3/lpc/04/3lpc0401kasg-5.jpg?_ex=128x128",
+          "images": [
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/hobinavi/cabinet/3/lpc/04/3lpc0401kasg-5.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/hobinavi/cabinet/3/lpc/04/3lpc0401aal-1.jpg?_ex=128x128",
+            "https://thumbnail.image.rakuten.co.jp/@0_mall/hobinavi/cabinet/3/lpc/04/3lpc0401aal-2.jpg?_ex=128x128"
+          ]
+        }
+      ],
+      "content": {
+        "title": "ノートPCスタンドを価格帯別に比較｜レビュー件数と平均評価で選ぶ定番5モデル",
+        "lead": "ノートPCスタンド5商品を、1,000円台から5,000円台までの価格帯別に、レビュー件数と平均評価で整理しました。価格は1,350円〜5,299円、レビュー平均は4.49〜4.72、レビュー件数は合計14,042件です。商品名に「軽量」とある商品もありますが、重さや強度のデータはなく、軽さなどは実測比較ではありません。商品名には「クーポン」「％オフ」といった表記や「冠」「1位」といった販売者の記載もあります。クーポンやセールの実際の価格・期間は、購入ページで確認が必要です。",
+        "picks": [
+          {
+            "i": 2,
+            "who_for": "まず1,000円台で試したい人。レビュー件数2,000件以上の商品から選びたい人。",
+            "point": "5商品の中で最も価格が低い1,350円で、レビュー平均4.51、レビュー件数2,399件です。価格を抑えつつ、一定数のレビューが集まっている点が選ぶ理由です。商品名には収納袋付き、折りたたみとの記載があります。",
+            "tradeoff": "レビュー件数は商品A・商品Bより少ないです。商品名に「6冠達成」「改良版」とありますが、販売者の表記であり、データでは裏付けられません。「軽量」も実測の裏付けはありません。クーポン表記もあるため、購入時に価格を確認してください。"
+          },
+          {
+            "i": 4,
+            "who_for": "1,000円台で、幅広い画面サイズへの対応をうたう商品を探している人。",
+            "point": "価格は1,980円で、レビュー平均4.49、レビュー件数1,528件です。商品名には13〜19インチの表記とタブレット、iPadへの言及があり、対応サイズを広く記載している点が選ぶ理由です。",
+            "tradeoff": "5商品の中でレビュー平均、レビュー件数ともに最も低い値です。商品名に複数のインチ数が併記されているため、手持ちの機種に合うか購入ページで確認が必要です。「楽天1位」も商品名の記載にすぎません。"
+          },
+          {
+            "i": 0,
+            "who_for": "2,000円台で、レビュー件数の多い定番モデルを選びたい人。",
+            "point": "価格は2,590円で、レビュー件数は5商品中最多の4,442件、平均評価は4.6です。件数が多く平均も高めなので、レビューの数を重視する人の比較対象になります。商品名にはZ型、アルミ製、折りたたみ式との記載があります。",
+            "tradeoff": "商品名に「7段階」「7+9段階」と調整段階の表記が複数あり、実際の仕様は購入ページで確認が必要です。「軽量」は実測の裏付けがありません。「まとめ買いクーポン配布中」の表記もあります。"
+          },
+          {
+            "i": 3,
+            "who_for": "3,000円台で、9〜17インチ対応とギフト向けの記載がある商品を探している人。",
+            "point": "価格は3,880円で、レビュー平均4.52、レビュー件数2,039件です。商品名にはアルミ合金製、折りたたみ式、9〜17インチ対応との記載があります。2,000円台と5,000円台の間の価格帯で、サイズ表記が明確な点が選ぶ理由です。",
+            "tradeoff": "レビュー件数は商品A・商品B・商品Cより少ないです。商品名の「楽天1位・2冠獲得」は販売者の記載で、データでは確認できません。「軽量」も実測の裏付けがありません。"
+          },
+          {
+            "i": 1,
+            "who_for": "5,000円台でも、平均評価の高さとレビュー件数を重視したい人。",
+            "point": "価格は5,299円で、レビュー平均は5商品中最高の4.72、レビュー件数は3,634件です。商品名にはN-19、アルミ合金、11〜17.3インチ対応との記載があります。件数と平均評価の両方を重視する人が比較しやすい商品です。",
+            "tradeoff": "5商品の中で最も価格が高く、商品Cとは3,949円の差があります。商品名の「レビュー3600件突破」は販売者の記載で、データ上の件数は3,634件です。素材や機能の違いが価格差に見合うかは、購入ページで確認が必要です。"
+          }
+        ],
+        "faq": [
+          {
+            "q": "価格帯別にはどう選べばよいですか。",
+            "a": "1,000円台なら商品Cと商品E、2,000円台なら商品A、3,000円台なら商品D、5,000円台なら商品Bが該当します。レビュー件数を重視するなら商品Aと商品B、価格を抑えたいなら商品Cが比較の出発点です。"
+          },
+          {
+            "q": "商品名のクーポンや「1位」「冠」の表記は信頼できますか。",
+            "a": "いずれも販売者による商品名の記載で、このデータでは裏付けを確認できません。クーポンやセールの実際の価格・期間は購入ページで確認してください。"
+          },
+          {
+            "q": "軽さや持ち運びやすさは比較できますか。",
+            "a": "重量や寸法のデータがないため、軽さなどの実測比較はしていません。商品名の「軽量」はあくまで販売者の表記です。購入前に仕様欄で確認してください。"
           }
         ]
       }
