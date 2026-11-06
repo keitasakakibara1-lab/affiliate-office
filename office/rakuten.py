@@ -6,6 +6,7 @@
 """
 import json
 import os
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -32,11 +33,21 @@ def search(keyword, hits, referer, min_price=0):
         q["minPrice"] = min_price
     if os.environ.get("RAKUTEN_AFFILIATE_ID"):
         q["affiliateId"] = os.environ["RAKUTEN_AFFILIATE_ID"]
-    req = urllib.request.Request(
-        ENDPOINT + "?" + urllib.parse.urlencode(q), headers={"Referer": referer}
-    )
-    with urllib.request.urlopen(req, timeout=20) as r:
-        data = json.load(r)
+    u = urllib.parse.urlparse(referer)
+    headers = {
+        "Referer": referer,
+        "Origin": f"{u.scheme}://{u.netloc}",
+        "User-Agent": "Mozilla/5.0 (compatible; affiliate-office/1.0)",
+        "Accept": "application/json",
+    }
+    req = urllib.request.Request(ENDPOINT + "?" + urllib.parse.urlencode(q), headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            data = json.load(r)
+    except urllib.error.HTTPError as e:
+        # URLにはキーが含まれるため出力しない。本文だけ出す
+        body = e.read().decode("utf-8", "replace")[:500]
+        raise RuntimeError(f"楽天API {e.code}: {body}") from None
 
     items = []
     for it in data.get("Items", []):

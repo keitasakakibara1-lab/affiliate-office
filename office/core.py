@@ -75,7 +75,7 @@ def llm(system, user, max_tokens=4000):
         system=system,
         messages=[{"role": "user", "content": user}],
     )
-    return r.content[0].text
+    return "".join(b.text for b in r.content if getattr(b, "type", "") == "text")
 
 
 def llm_json(system, user, max_tokens=4000):
