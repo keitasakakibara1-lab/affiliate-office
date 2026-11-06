@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://keitasakakibara1-lab.github.io/affiliate-office/sitemap.xml
