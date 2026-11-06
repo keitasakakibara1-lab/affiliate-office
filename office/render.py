@@ -113,37 +113,82 @@ def article_html(a):
                  path=f'{a["slug"]}.html', date=a["fetched_at"][:10])
 
 
+def _rank_stats(r):
+    import statistics
+    its = r["items"]
+    ups = [i["unit_price"] for i in its]
+    med = statistics.median(ups)
+    top = its[0]
+    bal = next((n for n, i in enumerate(its, 1) if i["review_avg"] >= 4.3 and i["review_count"] >= 100), None)
+    return {"min": ups[0], "max": ups[-1], "med": med, "ratio": ups[-1] / ups[0],
+            "saving": (med - top["unit_price"]) * top["total"], "bal": bal}
+
+
 def ranking_html(r, related=()):
     base = r["basis"]["base"]
     unit = {"L": "L", "kg": "kg", "個": "個"}[base]
     label = r["basis"]["label"]
-    rows = ""
-    for n, it in enumerate(r["items"], 1):
+    st = _rank_stats(r)
+    n_items = len(r["items"])
+
+    def card(n, it):
         img = (f'<a href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">'
                f'<img src="{E(it["image"])}" alt="" loading="lazy" width="72" height="72"></a>') if it.get("image") else ""
         tot = f'{it["total"]:.2f}'.rstrip("0").rstrip(".")
         post = {"込み": "送料込み", "別": "送料別"}.get(it.get("postage"), "送料要確認")
-        rows += (
+        hist = ""
+        if it.get("n_seen"):
+            diff = (it["price"] / it["low_seen"] - 1) * 100
+            hist = (f'<div class="note">当サイトの記録（{it["n_seen"]}日分）では、この商品の最も低い価格と同じです。</div>' if diff <= 0.5
+                    else f'<div class="note">当サイトの記録（{it["n_seen"]}日分）の最も低い価格より、約{diff:.0f}%高い価格です。</div>')
+        return (
             f'<div class="rk"><div class="rn">{n}</div>'
-            f'<div class="rb"><div class="up">約{it["unit_price"]:.1f}円<small> / {E(label.replace("あたり", ""))}</small></div>'
+            f'<div class="rb"><div class="up">約{it["unit_price"]:.1f}円<small> / {E(unit)}</small></div>'
             f'<div class="nm"><a href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">{E(it["name"][:90])}</a></div>'
             f'<div class="note">{it["price"]:,}円（{post}）／ 総量 {tot}{unit} ／ レビュー {it["review_avg"]:.2f}（{it["review_count"]:,}件）／ {E(it.get("shop", ""))}</div>'
+            f'{hist}<div style="margin-top:8px"><a class="btn" href="{E(it["url"])}" rel="sponsored nofollow noopener" target="_blank">楽天市場で見る</a></div>'
             f'</div><div class="ri">{img}</div></div>'
         )
+
+    top_cards = "".join(card(n, it) for n, it in enumerate(r["items"][:5], 1))
+    rest = r["items"][5:]
+    rest_cards = ("<details><summary><b>6位〜%d位を見る</b></summary>" % n_items
+                  + "".join(card(n, it) for n, it in enumerate(rest, 6)) + "</details>") if rest else ""
+    ratio_txt = f"{st['ratio']:.1f}倍" if st["ratio"] >= 1.15 else "小さな差"
+    summary = (
+        f"<div class=\"card\"><b>このランキングで分かること</b><ul>"
+        f"<li>掲載{n_items}件の{E(label)}の価格は、約{st['min']:.0f}円〜{st['max']:.0f}円で、最大で{ratio_txt}の差があります。</li>"
+        f"<li>1位は、掲載商品の中央値（約{st['med']:.0f}円/{unit}）で同じ量（{r['items'][0]['total']:.0f}{unit}）を買う場合に比べて、約{max(st['saving'], 0):,.0f}円安くなります（送料・クーポンは含みません）。</li>"
+        + (f"<li>レビュー4.3以上・100件以上の商品の中では、{st['bal']}位の商品が最も単価が低くなっています。</li>" if st["bal"] else "")
+        + "</ul></div>"
+    )
     notes = "".join(f"<li>{E(x)}</li>" for x in r.get("notes", []))
+    howto = ("<h2>このランキングの使い方</h2><ul>"
+             f"<li>必要な量を決めて、その量に近い商品から選ぶと、単価の差を活かせます。</li>"
+             "<li>「送料別」の商品は、送料を足した合計で比べてください。</li>"
+             "<li>商品名に期間限定価格やクーポンの記載がある場合は、期間外に価格が変わります。</li></ul>")
     body = (
         f'<p><a href="index.html">← 一覧</a></p><div class="pr">{PR_TEXT}</div>'
         f"<h1>{E(r['title'])}</h1>"
         f"<p>楽天市場でレビュー件数の多い商品のうち、商品名・説明文に内容量が明記されている商品を、<b>{E(label)}の価格が安い順</b>に並べています。"
         f"毎日、価格を取得し直して更新します。</p>"
-        f"<p class=\"note\">最終更新：{E(r['updated'])}。取得{r['fetched']}件のうち、内容量を確認できた商品から掲載しています。"
+        f"{summary}"
+        f"<p class=\"note\">最終更新：{E(r['updated'])}。種類が合う{r['fetched']}件のうち、内容量を確認できた商品から掲載しています。"
         f"内容量は商品名・説明文の記載から抜き出し、原文と照合できた数字だけを使っています。誤りがある場合は購入ページの記載を優先してください。</p>"
-        f"{rows}"
-        f"<p class=\"note\">価格は取得時点のものです。商品名に期間限定価格やクーポンの記載がある場合、期間外は価格が変わります。「送料別」は楽天のデータ上で送料が別になっている商品で、条件付きの送料無料を含みます。送料を足すと順位が変わることがあります。商品名は販売者の表記です。単価の安さは、味・品質・好みへの合い方を示すものではありません。</p>"
-        f"<h2>選ぶときの注意</h2><ul>{notes}</ul>"
+        f"{top_cards}{rest_cards}"
+        f"<p class=\"note\">価格は取得時点のものです。商品名は販売者の表記です。単価の安さは、味・品質・好みへの合い方を示すものではありません。</p>"
+        f"{howto}<h2>選ぶときの注意</h2><ul>{notes}</ul>"
         + (("<h2>ほかのランキング</h2><ul>" + "".join(f'<li><a href="{E(x["slug"])}.html">{E(x["title"])}</a></li>' for x in related) + "</ul>") if related else "")
     )
-    return _page(r["title"], body, desc=f"{r['keyword']}を{label}の価格で比べたランキング。毎日更新。", path=f"{r['slug']}.html", date=r["updated"][:10])
+    ym = r["updated"][:7].replace("-", "年") + "月"
+    page_title = f"{r['title']}【{ym}更新】"
+    return _page(page_title, body, desc=f"{r['keyword']}を{label}の価格が安い順に比較。{n_items}件の単価の差は最大{ratio_txt}。毎日更新。", path=f"{r['slug']}.html", date=r["updated"][:10])
+
+
+def _range_txt(r):
+    u = {"L": "L", "kg": "kg", "個": "個"}[r["basis"]["base"]]
+    its = r["items"]
+    return f"約{its[0]['unit_price']:.0f}〜{its[-1]['unit_price']:.0f}円/{u}（{len(its)}件）"
 
 
 def index_html(cfg, arts, ranks=()):
@@ -151,7 +196,7 @@ def index_html(cfg, arts, ranks=()):
     for r in ranks:
         groups.setdefault(r.get("group", "その他"), []).append(r)
     rk = "".join(
-        f"<li><b>{E(g)}</b><ul>" + "".join(f'<li><a href="{E(r["slug"])}.html">{E(r["title"])}</a></li>' for r in rs) + "</ul></li>"
+        f"<li><b>{E(g)}</b><ul>" + "".join(f'<li><a href="{E(r["slug"])}.html">{E(r["title"])}</a> <span class="note">{_range_txt(r)}</span></li>' for r in rs) + "</ul></li>"
         for g, rs in groups.items())
     lis = rk + "".join(
         f'<li><a href="{E(a["slug"])}.html">{E(a["content"]["title"])}</a>'

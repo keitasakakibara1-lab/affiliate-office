@@ -47,6 +47,12 @@ def total_amount(nums, unit, base, src):
     return total * f
 
 
+def _load_prices():
+    import json
+    p = core.DATA / "prices.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
 def _cache_path():
     return core.DATA / "amounts.json"
 
@@ -158,14 +164,18 @@ def build(state, cfg, rk):
         return None
     rows.sort(key=lambda r: r["unit_price"])
     rows = rows[:15]
-    keep = ("name", "price", "shop", "review_avg", "review_count", "url", "image", "postage", "total", "unit_price")
+    keep = ("name", "price", "shop", "review_avg", "review_count", "url", "image", "postage", "total", "unit_price", "code")
     rows = [{k: r.get(k) for k in keep} for r in rows]
-    rakuten_ids = [r for r in items if r.get("code")]
     try:
         from . import agents
-        agents.record_prices(rakuten_ids)
+        agents.record_prices([r for r in rows if r.get("code")])
     except Exception:
         pass
+    hist = _load_prices()
+    for r in rows:  # 当サイトの記録（3日分以上）がある商品だけ、過去の最安値との比較を付ける
+        h = hist.get(r.get("code") or "", [])
+        if len(h) >= 3:
+            r["n_seen"], r["low_seen"] = len(h), min(x[1] for x in h)
     say(state, "researcher",
         f"「{rk['keyword']}」: 取得{fetched}件→種類が合う{matched}件→内容量を確認{n}件→掲載{len(rows)}件（極端な値{excluded_outlier}件を除外）", done=True)
     return {
