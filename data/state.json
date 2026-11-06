@@ -21,16 +21,11 @@
       "status": "rank-drip-coffee を published にしました"
     },
     "analyst": {
-      "done": 15,
+      "done": 16,
       "status": "収益を集計済み"
     }
   },
   "log": [
-    {
-      "t": "11/06 18:19",
-      "agent": "researcher",
-      "msg": "「洗濯洗剤 詰め替え 大容量」: 取得60件→種類が合う39件→内容量を確認13件→掲載13件（極端な値0件を除外）"
-    },
     {
       "t": "11/06 18:19",
       "agent": "designer",
@@ -423,6 +418,11 @@
     },
     {
       "t": "11/06 18:45",
+      "agent": "analyst",
+      "msg": "累計報酬0円・成果0件（実績データなし）"
+    },
+    {
+      "t": "11/06 18:47",
       "agent": "analyst",
       "msg": "累計報酬0円・成果0件（実績データなし）"
     }
@@ -1964,7 +1964,8 @@
       "confirmed": 27,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "published"
+      "status": "published",
+      "default_qty": 12
     },
     "rank-drip-coffee": {
       "slug": "rank-drip-coffee",
@@ -2182,7 +2183,8 @@
       "confirmed": 39,
       "excluded_outlier": 4,
       "updated": "2026-11-06 18:33 JST",
-      "status": "published"
+      "status": "published",
+      "default_qty": 60
     },
     "rank-sparkling-water-1l": {
       "slug": "rank-sparkling-water-1l",
@@ -2400,7 +2402,8 @@
       "confirmed": 29,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "published"
+      "status": "published",
+      "default_qty": 12
     },
     "rank-water-2l": {
       "slug": "rank-water-2l",
@@ -2618,7 +2621,8 @@
       "confirmed": 42,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "published"
+      "status": "published",
+      "default_qty": 24
     },
     "rank-water-500ml": {
       "slug": "rank-water-500ml",
@@ -2835,7 +2839,8 @@
       "confirmed": 41,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "published"
+      "status": "published",
+      "default_qty": 12
     },
     "rank-green-tea-bottle": {
       "slug": "rank-green-tea-bottle",
@@ -3052,7 +3057,8 @@
       "confirmed": 36,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 12
     },
     "rank-barley-tea-bag": {
       "slug": "rank-barley-tea-bag",
@@ -3191,7 +3197,8 @@
       "confirmed": 10,
       "excluded_outlier": 1,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 60
     },
     "rank-rooibos-tea-bag": {
       "slug": "rank-rooibos-tea-bag",
@@ -3408,7 +3415,8 @@
       "confirmed": 40,
       "excluded_outlier": 1,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 60
     },
     "rank-coffee-beans": {
       "slug": "rank-coffee-beans",
@@ -3625,7 +3633,8 @@
       "confirmed": 40,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 1
     },
     "rank-rice-10kg": {
       "slug": "rank-rice-10kg",
@@ -3843,7 +3852,8 @@
       "confirmed": 44,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "published"
+      "status": "published",
+      "default_qty": 10
     },
     "rank-rice-30kg": {
       "slug": "rank-rice-30kg",
@@ -4061,7 +4071,8 @@
       "confirmed": 31,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 10
     },
     "rank-pasta-dry": {
       "slug": "rank-pasta-dry",
@@ -4279,7 +4290,8 @@
       "confirmed": 15,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 2
     },
     "rank-oatmeal": {
       "slug": "rank-oatmeal",
@@ -4419,7 +4431,8 @@
       "confirmed": 9,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 1
     },
     "rank-mixed-nuts": {
       "slug": "rank-mixed-nuts",
@@ -4637,7 +4650,8 @@
       "confirmed": 36,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 1
     },
     "rank-tuna-can": {
       "slug": "rank-tuna-can",
@@ -4790,7 +4804,8 @@
       "confirmed": 10,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 24
     },
     "rank-chicken-breast": {
       "slug": "rank-chicken-breast",
@@ -4968,7 +4983,8 @@
       "confirmed": 12,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 4
     },
     "rank-diaper-pants-m": {
       "slug": "rank-diaper-pants-m",
@@ -5056,7 +5072,8 @@
       "confirmed": 5,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 200
     },
     "rank-diaper-pants-l": {
       "slug": "rank-diaper-pants-l",
@@ -5157,7 +5174,8 @@
       "confirmed": 6,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 200
     },
     "rank-detergent-laundry": {
       "slug": "rank-detergent-laundry",
@@ -5349,7 +5367,8 @@
       "confirmed": 13,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 3
     },
     "rank-detergent-dish": {
       "slug": "rank-detergent-dish",
@@ -5437,7 +5456,8 @@
       "confirmed": 5,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 1
     },
     "rank-trash-bag-45l": {
       "slug": "rank-trash-bag-45l",
@@ -5629,7 +5649,8 @@
       "confirmed": 13,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 30
     },
     "rank-battery-aa": {
       "slug": "rank-battery-aa",
@@ -5807,7 +5828,8 @@
       "confirmed": 12,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 4
     },
     "rank-mask-nonwoven": {
       "slug": "rank-mask-nonwoven",
@@ -6025,7 +6047,8 @@
       "confirmed": 20,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 60
     },
     "rank-dog-food": {
       "slug": "rank-dog-food",
@@ -6243,7 +6266,8 @@
       "confirmed": 53,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 3
     },
     "rank-cat-food": {
       "slug": "rank-cat-food",
@@ -6461,7 +6485,8 @@
       "confirmed": 58,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 2
     },
     "rank-black-tea-bag": {
       "slug": "rank-black-tea-bag",
@@ -6678,7 +6703,8 @@
       "confirmed": 25,
       "excluded_outlier": 1,
       "updated": "2026-11-06 18:33 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 60
     },
     "rank-flour-soft": {
       "slug": "rank-flour-soft",
@@ -6896,7 +6922,8 @@
       "confirmed": 21,
       "excluded_outlier": 0,
       "updated": "2026-11-06 18:34 JST",
-      "status": "pending"
+      "status": "pending",
+      "default_qty": 1
     }
   }
 }

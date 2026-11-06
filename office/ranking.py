@@ -131,7 +131,7 @@ def build(state, cfg, rk):
         return None
     import time
     items, seen = [], set()
-    for page in range(1, rk.get("pages", 2) + 1):  # 候補を増やすため2ページ取得（1秒1回程度に抑える）
+    for page in range(1, rk.get("pages", 3) + 1):  # 候補を増やすため2ページ取得（1秒1回程度に抑える）
         for it in rakuten.search(rk["keyword"], 30, cfg["site_url"], rk.get("min_price", cfg.get("min_price", 0)), page):
             if it.get("code") not in seen:
                 seen.add(it.get("code"))
@@ -181,7 +181,7 @@ def build(state, cfg, rk):
         f"「{rk['keyword']}」: 取得{fetched}件→種類が合う{matched}件→内容量を確認{n}件→掲載{len(rows)}件（極端な値{excluded_outlier}件を除外）", done=True)
     return {
         "slug": "rank-" + rk["id"], "id": rk["id"], "group": rk.get("group", "その他"), "keyword": rk["keyword"], "title": rk["title"],
-        "basis": rk["basis"], "notes": rk.get("notes", []), "items": rows,
+        "basis": rk["basis"], "notes": rk.get("notes", []), "default_qty": rk.get("default_qty"), "items": rows,
         "fetched": matched, "confirmed": n, "excluded_outlier": excluded_outlier,
         "updated": core.now().strftime("%Y-%m-%d %H:%M JST"),
     }

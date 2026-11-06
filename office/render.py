@@ -157,6 +157,25 @@ def _rank_stats(r):
             "saving": (med - top["unit_price"]) * top["total"], "bal": bal}
 
 
+def _calc_block(r, st, unit):
+    """使う量を入力すると、月・年のコスト差が分かる計算欄（外部ライブラリなし・数値のみ埋め込み）。"""
+    import json as _json
+    qty = r.get("default_qty") or {"L": 10, "kg": 5, "個": 50}[r["basis"]["base"]]
+    data = _json.dumps({"top": round(r["items"][0]["unit_price"], 4), "med": round(st["med"], 4), "bal": None}, ensure_ascii=False)
+    return (
+        '<div class="card"><b>あなたの使う量で計算する</b>'
+        f'<p class="note">1か月に使う量（{E(unit)}）を入れると、1位と中央値の商品とで、月・年にいくら違うかが分かります。送料・クーポンは含みません。</p>'
+        f'<p><input id="q" type="number" min="0" step="any" value="{qty}" style="width:6em;font-size:1rem"> {E(unit)} / 月</p>'
+        '<p id="calcout" aria-live="polite"></p>'
+        f'<script>(function(){{var d={data};var q=document.getElementById("q"),o=document.getElementById("calcout");'
+        'function f(n){return Math.round(n).toLocaleString("ja-JP")}'
+        'function u(){var v=parseFloat(q.value);if(!(v>=0)){o.textContent="";return}'
+        'var a=v*d.top,b=v*d.med,g=Math.max(b-a,0);'
+        'o.textContent="1位の単価では月約"+f(a)+"円、中央値の単価では月約"+f(b)+"円です。差は月約"+f(g)+"円、年約"+f(g*12)+"円です。";}'
+        'q.addEventListener("input",u);u();})();</script></div>'
+    )
+
+
 def ranking_html(r, related=()):
     base = r["basis"]["base"]
     unit = {"L": "L", "kg": "kg", "個": "個"}[base]
@@ -217,7 +236,7 @@ def ranking_html(r, related=()):
         f"<h1>{E(r['title'])}</h1>"
         f"<p>楽天市場でレビュー件数の多い商品のうち、商品名・説明文に内容量が明記されている商品を、<b>{E(label)}の価格が安い順</b>に並べています。"
         f"毎日、価格を取得し直して更新します。</p>"
-        f"{summary}"
+        f"{summary}{_calc_block(r, st, unit)}"
         f"<p class=\"note\">最終更新：{E(r['updated'])}。種類が合う{r['fetched']}件のうち、内容量を確認できた商品から掲載しています。"
         f"内容量は商品名・説明文の記載から抜き出し、原文と照合できた数字だけを使っています。誤りがある場合は購入ページの記載を優先してください。</p>"
         f"{top_cards}{rest_cards}"
