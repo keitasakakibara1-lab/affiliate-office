@@ -65,12 +65,12 @@ def llm_available():
     return (not MOCK) and bool(os.environ.get("ANTHROPIC_API_KEY"))
 
 
-def llm(system, user, max_tokens=4000):
+def llm(system, user, max_tokens=4000, model=None):
     import anthropic
     cfg = load_config()
     client = anthropic.Anthropic()
     r = client.messages.create(
-        model=cfg["model"],
+        model=model or cfg["model"],
         max_tokens=max_tokens,
         system=system,
         messages=[{"role": "user", "content": user}],
@@ -78,10 +78,10 @@ def llm(system, user, max_tokens=4000):
     return "".join(b.text for b in r.content if getattr(b, "type", "") == "text")
 
 
-def llm_json(system, user, max_tokens=4000):
+def llm_json(system, user, max_tokens=4000, model=None):
     text = ""
     for _ in range(3):  # 空応答・JSON崩れは2回までやり直す
-        text = llm(system, user, max_tokens)
+        text = llm(system, user, max_tokens, model)
         m = re.search(r"\{.*\}", text, re.S)
         if m:
             try:

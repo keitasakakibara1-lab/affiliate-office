@@ -21,9 +21,12 @@ def update_rankings(cfg, state):
         try:
             r = ranking.build(state, cfg, rk)
         except Exception as e:  # 1つの失敗で他を止めない
-            say(state, "researcher", f"「{rk['keyword']}」のランキング更新に失敗（{type(e).__name__}）")
+            say(state, "researcher", f"「{rk['keyword']}」のランキング更新に失敗（{type(e).__name__}: {str(e)[:120]}）")
             continue
         if not r:
+            cur = rks.get("rank-" + rk["id"])
+            if cur and cur["status"] == "pending":  # 古い確認待ちは、誤りを含む可能性があるため破棄する
+                del rks["rank-" + rk["id"]]
             continue
         cur = rks.get(r["slug"])
         if cur and cur["status"] in ("published", "pending"):

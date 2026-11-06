@@ -104,6 +104,7 @@ def extract_amounts(state, rk, items):
             "数字は原文にある数だけ（合計値を自分で計算して書かない）。不明・曖昧なら amount は null。"
             '{"rows":[{"i":0,"fits":true,"amount":[500,24],"unit":"ml"}]}を返して。',
             4000,
+            model=core.load_config().get("extract_model"),
         )
         got = {row.get("i"): row for row in r.get("rows", []) if isinstance(row, dict)}
         for i in idx:
